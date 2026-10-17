@@ -4,8 +4,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { chromium } from 'playwright-core';
+import { fileURLToPath } from 'node:url';
 
-const ROOT = new URL('..', import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const OUT = path.join(ROOT, 'site/cards');
 const data = JSON.parse(fs.readFileSync(path.join(ROOT, 'build/data.json'), 'utf8'));
 const geo = JSON.parse(fs.readFileSync(path.join(ROOT, 'build/geo.json'), 'utf8'));

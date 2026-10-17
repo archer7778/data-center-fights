@@ -90,6 +90,7 @@ header .stamp{font:500 12px/1.4 var(--f-mono);color:var(--muted);text-align:righ
 .case>div{padding:16px 18px;min-width:0}
 .case .side{border-left:1px solid var(--line);background:var(--sunk);display:flex;flex-direction:column;gap:14px}
 .case h3{font-size:30px;text-transform:none}
+.case h3:focus{outline:none}.case h3:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
 .pill{display:inline-flex;align-items:center;gap:6px;font:600 11.5px/1 var(--f-mono);letter-spacing:.05em;text-transform:uppercase;padding:5px 8px;border-radius:3px;border:1px solid currentColor;color:var(--ink2)}
 .facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;margin:0;font-size:13.5px}
 .facts dt{color:var(--muted);font:500 12px/1.6 var(--f-mono);text-transform:uppercase;letter-spacing:.04em}
@@ -173,11 +174,11 @@ footer a{color:var(--accent)}
     </div>
     <div class="panel">
       <div class="ph"><h2>Cases</h2><span class="counts" id="listCounts"></span></div>
-      <div class="list" id="list" role="list"></div>
+      <div class="list" id="list" aria-label="All cases"></div>
     </div>
   </section>
 
-  <section class="case" id="case" aria-live="polite"></section>
+  <section class="case" id="case" aria-label="Case file"></section>
 
   <section class="sec">
     <div><div class="eyebrow">Megawatt ledger</div><h2>What was at stake</h2>
@@ -230,7 +231,7 @@ const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','De
 function mi(s){if(!s)return null;const p=String(s).split('-');return (+p[0]-2000)*12+(p[1]?+p[1]-1:6)}
 function fmtM(m){return MON[m%12]+' '+(2000+Math.floor(m/12))}
 function fmtD(s){if(!s)return '';const p=s.split('-');if(p.length===1)return p[0];const m=MON[+p[1]-1];return p[2]?`${+p[2]} ${m} ${p[0]}`:`${m} ${p[0]}`}
-const S=DATA.sites.map(s=>Object.assign(s,{m0:mi(s.start),m1:mi(s.decided)}));
+const S=DATA.sites.map(s=>Object.assign(s,{m0:mi(s.start),m1:mi(s.decided),mc:mi(s.contested_from)}));
 const ASOF=mi(DATA.as_of);
 const M0=Math.min(...S.map(s=>s.m0));
 let T=ASOF,SEL=null,SHOW=new Set(OUT),timer=null;
@@ -238,7 +239,8 @@ if(CFG.select&&S.some(s=>s.id===CFG.select))SEL=CFG.select;
 try{const h=decodeURIComponent(location.hash.slice(1));if(S.some(s=>s.id===h))SEL=h}catch(e){}
 if(!SEL)SEL='pw-digital-gateway';
 
-function state(s,t){if(s.m0>t)return null;if(s.outcome==='contested')return 'contested';return s.m1!=null&&s.m1<=t?s.outcome:'pending'}
+// a contested case counts as undecided until the fight it is still in began (approval challenged, suit filed)
+function state(s,t){if(s.m0>t)return null;if(s.outcome==='contested')return (s.mc??s.m0)<=t?'contested':'pending';return s.m1!=null&&s.m1<=t?s.outcome:'pending'}
 const CV=o=>`var(--o-${o})`;
 // shapes keep outcomes apart without relying on color
 function shape(o,r){
@@ -257,7 +259,7 @@ function renderStrip(){
   const N=DATA.national,c=N.construction.points,e=N.electricity,o=N.opposition;
   const last=c[c.length-1],prev=c[c.length-2];
   const tiles=[
-    {l:'Construction pace',v:'$'+last[1].toFixed(0)+' bn a year',s:`Data center buildings, ${fmtD(last[0])}; up ${Math.round((last[1]/prev[1]-1)*100)}% in a year`,src:'Census Bureau'},
+    {l:'Construction pace',v:'$'+last[1].toFixed(0)+' bn a year',s:`Data center buildings, ${fmtD(last[0])}; up ${Math.round((last[1]/prev[1]-1)*100)}% in a year`,src:'Census data, via Tom’s Hardware'},
     {l:'Share of US electricity',v:'4.4% → 12%',s:'2023 use, and the central 2030 projection',src:'Berkeley Lab'},
     {l:'Largest AI sites, worldwide',v:N.compute.facts[1][0],s:`${N.compute.facts[0][0]} sites, ${N.compute.facts[2][0]} H100-equivalents`,src:'Epoch AI, Oct 2026'},
     {l:'Blocked or delayed by locals',v:`${o.points[0][1]} + ${o.points[1][1]}`,s:`projects in Q1 and Q2 2026 ($${o.points[0][2]} bn and $${o.points[1][2]} bn); ${o.groups} local groups`,src:'Data Center Watch'}];
@@ -275,7 +277,7 @@ function renderMap(){
   const pins=vis.map(s=>{const st=state(s,T),r=rad(s);
     return `<g class="pin${s.id===SEL?' sel':''}" data-id="${s.id}" transform="translate(${s.x} ${s.y})" tabindex="0" role="button" aria-label="${esc(s.name+', '+s.place+' '+s.state+': '+(st==='pending'?'before a decision':LAB[st]))}">
       ${s.id===SEL?`<circle class="ring" r="${r+5}"/>`:''}${st==='pending'?shape(st,r):shape(st,r).replace('class="shape"','class="shape" stroke="var(--panel)" stroke-width="1.5"')}</g>`}).join('');
-  const svg=`<svg viewBox="0 0 ${GEO.w} ${GEO.h}" role="img" aria-label="Map of the United States with ${vis.length} data center sites">
+  const svg=`<svg viewBox="0 0 ${GEO.w} ${GEO.h}" role="group" aria-label="Map of the United States with ${vis.length} data center sites; each pin opens its case">
     <path class="land" d="${GEO.nation}"/><path class="borders" d="${GEO.borders}"/>${pins}</svg>`;
   const tip=$('#tip');$('#map').innerHTML=svg;$('#map').appendChild(tip);
   $('#mapCounts').textContent=`${vis.length} sites shown · ${fmtM(T)}`;
@@ -290,7 +292,7 @@ function showTip(el){
 function renderList(){
   const rows=[...S].sort((a,b)=>OUT.indexOf(a.outcome)-OUT.indexOf(b.outcome)||(b.m1??b.m0)-(a.m1??a.m0));
   $('#list').innerHTML=rows.map(s=>{const st=state(s,T)||'pending',hidden=!state(s,T)||(st!=='pending'&&!SHOW.has(st));
-    return `<button class="row${hidden?' dim':''}" role="listitem" data-id="${s.id}" aria-current="${s.id===SEL}">${icon(state(s,T)?st:'pending')}
+    return `<button type="button" class="row${hidden?' dim':''}" data-id="${s.id}" aria-current="${s.id===SEL}">${icon(state(s,T)?st:'pending')}
       <span><span class="t">${esc(s.name)}</span><br><span class="p">${esc(s.place)}, ${esc(s.state)} · ${esc(s.decided?fmtD(s.decided):'undecided')}</span></span>
       <span class="m">${s.mw?n0(s.mw)+' MW':''}</span></button>`}).join('');
   $('#listCounts').textContent=`${S.length} documented`;
@@ -304,7 +306,7 @@ function renderCase(){
     ['Investment',s.invest_bn?`$${s.invest_bn} billion`:'Not published'],['Land',s.acres?`${n0(s.acres)} acres`:'Not published'],['First public',`${fmtD(s.start)}${s.start_note?' · '+s.start_note:''}`]];
   $('#case').innerHTML=`<div>
       <div style="display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center"><span class="pill" style="color:${CV(s.outcome)}">${icon(s.outcome,12)}<span style="color:var(--ink)">${esc(LAB[s.outcome])}</span></span><span class="eyebrow">${esc(s.place)}, ${esc(s.state)}</span></div>
-      <h3 style="margin-top:8px">${esc(s.name)}</h3>
+      <h3 style="margin-top:8px" tabindex="-1" id="caseTitle">${esc(s.name)}</h3>
       <p class="sumline">${esc(s.summary)}</p>
       <p class="history">${esc(s.history)}</p>
       <div class="two">
@@ -391,7 +393,9 @@ function renderNational(){
 
 /* ---------- wiring ---------- */
 function renderTime(){$('#when').textContent=fmtM(T);renderLegend();renderMap();renderList();renderLedger();renderCum()}
-function select(id,scroll){SEL=id;try{history.replaceState(null,'','#'+id)}catch(e){}renderMap();renderList();renderCase();if(scroll)$('#case').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}
+function select(id,scroll){SEL=id;try{history.replaceState(null,'','#'+id)}catch(e){}renderMap();renderList();renderCase();
+  if(scroll){$('#case').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+    const h=$('#caseTitle');if(h)h.focus({preventScroll:true})}}
 const slider=$('#t');slider.min=M0;slider.max=ASOF;slider.value=T;
 slider.addEventListener('input',()=>{T=+slider.value;renderTime()});
 $('#play').addEventListener('click',()=>{

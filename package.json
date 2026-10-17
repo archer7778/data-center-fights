@@ -9,6 +9,7 @@
     "validate": "node tools/validate.mjs",
     "build": "node tools/build.mjs",
     "cards": "node tools/cards.mjs",
+    "sources": "node tools/sources.mjs",
     "all": "node tools/validate.mjs && node tools/build.mjs && node tools/cards.mjs"
   },
   "dependencies": {

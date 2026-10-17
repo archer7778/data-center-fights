@@ -28,6 +28,8 @@ export function validate(data) {
     for (const k of ['start', 'decided', 'checked']) if (s[k] != null && !DATE.test(s[k])) bad(id, `"${k}" is not YYYY, YYYY-MM or YYYY-MM-DD`);
     if (s.outcome === 'contested' && s.decided) bad(id, 'a case still being fought should have decided: null');
     if (s.outcome !== 'contested' && !s.decided) bad(id, 'needs a "decided" date');
+    if (s.outcome === 'contested' && !DATE.test(s.contested_from || '')) bad(id, 'a case still being fought needs "contested_from": when the fight it is in began');
+    if (s.contested_from && s.outcome !== 'contested') bad(id, '"contested_from" is only for cases still being fought');
     if (s.decided && s.start && s.decided.slice(0, 7) < s.start.slice(0, 7)) bad(id, 'decided is before start');
     if (s.mw != null && !(Number.isFinite(s.mw) && s.mw > 0)) bad(id, 'mw must be a positive number or null');
     if (s.invest_bn != null && !(Number.isFinite(s.invest_bn) && s.invest_bn > 0)) bad(id, 'invest_bn must be a positive number or null');

@@ -12,12 +12,13 @@ A sourced map of US data center fights: where communities stopped data centers, 
 - **A page for every case,** with its own link and share card, so a single fight can be posted on its own.
 - **The megawatt ledger:** announced or planned capacity by outcome, and decisions over time.
 - **The national buildout:** construction spending on data centers (Census Bureau), their share of US electricity (Lawrence Berkeley National Laboratory), the largest AI sites (Epoch AI) and projects blocked or delayed by local opposition (Data Center Watch).
+- **Every source,** listed by case in [docs/sources.md](docs/sources.md).
 - **The data,** as [CSV](https://archer7778.github.io/data-center-fights/data/sites.csv) and [JSON](https://archer7778.github.io/data-center-fights/data/sites.json).
 
 ## Method
 
 - **A documented sample, not a census.** The cases are well-reported fights chosen to show each outcome, so fights are over-represented. The US has about 4,800 data centers of all sizes; most were never contested in public.
-- **Outcomes.** *Stopped*: rejected, withdrawn or banned after public opposition (developers sometimes move elsewhere). *Approved despite opposition*: went ahead over organized objections. *Still being fought*: approval is in court or not final. *Little or no organized opposition*: we searched and found no organized campaign at the time of approval; individual objections and later complaints are noted. Absence of coverage isn't proof nobody objected.
+- **Outcomes.** *Stopped*: rejected, withdrawn or banned after public opposition (developers sometimes move elsewhere). *Approved despite opposition*: went ahead over organized objections. *Still being fought*: approval is in court or not final; on the timeline these count as undecided until the current fight began (`contested_from`). *Little or no organized opposition*: we searched and found no organized campaign at the time of approval; individual objections and later complaints are noted. Absence of coverage isn't proof nobody objected.
 - **Dates.** A case appears at the earliest date we could source (an announcement, filing or first coverage) and takes its outcome on the date of the decision that set its current status.
 - **Megawatts** are announced or planned maximums from developers, utilities or filings, not measured use. Many projects never publish one, especially those stopped early, so totals undercount. Power-plant capacity is not counted as data-center load.
 - **Cause.** A project is called stopped by opposition only when sources link the two. Both sides' arguments are given where reported.
@@ -27,7 +28,7 @@ A sourced map of US data center fights: where communities stopped data centers, 
 ## Contribute
 
 - **[Suggest a case](https://github.com/archer7778/data-center-fights/issues/new?template=new-case.yml)** or **[report a correction](https://github.com/archer7778/data-center-fights/issues/new?template=correction.yml).** A public source link is required for both.
-- Cases live in [`data/sites.json`](data/sites.json). Each one needs an `id`, name, place, state, coordinates (town level is enough), `outcome`, `start` and `decided` dates, a one-line `summary` (160 characters at most, used on share cards), a short `history`, a `timeline`, `objections`, `case_for`, `sources` and a `checked` date. `node tools/validate.mjs` lists anything missing or malformed, and runs automatically on every pull request.
+- Cases live in [`data/sites.json`](data/sites.json). Each one needs an `id`, name, place, state, coordinates (town level is enough), `outcome`, `start` and `decided` dates (or `contested_from` for a case still being fought), a one-line `summary` (160 characters at most, used on share cards), a short `history`, a `timeline`, `objections`, `case_for`, `sources` and a `checked` date. `node tools/validate.mjs` lists anything missing or malformed, and runs automatically on every pull request.
 
 ## Build it yourself
 

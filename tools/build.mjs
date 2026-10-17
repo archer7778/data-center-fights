@@ -7,12 +7,13 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { createRequire } from 'node:module';
+import { fileURLToPath } from 'node:url';
 import { geoAlbersUsa, geoPath } from 'd3-geo';
 import { feature, mesh } from 'topojson-client';
 import { validate } from './validate.mjs';
 
 const require = createRequire(import.meta.url);
-const ROOT = new URL('..', import.meta.url).pathname;
+const ROOT = fileURLToPath(new URL('..', import.meta.url));
 const SITE_URL = (process.env.SITE_URL || 'https://archer7778.github.io/data-center-fights/').replace(/\/?$/, '/');
 const REPO_URL = (process.env.REPO_URL || 'https://github.com/archer7778/data-center-fights').replace(/\/$/, '');
 const OUT = path.join(ROOT, 'site');
@@ -107,6 +108,11 @@ const cell = v => { const t = Array.isArray(v) ? v.map(x => Array.isArray(x) ? x
 fs.writeFileSync(path.join(OUT, 'data/sites.csv'), [cols.join(','), ...clean.sites.map(s => cols.map(c => cell(s[c])).join(','))].join('\n') + '\n');
 
 fs.writeFileSync(path.join(OUT, '.nojekyll'), '');
+fs.writeFileSync(path.join(OUT, '404.html'), `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Not found · ${NAME}</title><meta http-equiv="refresh" content="4;url=${SITE_URL}">
+<style>body{font:16px/1.5 system-ui,sans-serif;background:#f3f5f2;color:#18201d;display:grid;place-items:center;min-height:100vh;margin:0;padding:16px}a{color:#1d5869}
+@media (prefers-color-scheme:dark){body{background:#0f1412;color:#e7ece9}a{color:#7db9ca}}</style></head>
+<body><p>That page isn't here. It may be a case that was renamed. Taking you to <a href="${SITE_URL}">the map</a>.</p></body></html>\n`);
 fs.writeFileSync(path.join(OUT, 'robots.txt'), `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}sitemap.xml\n`);
 fs.writeFileSync(path.join(OUT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n` +
   [SITE_URL, ...data.sites.map(s => `${SITE_URL}case/${s.id}/`)].map(u => `  <url><loc>${esc(u)}</loc></url>`).join('\n') + '\n</urlset>\n');
