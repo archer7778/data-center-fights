@@ -601,7 +601,7 @@
    ],
    "objections": [
     "Loss of farmland",
-    "A settlement that bypassed the board's vote",
+    "A settlement that let the project proceed after the board voted no",
     "Power and water demand"
    ],
    "case_for": "About $14 million in community benefits, including $4 million for farmland preservation; two-thirds of the wider 1,000-acre campus kept as open space, according to Oracle.",
@@ -788,7 +788,7 @@
     ]
    ],
    "objections": [
-    "Air pollution from unpermitted turbines",
+    "Air pollution from turbines that opponents said were running without permits",
     "A neighborhood already burdened by industry",
     "Doubts about enforcement"
    ],
@@ -1010,7 +1010,7 @@
    "start_note": "rezoning approved",
    "decided": null,
    "summary": "A 2,100-acre rezoning beside a Civil War battlefield was approved, then voided by the courts.",
-   "history": "In December 2023, after a 29-hour public hearing, Prince William's supervisors narrowly rezoned about 2,100 acres beside Manassas National Battlefield Park for 23 million sq ft of data centers. Neighbors in the Oak Valley Homeowners Association and the American Battlefield Trust sued. In August 2025 a circuit judge voided the rezoning because the county failed to give proper public notice, and the Court of Appeals upheld that on 31 March 2026. The county then dropped its defense and Compass stepped back; QTS appealed to the Supreme Court of Virginia, which could decide whether to hear it from autumn 2026.",
+   "history": "In December 2023, after a 29-hour public hearing, Prince William's supervisors narrowly rezoned about 2,100 acres beside Manassas National Battlefield Park for 23 million sq ft of data centers. Neighbors in the Oak Valley Homeowners Association and the American Battlefield Trust sued. In August 2025 a circuit judge voided the rezoning, ruling that the county had not given proper public notice, and the Court of Appeals upheld that on 31 March 2026. The county then dropped its defense and Compass stepped back; QTS appealed to the Supreme Court of Virginia, which could decide whether to hear it from autumn 2026.",
    "timeline": [
     [
      "2023-12",
@@ -1043,7 +1043,7 @@
    ],
    "objections": [
     "Next to a Civil War battlefield",
-    "Improper public notice",
+    "Public notice the court found inadequate",
     "Taxpayer money spent defending it"
    ],
    "case_for": "The county board approved it in 2023 and spent about $1.7 million defending it before withdrawing.",
@@ -1925,7 +1925,7 @@
    "start": "2025-08",
    "start_note": "turbines began running",
    "decided": "2026-03-10",
-   "summary": "Turbines ran without permits for months; the state then approved 41 permanent ones.",
+   "summary": "Temporary turbines ran for months without a permit, which regulators said they didn’t need; the state then approved 41 permanent ones.",
    "history": "To power Colossus 2 across the state line in Memphis, an xAI affiliate set up temporary gas turbines at a plant it bought in Southaven, running from August 2025 without a permit; regulators said temporary-mobile units are exempt for up to a year. It then applied for 41 permanent turbines, about 1.2 GW; residents said the site is less than half a mile from their homes. Residents unanimously opposed it at a February 2026 hearing over noise and air pollution, and the NAACP and Southern Environmental Law Center gave notice of a Clean Air Act suit. On 10 March 2026 the state permit board approved it unanimously.",
    "timeline": [
     [
@@ -1948,8 +1948,8 @@
    "objections": [
     "Noise day and night",
     "Nitrogen oxides and particulates near homes",
-    "Unpermitted running",
-    "Rushed process"
+    "Turbines running before any permit was issued",
+    "A process opponents called rushed (short notice, hearing timing)"
    ],
    "case_for": "Regulators said modeling showed the area would stay within national air-quality standards.",
    "after": "Groups said they would pursue legal action.",
@@ -2165,7 +2165,7 @@
    "objections": [
     "No site plan or environmental study",
     "Speed of approval",
-    "Influence over local officials"
+    "Residents’ questions about Amazon’s influence on local decisions"
    ],
    "case_for": "Amazon promises more than 400 permanent jobs averaging about $37 an hour; the mayor called it minimally impactful and economically beneficial.",
    "after": "Amazon targets completion in 2028.",
@@ -2277,7 +2277,7 @@
    ],
    "objections": [
     "Ogallala Aquifer water",
-    "Trust in the developer's claims"
+    "Residents’ doubts about the developer’s water figures"
    ],
    "case_for": "Economic growth; the developer says closed-loop cooling needs little water.",
    "after": null,
@@ -2375,8 +2375,8 @@
    "start": "2025-09",
    "start_note": "environmental review",
    "decided": null,
-   "summary": "Kept secret, then sued, then shrunk; Google dropped its tax break request in October 2026.",
-   "history": "The city kept a large data-center project near Duluth from the public until September 2025, when records requests showed it had known for over a year. A citizen petition paused it, and in November 2025 the Minnesota Center for Environmental Advocacy and Stop the Hermantown Data Center sued over the environmental review. Google was revealed as the end user in March 2026 and agreed to a smaller footprint and a new review. The city granted a tax abatement worth up to $80 million in May 2026, but Google dropped the request on 14 October 2026.",
+   "summary": "Revealed late, challenged in court, then scaled back; Google dropped its tax break request in October 2026.",
+   "history": "A large data-center project near Duluth became public in September 2025; according to the Minnesota Center for Environmental Advocacy, records requests showed the city had known of it for over a year. A citizen petition paused it, and in November 2025 the Minnesota Center for Environmental Advocacy and Stop the Hermantown Data Center sued over the environmental review. Google was revealed as the end user in March 2026 and agreed to a smaller footprint and a new review. The city granted a tax abatement worth up to $80 million in May 2026, but Google dropped the request on 14 October 2026.",
    "timeline": [
     [
      "2025-09",
@@ -2401,7 +2401,7 @@
    ],
    "objections": [
     "Adequacy of environmental review",
-    "Secrecy",
+    "How long the project was kept from the public",
     "Tax abatement"
    ],
    "case_for": "The city projects over $240 million in property taxes over 20 years.",

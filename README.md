@@ -24,6 +24,8 @@ A sourced map of US data center fights: where communities stopped data centers, 
 - **Megawatts** are announced or planned maximums from developers, utilities or filings, not measured use. Many projects never publish one, especially those stopped early, so totals undercount. Power-plant capacity is not counted as data-center load.
 - **Cause.** A project is called stopped by opposition only when sources link the two. Both sides' arguments are given where reported.
 - **Privacy.** Private residents are not named; public officials, companies and organized groups are.
+- **Attribution.** Any claim that a person or company did something wrong is attributed to whoever made it, with the response where one was reported.
+- **Right of reply.** Anyone named can ask for a correction or for their response to be added, through the [right of reply form](https://github.com/archer7778/data-center-fights/issues/new?template=right-of-reply.yml). Requests are reviewed within a few days, and significant corrections are noted on the case.
 - **Checking.** Every case lists its sources and the date it was last checked. Histories are our own summaries; they don't copy the source articles.
 
 ## Contribute

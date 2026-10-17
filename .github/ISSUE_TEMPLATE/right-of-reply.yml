@@ -1,0 +1,31 @@
+name: Right of reply
+description: For people, companies, officials or groups named on the site who want a correction or their response added.
+title: "Right of reply: "
+labels: ["right of reply"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        If you're named in a case and think something is wrong or one-sided, tell us here. We'll review it within a few days, correct anything we got wrong, and add your response where it's relevant.
+        This form is public. If you'd rather not post publicly, say so here with a way to reach you, and leave out the details.
+  - type: input
+    id: case
+    attributes:
+      label: Which case?
+      description: Its name, or the link to its page.
+    validations:
+      required: true
+  - type: input
+    id: who
+    attributes:
+      label: Who are you replying for?
+      description: The person, company, office or group named.
+    validations:
+      required: true
+  - type: textarea
+    id: reply
+    attributes:
+      label: Your correction or response
+      description: What's wrong or missing, and what you'd like added. Links to documents or statements help.
+    validations:
+      required: true
