@@ -67,8 +67,17 @@ function headTags({ title, description, url, image, alt, type }) {
 <meta name="twitter:image:alt" content="${esc(alt)}">
 `;
 }
+// the case file as plain HTML, so the text is there for search engines and readers without JavaScript;
+// the page's script replaces it with the full interactive version
+function staticCase(s) {
+  return `<div><p class="eyebrow">${esc(data.outcomes[s.outcome])} · ${esc(s.place)}, ${esc(s.state)}</p><h3>${esc(s.name)}</h3>
+<p class="sumline">${esc(s.summary)}</p><p class="history">${esc(s.history)}</p></div>
+<div class="side"><h4>Sources</h4><ul class="src">${s.sources.map(([t, u]) => `<li><a href="${esc(u)}">${esc(t)}</a></li>`).join('')}</ul></div>`;
+}
 function render(head, cfg, { skeleton = true } = {}) {
-  const body = bodyPart.replace('/*DATA*/null', json(data)).replace('/*GEO*/null', json(geo))
+  const pre = cfg.select ? staticCase(data.sites.find(s => s.id === cfg.select)) : '';
+  const body = bodyPart.replace('<section class="case" id="case" aria-label="Case file"></section>', `<section class="case" id="case" aria-label="Case file">${pre}</section>`)
+    .replace('/*DATA*/null', json(data)).replace('/*GEO*/null', json(geo))
     .replace("/*CFG*/{site:'',repo:'',select:null,base:''}", json(cfg));
   const h = headPart.replace('<!--HEAD-->', head);
   return skeleton ? `<!doctype html>\n<html lang="en">\n<head>\n${h}</head>\n<body>\n${body}\n</body>\n</html>\n` : h + body;
