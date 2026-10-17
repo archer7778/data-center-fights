@@ -416,7 +416,7 @@ mapEl.addEventListener('focusin',e=>{const p=e.target.closest('.pin');if(p)showT
 mapEl.addEventListener('focusout',()=>{$('#tip').hidden=true});
 $('#asof').textContent=$('#asof2').textContent=fmtD(DATA.as_of);
 if(CFG.repo){
-  $('#links').innerHTML=`<a href="${esc(CFG.base)}data/sites.csv">Download the data (CSV)</a> · <a href="${esc(CFG.base)}data/sites.json">JSON</a> · <a href="${esc(CFG.repo)}" target="_blank" rel="noopener">Source on GitHub</a> · <a href="${esc(CFG.repo)}/issues/new?template=new-case.yml" target="_blank" rel="noopener">Suggest a case</a>`;
+  $('#links').innerHTML=`<a href="${esc(CFG.base)}data/sites.csv">Download the data (CSV)</a> · <a href="${esc(CFG.base)}data/sites.json">JSON</a> · <a href="${esc(CFG.repo)}/blob/main/SOURCES.md" target="_blank" rel="noopener">All sources</a> · <a href="${esc(CFG.repo)}" target="_blank" rel="noopener">Code on GitHub</a> · <a href="${esc(CFG.repo)}/issues/new?template=new-case.yml" target="_blank" rel="noopener">Suggest a case</a>`;
   $('#contrib').innerHTML=` through <a href="${esc(CFG.repo)}/issues/new/choose" target="_blank" rel="noopener">GitHub</a>`;
 }
 document.addEventListener('click',async e=>{const b=e.target.closest('.copy');if(!b)return;

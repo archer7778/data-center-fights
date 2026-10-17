@@ -1,4 +1,4 @@
-// Writes docs/sources.md: every source behind the map, grouped by case, plus the national figures.
+// Writes SOURCES.md: every source behind the map, grouped by case, plus the national figures.
 // Run: node tools/sources.mjs
 import fs from 'node:fs';
 import { fileURLToPath } from 'node:url';
@@ -23,6 +23,5 @@ for (const k of ['construction', 'electricity', 'compute', 'opposition', 'count'
   for (const [t, u] of x.sources) { md += `- [${t}](${u})\n`; n++; }
 }
 md += `\n## Map\n\n- [us-atlas 3.0.1](https://github.com/topojson/us-atlas) (ISC licence), state and nation outlines from US Census Bureau cartographic boundaries.\n`;
-fs.mkdirSync(ROOT + 'docs', { recursive: true });
-fs.writeFileSync(ROOT + 'docs/sources.md', md);
-console.log(`docs/sources.md: ${n} sources across ${data.sites.length} cases and 5 national figures.`);
+fs.writeFileSync(ROOT + 'SOURCES.md', md);
+console.log(`SOURCES.md: ${n} sources across ${data.sites.length} cases and 5 national figures.`);

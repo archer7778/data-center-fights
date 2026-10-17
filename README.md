@@ -12,7 +12,7 @@ A sourced map of US data center fights: where communities stopped data centers, 
 - **A page for every case,** with its own link and share card, so a single fight can be posted on its own.
 - **The megawatt ledger:** announced or planned capacity by outcome, and decisions over time.
 - **The national buildout:** construction spending on data centers (Census Bureau), their share of US electricity (Lawrence Berkeley National Laboratory), the largest AI sites (Epoch AI) and projects blocked or delayed by local opposition (Data Center Watch).
-- **Every source,** listed by case in [docs/sources.md](docs/sources.md).
+- **Every source,** listed by case in [SOURCES.md](SOURCES.md).
 - **The data,** as [CSV](https://archer7778.github.io/data-center-fights/data/sites.csv) and [JSON](https://archer7778.github.io/data-center-fights/data/sites.json).
 
 ## Method
