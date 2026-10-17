@@ -10,6 +10,7 @@ A sourced map of US data center fights: where communities stopped data centers, 
 
 - **The map and timeline.** Pins appear when a project became public and take their outcome color when it was decided. Press Play to watch it unfold from 2022 to today. Each outcome also has its own shape, so color isn't needed to read it.
 - **A page for every case,** with its own link and share card, so a single fight can be posted on its own.
+- **Findings:** patterns across the cases (where state regulators decide, projects with their own gas power, how fast winning fights are, anonymity, size, courts, megawatt disclosure, ballots), counted live from the data. Each finding links to the cases behind it.
 - **The megawatt ledger:** announced or planned capacity by outcome, and decisions over time.
 - **The national buildout:** construction spending on data centers (Census Bureau), their share of US electricity (Lawrence Berkeley National Laboratory), the largest AI sites (Epoch AI) and projects blocked or delayed by local opposition (Data Center Watch).
 - **Every source,** listed by case in [SOURCES.md](SOURCES.md).
@@ -28,7 +29,7 @@ A sourced map of US data center fights: where communities stopped data centers, 
 ## Contribute
 
 - **[Suggest a case](https://github.com/archer7778/data-center-fights/issues/new?template=new-case.yml)** or **[report a correction](https://github.com/archer7778/data-center-fights/issues/new?template=correction.yml).** A public source link is required for both.
-- Cases live in [`data/sites.json`](data/sites.json). Each one needs an `id`, name, place, state, coordinates (town level is enough), `outcome`, `start` and `decided` dates (or `contested_from` for a case still being fought), a one-line `summary` (160 characters at most, used on share cards), a short `history`, a `timeline`, `objections`, `case_for`, `sources` and a `checked` date. `node tools/validate.mjs` lists anything missing or malformed, and runs automatically on every pull request.
+- Cases live in [`data/sites.json`](data/sites.json). Each one needs an `id`, name, place, state, coordinates (town level is enough), `outcome`, `start` and `decided` dates (or `contested_from` for a case still being fought), a one-line `summary` (160 characters at most, used on share cards), a short `history`, a `timeline`, `objections`, `case_for`, `sources` and a `checked` date. Cases can also carry `tags`, assigned by hand from the sources and defined at the top of `sites.json` (`state-regulator`, `new-gas`, `nda`, `court`, `withdrawn`, `ballot`, `anonymous`); the findings are counted from them. `node tools/validate.mjs` lists anything missing or malformed, and runs automatically on every pull request.
 
 ## Build it yourself
 

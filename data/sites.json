@@ -57,7 +57,11 @@
      "https://www.kjzz.org/community-outrage-shut-down-project-blue-data-center-project-in-tucson-but-its-not-dead-yet"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "nda",
+    "anonymous"
+   ]
   },
   {
    "id": "franklin-township-google",
@@ -113,7 +117,11 @@
      "https://mirrorindy.org/google-withdraws-southside-data-center-proposal-franklin-township/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "nda",
+    "withdrawn"
+   ]
   },
   {
    "id": "college-station-aggie",
@@ -162,7 +170,10 @@
      "https://www.kbtx.com/2025/09/12/college-station-city-council-unanimously-rejects-land-sale-ai-data-center/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "peculiar-diode",
@@ -209,7 +220,10 @@
      "https://datacenterdynamics.com/en/news/peculiar-officials-in-missouri-remove-data-centers-from-ordinance-blocking-15bn-diode-project"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "st-charles-cumulus",
@@ -261,7 +275,12 @@
      "https://www.kfvs12.com/2025/08/23/st-charles-places-1-year-pause-data-center-projects/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "nda",
+    "withdrawn",
+    "anonymous"
+   ]
   },
   {
    "id": "pittsylvania-balico",
@@ -313,7 +332,12 @@
      "https://www.wvtf.org/news/2025-04-14/balico-withdraws-application-to-build-data-centers-in-pittsylvania-county"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "new-gas",
+    "withdrawn",
+    "anonymous"
+   ]
   },
   {
    "id": "chesterton-provident",
@@ -357,7 +381,11 @@
      "https://datacenterdynamics.com/en/news/application-for-13bn-data-center-in-chesterton-indiana-withdrawn"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "withdrawn",
+    "anonymous"
+   ]
   },
   {
    "id": "new-carlisle-second",
@@ -409,7 +437,10 @@
      "https://www.wndu.com/2025/10/23/new-carlisle-town-council-opposes-proposed-12-billion-data-center"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "archbald-provident",
@@ -466,7 +497,10 @@
      "https://www.wvia.org/news/local/2026-03-19/data-center-concerns-prompt-regime-change-in-archbald"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "monterey-park",
@@ -518,7 +552,11 @@
      "https://www.adn.com/nation-world/2026/06/05/in-this-city-near-la-voters-backed-a-first-in-the-nation-permanent-ban-on-data-centers/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "ballot",
+    "anonymous"
+   ]
   },
   {
    "id": "saline-stargate",
@@ -578,7 +616,10 @@
      "https://www.datacenterdynamics.com/en/news/township-in-michigan-settles-lawsuit-allows-data-center-project-to-proceed/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "court"
+   ]
   },
   {
    "id": "port-washington-lighthouse",
@@ -643,7 +684,10 @@
      "https://www.wpr.org/news/data-center-opponents-launch-recall-of-port-washington-mayor"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "ballot"
+   ]
   },
   {
    "id": "meta-hyperion",
@@ -700,7 +744,11 @@
      "https://en.wikipedia.org/wiki/Hyperion_Data_Center"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "state-regulator",
+    "new-gas"
+   ]
   },
   {
    "id": "xai-colossus",
@@ -760,7 +808,12 @@
      "https://tennesseelookout.com/2025/07/17/naacp-others-appeal-xai-turbine-permits-for-memphis-data-center/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "state-regulator",
+    "new-gas",
+    "court"
+   ]
   },
   {
    "id": "bessemer-marvel",
@@ -813,7 +866,12 @@
      "https://www.wbrc.com/2026/06/25/bessemer-data-center-rezoning-lawsuit-dismissed/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "nda",
+    "court",
+    "anonymous"
+   ]
   },
   {
    "id": "coweta-sail",
@@ -864,7 +922,10 @@
      "https://www.atlantanewsfirst.com/2026/04/08/coweta-county-commissioners-approve-rezoning-massive-data-center/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "farmington-tract",
@@ -925,7 +986,11 @@
      "https://blandinonbroadband.org/2026/09/09/coalition-for-responsible-data-center-development-withdraws-lawsuit-due-in-farmington-to-litigation-costs-dakota-county/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "court",
+    "anonymous"
+   ]
   },
   {
    "id": "pw-digital-gateway",
@@ -998,7 +1063,11 @@
     ]
    ],
    "checked": "2026-10-17",
-   "contested_from": "2023-12"
+   "contested_from": "2023-12",
+   "tags": [
+    "court",
+    "anonymous"
+   ]
   },
   {
    "id": "warrenton-amazon",
@@ -1063,7 +1132,10 @@
     ]
    ],
    "checked": "2026-10-17",
-   "contested_from": "2023-02-14"
+   "contested_from": "2023-02-14",
+   "tags": [
+    "court"
+   ]
   },
   {
    "id": "abilene-stargate",
@@ -1113,7 +1185,10 @@
      "https://radio.kttz.org/2026-08-12/officials-say-data-centers-can-boost-local-economies-in-abilene-they-have-spurred-a-housing-crisis"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "new-gas"
+   ]
   },
   {
    "id": "cheyenne-jade",
@@ -1159,7 +1234,11 @@
      "https://www.ksat.com/business/2025/07/28/cheyenne-to-host-massive-ai-data-center-using-more-electricity-than-all-wyoming-homes-combined/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "new-gas",
+    "anonymous"
+   ]
   },
   {
    "id": "new-carlisle-amazon",
@@ -1205,7 +1284,8 @@
      "https://www.wvpe.org/wvpe-news/2025-12-10/council-denies-rezoning-for-data-center-near-new-carlisle"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": []
   },
   {
    "id": "mount-pleasant-fairwater",
@@ -1255,7 +1335,8 @@
      "https://wisconsinexaminer.com/2026/07/02/mount-pleasant-residents-file-class-action-suit-over-microsoft-data-center-noise/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": []
   },
   {
    "id": "caledonia-nova",
@@ -1305,7 +1386,10 @@
      "https://www.wisn.com/article/microsoft-drops-caledonia-data-center-after-community-pushback/68905827"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "withdrawn"
+   ]
   },
   {
    "id": "san-marcos-highlander",
@@ -1357,7 +1441,10 @@
      "https://datacenterdynamics.com/en/news/data-center-proposal-rejected-in-san-marcos-texas"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "mooresville-tract",
@@ -1404,7 +1491,11 @@
      "https://www.wbtv.com/2025/08/13/developers-withdraw-plans-data-center-nascar-legends-land-mooresville/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "withdrawn",
+    "anonymous"
+   ]
   },
   {
    "id": "chandler-price-road",
@@ -1451,7 +1542,10 @@
      "https://www.azfamily.com/2025/12/12/chandler-unanimously-votes-against-proposed-ai-data-center/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "menomonie-balloonist",
@@ -1499,7 +1593,11 @@
      "https://civicmedia.us/news/2025/09/24/menomonie-data-center-plans-paused"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "nda",
+    "anonymous"
+   ]
   },
   {
    "id": "matthews-accelerate",
@@ -1548,7 +1646,11 @@
      "https://www.wfae.org/business/2025-10-08/matthews-data-center-plan-is-withdrawn-mayor-says"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "withdrawn",
+    "anonymous"
+   ]
   },
   {
    "id": "howell-township",
@@ -1595,7 +1697,11 @@
      "https://www.datacenterdynamics.com/en/news/proposal-for-data-center-in-howell-township-michigan-has-been-withdrawn/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "withdrawn",
+    "anonymous"
+   ]
   },
   {
    "id": "pataskala-aligned",
@@ -1640,7 +1746,10 @@
      "https://www.nbc4i.com/news/local-news/central-ohio-news/datacenters/pataskala-city-council-votes-against-data-center-proposal/amp/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "buckeye-tract",
@@ -1682,7 +1791,11 @@
      "https://www.abc15.com/news/business/14-billion-west-valley-data-center-project-request-withdrawn-after-cities-push-back"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "withdrawn",
+    "anonymous"
+   ]
   },
   {
    "id": "spartanburg-jones-road",
@@ -1725,7 +1838,11 @@
      "https://www.foxcarolina.com/2026/08/26/spartanburg-county-zoning-board-upholds-denial-data-center-jones-road/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "court",
+    "anonymous"
+   ]
   },
   {
    "id": "louisa-aws-third",
@@ -1786,7 +1903,10 @@
      "https://www.wvva.com/2026/01/16/amazon-web-services-purchases-nearly-2000-acres-land-louisa-county"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "withdrawn"
+   ]
   },
   {
    "id": "southaven-xai",
@@ -1843,7 +1963,11 @@
      "https://www.mississippifreepress.org/xai-faces-fierce-opposition-over-southaven-mississippi-power-plant-permit/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "state-regulator",
+    "new-gas"
+   ]
   },
   {
    "id": "homer-city",
@@ -1899,7 +2023,13 @@
      "https://www.pennfuture.org/News-Clean-Air-Council-PennFuture-and-Sierra-Club-Appeal-Air-Pollution-Permit-for-Nations-Largest-Proposed-Fracked-Gas-Power-Plant-for-Homer-City-Data-Center"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "state-regulator",
+    "new-gas",
+    "court",
+    "anonymous"
+   ]
   },
   {
    "id": "mason-county-ky",
@@ -1943,7 +2073,10 @@
      "https://www.datacenterdynamics.com/en/news/2000-acre-land-parcel-rezoned-for-data-center-use-in-mason-county-kentucky/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "lancaster-coreweave",
@@ -1995,7 +2128,10 @@
      "https://www.thecooldown.com/green-business/lancaster-residents-appeal-data-center-approval/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "court"
+   ]
   },
   {
    "id": "hobart-amazon",
@@ -2043,7 +2179,10 @@
      "https://www.fox32chicago.com/news/lawsuit-seeks-block-amazon-data-center-permit-hobart-ind"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "court"
+   ]
   },
   {
    "id": "tucker-ridgeline",
@@ -2095,7 +2234,13 @@
      "https://wvmetronews.com/2025/12/03/protesters-oppose-tucker-county-data-center-as-air-quality-board-considers-permit-appeal/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "state-regulator",
+    "new-gas",
+    "court",
+    "anonymous"
+   ]
   },
   {
    "id": "fermi-amarillo",
@@ -2146,7 +2291,10 @@
      "https://www.datacenterdynamics.com/en/news/macquarie-invests-in-fermi-america-to-support-development-of-11gw-ai-campus-in-amarillo-texas/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "king-george-amazon",
@@ -2205,7 +2353,10 @@
     ]
    ],
    "checked": "2026-10-17",
-   "contested_from": "2024-01-02"
+   "contested_from": "2024-01-02",
+   "tags": [
+    "court"
+   ]
   },
   {
    "id": "hermantown-google",
@@ -2266,7 +2417,10 @@
     ]
    ],
    "checked": "2026-10-17",
-   "contested_from": "2025-11-05"
+   "contested_from": "2025-11-05",
+   "tags": [
+    "court"
+   ]
   },
   {
    "id": "hood-county-comanche",
@@ -2307,7 +2461,10 @@
     ]
    ],
    "checked": "2026-10-17",
-   "contested_from": "2026-02-10"
+   "contested_from": "2026-02-10",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "frontier-shackelford",
@@ -2345,7 +2502,10 @@
      "https://www.datacenterdynamics.com/en/news/vantage-plots-14gw-data-center-campus-in-texas/"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": [
+    "anonymous"
+   ]
   },
   {
    "id": "ellendale-applied",
@@ -2391,7 +2551,8 @@
      "https://www.grandforksherald.com/news/north-dakota/7-billion-data-center-deal-in-southeast-north-dakota-is-worth-the-growing-pains-residents-say"
     ]
    ],
-   "checked": "2026-10-17"
+   "checked": "2026-10-17",
+   "tags": []
   }
  ],
  "national": {
@@ -2529,5 +2690,14 @@
     ]
    ]
   }
+ },
+ "tags": {
+  "state-regulator": "The decision that set the outcome was made by a state regulator or permit board, not a local government",
+  "new-gas": "New gas-fired power is being built for the project (its own plant or turbines, or utility plants dedicated to it)",
+  "nda": "Sources report local officials signed non-disclosure agreements about the project",
+  "court": "A lawsuit or formal appeal was filed by opponents or the developer",
+  "withdrawn": "The developer withdrew before a final vote",
+  "ballot": "Voters decided a measure prompted by the project",
+  "anonymous": "The end user was not publicly confirmed when the outcome was decided"
  }
 }

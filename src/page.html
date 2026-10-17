@@ -125,6 +125,18 @@ header .stamp{font:500 12px/1.4 var(--f-mono);color:var(--muted);text-align:righ
 .facts3 div{display:flex;flex-direction:column}
 .facts3 b{font:600 26px/1.1 var(--f-display)}
 .facts3 span{font-size:12.5px;color:var(--ink2)}
+.fgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.find{background:var(--panel);border:1px solid var(--line);padding:14px 16px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.find .big{font:600 34px/1 var(--f-display);font-variant-numeric:tabular-nums}
+.find .big small{font:500 13px var(--f-mono);color:var(--muted);margin-left:8px;letter-spacing:.02em}
+.find h3{font-size:21px}
+.find p{margin:0;font-size:14px;color:var(--ink2);max-width:62ch}
+.units{display:flex;flex-direction:column;gap:6px;margin-top:2px}
+.units .ul{font:500 11.5px var(--f-mono);color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.units .ic{display:flex;flex-wrap:wrap;gap:3px}
+.uc{border:0;background:var(--sunk);border-radius:3px;padding:3px;line-height:0;cursor:pointer}
+.uc:hover{background:var(--accent-bg)}
+.find .cav{font-size:12px;color:var(--muted)}
 .method{columns:2 320px;column-gap:28px;font-size:14px;color:var(--ink2)}
 .method p{margin:0 0 10px;break-inside:avoid}
 .method b{color:var(--ink)}
@@ -140,7 +152,7 @@ footer a{color:var(--accent)}
   .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 @media (max-width:560px){
-  .grid4,.two,.facts3{grid-template-columns:minmax(0,1fr)}
+  .grid4,.two,.facts3,.fgrid{grid-template-columns:minmax(0,1fr)}
   .tile .v{font-size:26px}
   .bar{grid-template-columns:minmax(0,1fr) auto}
   .bar .track{grid-column:1 / -1;order:3}
@@ -179,6 +191,12 @@ footer a{color:var(--accent)}
   </section>
 
   <section class="case" id="case" aria-label="Case file"></section>
+
+  <section class="sec" id="findings">
+    <div><div class="eyebrow">Findings</div><h2>What the cases show</h2>
+      <p class="lede">Patterns across the documented cases, counted from the data and updated as cases are added. The cases are a hand-picked sample, so read these as leads worth testing, not national rates. Each icon is a case: select one to open it.</p></div>
+    <div class="fgrid" id="fgrid"></div>
+  </section>
 
   <section class="sec">
     <div><div class="eyebrow">Megawatt ledger</div><h2>What was at stake</h2>
@@ -391,6 +409,66 @@ function renderNational(){
   $('#national').innerHTML=p1+p2+p3+p4;
 }
 
+/* ---------- findings ---------- */
+// Every number here is counted from the case data and its hand-assigned tags (see DATA.tags).
+function renderFindings(){
+  const has=(s,t)=>(s.tags||[]).includes(t), of=o=>S.filter(s=>s.outcome===o);
+  const med=a=>{if(!a.length)return null;const b=[...a].sort((x,y)=>x-y),h=b.length>>1;return b.length%2?b[h]:(b[h-1]+b[h])/2};
+  const pct=(a,b)=>b?Math.round(100*a/b):0, names=a=>a.map(s=>s.name).join(', ');
+  const stopped=of('stopped'),approved=of('approved'),decidedS=S.filter(s=>s.outcome!=='contested');
+  const units=groups=>`<div class="units">${groups.filter(g=>g[1].length).map(([l,cs])=>`<div><div class="ul">${esc(l)} · ${cs.length}</div><div class="ic">${cs.map(s=>`<button type="button" class="uc" data-id="${esc(s.id)}" title="${esc(s.name+', '+s.place+', '+s.state+': '+LAB[s.outcome])}" aria-label="${esc(s.name+': '+LAB[s.outcome])}">${icon(s.outcome,16)}</button>`).join('')}</div></div>`).join('')}</div>`;
+  const F=[];
+  // 1 state regulators
+  const reg=S.filter(s=>has(s,'state-regulator')),regOk=reg.filter(s=>s.outcome==='approved'||s.outcome==='quiet');
+  const stoppedLocal=stopped.filter(s=>!has(s,'state-regulator'));
+  if(reg.length)F.push({big:regOk.length===reg.length?`${reg.length} of ${reg.length}`:`${regOk.length} of ${reg.length}`,sub:'went ahead',h:'Where a state regulator decides, it gets built',
+    p:`${regOk.length===reg.length?`All ${reg.length}`:`${regOk.length} of the ${reg.length}`} projects whose outcome was set by a state regulator or permit board went ahead${reg.every(s=>s.outcome==='approved')?', every one over organized opposition':''}. ${stoppedLocal.length===stopped.length?`All ${stopped.length}`:`${stoppedLocal.length} of ${stopped.length}`} stopped projects were stopped locally: by a council, a zoning board, voters or the developer pulling out.`,
+    u:units([['Decided by a state regulator',reg],['Stopped, all locally',stoppedLocal]])});
+  // 2 new gas
+  const gas=S.filter(s=>has(s,'new-gas')),gasGo=gas.filter(s=>s.outcome==='approved'||s.outcome==='quiet'),gasStop=gas.filter(s=>s.outcome==='stopped');
+  if(gas.length)F.push({big:`${gasGo.length} of ${gas.length}`,sub:'went ahead',h:'Projects that bring their own gas power go ahead',
+    p:`${gasGo.length} of the ${gas.length} projects with new gas-fired power built for them went ahead.${gasStop.length?` The ${gasStop.length===1?'one':gasStop.length} stopped, ${names(gasStop)}, fell at a local vote.`:''} Dedicated power avoids the wait for a grid connection, and in several of these the key permit was a state one.`,
+    u:units([['New gas power built for it',gas]])});
+  // 3 speed
+  const mo=s=>s.m1-s.m0,ms=med(stopped.filter(s=>s.m1!=null).map(mo)),ma=med(approved.filter(s=>s.m1!=null).map(mo));
+  const wd=stopped.filter(s=>has(s,'withdrawn'));
+  F.push({big:`${ms} vs ${ma}`,sub:'months, median',h:'Fights that win are fast',
+    p:`Stopped projects died a median ${ms} months after they went public; projects approved over opposition took ${ma}. ${wd.length} of the ${stopped.length} stopped projects were withdrawn by the developer before a final vote: once a fight looks lost, developers tend to leave rather than lose a vote.`,
+    cav:'Measured from the earliest date we could source for each project, which is sometimes its first press coverage.',
+    u:units([['Withdrawn before a vote',wd],['Voted down, denied or banned',stopped.filter(s=>!has(s,'withdrawn'))]])});
+  // 4 anonymity
+  const anon=decidedS.filter(s=>has(s,'anonymous')),named=decidedS.filter(s=>!has(s,'anonymous'));
+  const sa=anon.filter(s=>s.outcome==='stopped').length,sn=named.filter(s=>s.outcome==='stopped').length;
+  const nda=S.filter(s=>has(s,'nda')),ndaStop=nda.filter(s=>s.outcome==='stopped').length;
+  F.push({big:`${pct(sa,anon.length)}% vs ${pct(sn,named.length)}%`,sub:'stopped',h:'Anonymous projects get stopped more often',
+    p:`${sa} of ${anon.length} decided projects whose end user wasn't publicly confirmed were stopped, against ${sn} of ${named.length} where the company was named. Officials had signed non-disclosure agreements in ${nda.length} cases, and ${ndaStop} of those projects were stopped.`,
+    u:units([['End user not confirmed',anon],['End user named',named]])});
+  // 5 size
+  const inv=a=>a.filter(s=>s.invest_bn),ac=a=>a.filter(s=>s.acres);
+  const is=inv(stopped),ia=inv(approved),as=ac(stopped),aa=ac(approved);
+  const fm=v=>v==null?'—':v>=10?Math.round(v):v.toFixed(1);
+  if(is.length&&ia.length)F.push({big:`$${fm(med(is.map(s=>s.invest_bn)))} bn vs $${fm(med(ia.map(s=>s.invest_bn)))} bn`,sub:'median investment',h:'The biggest projects get through',
+    p:`Median published investment: $${fm(med(is.map(s=>s.invest_bn)))} billion for stopped projects (${is.length} of ${stopped.length} published one) against $${fm(med(ia.map(s=>s.invest_bn)))} billion for those approved over opposition (${ia.length} of ${approved.length}). Median land: ${n0(med(as.map(s=>s.acres)))} acres against ${n0(med(aa.map(s=>s.acres)))}. The giants tend to arrive with state backing or their own power.`,
+    cav:'Few cases publish these figures, so treat this as a lead, not a conclusion.',
+    u:units([['Stopped, investment published',is],['Approved over opposition, investment published',ia]])});
+  // 6 courts
+  const ct=S.filter(s=>has(s,'court')),cBy=o=>ct.filter(s=>s.outcome===o).length;
+  F.push({big:`${cBy('stopped')} of ${ct.length}`,sub:'court cases ended in a stopped project',h:'Courts come after approval, not instead of it',
+    p:`${ct.length} cases went to court or a formal appeal: ${cBy('approved')} projects approved over opposition, ${cBy('contested')} still being fought and ${cBy('stopped')} stopped. Projects in this sample were stopped in council chambers, not courtrooms; lawsuits mostly follow an approval, and they cut both ways: in Saline Township and King George County it was the developer that sued.`,
+    u:units([['Court case or formal appeal',ct]])});
+  // 7 megawatt disclosure
+  const k1=stopped.filter(s=>s.mw),k2=approved.filter(s=>s.mw);
+  F.push({big:`${k1.length} of ${stopped.length}`,sub:'stopped projects gave a megawatt figure',h:'Stopped projects rarely say how big they were',
+    p:`Only ${k1.length} of the ${stopped.length} stopped projects published how much power they would need, against ${k2.length} of ${approved.length} approved over opposition. The stopped total on the megawatt chart is therefore far smaller than what was actually blocked.`,
+    u:units([['Stopped, megawatts published',k1],['Stopped, no figure',stopped.filter(s=>!s.mw)]])});
+  // 8 ballots
+  const bal=S.filter(s=>has(s,'ballot'));
+  if(bal.length)F.push({big:`${bal.length}`,sub:bal.length===1?'ballot measure':'ballot measures',h:'Voters are a new front',
+    p:`Residents have started taking these decisions to the ballot: Monterey Park voters banned data centers permanently, and Port Washington voters now get a say on large tax breaks. Ballot measures are hard for a later council to undo.`,
+    u:units([['Voters decided a measure',bal]])});
+  $('#fgrid').innerHTML=F.map(f=>`<article class="find"><div class="big">${esc(f.big)}<small>${esc(f.sub)}</small></div><h3>${esc(f.h)}</h3><p>${esc(f.p)}</p>${f.u}${f.cav?`<p class="cav">${esc(f.cav)}</p>`:''}</article>`).join('');
+}
+
 /* ---------- wiring ---------- */
 function renderTime(){$('#when').textContent=fmtM(T);renderLegend();renderMap();renderList();renderLedger();renderCum()}
 function select(id,scroll){SEL=id;try{history.replaceState(null,'','#'+id)}catch(e){}renderMap();renderList();renderCase();
@@ -405,7 +483,7 @@ $('#play').addEventListener('click',()=>{
 });
 document.addEventListener('click',e=>{
   const lg=e.target.closest('#legend button');if(lg){const o=lg.dataset.o;SHOW.has(o)?SHOW.delete(o):SHOW.add(o);if(!SHOW.size)OUT.forEach(x=>SHOW.add(x));renderLegend();renderMap();renderList();return}
-  const pin=e.target.closest('.pin');if(pin){select(pin.dataset.id,true);return}
+  const pin=e.target.closest('.pin, .uc');if(pin){select(pin.dataset.id,true);return}
   const row=e.target.closest('.row');if(row){select(row.dataset.id,true)}
 });
 document.addEventListener('keydown',e=>{const pin=e.target.closest&&e.target.closest('.pin');if(pin&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(pin.dataset.id,true)}});
@@ -423,6 +501,6 @@ document.addEventListener('click',async e=>{const b=e.target.closest('.copy');if
   try{await navigator.clipboard.writeText(b.dataset.url);b.textContent='Copied'}catch(err){b.textContent=b.dataset.url}
   setTimeout(()=>{b.textContent='Copy link'},2500)});
 $('#nsites').textContent=S.length;
-renderStrip();renderNational();renderTime();renderCase();
+renderStrip();renderNational();renderFindings();renderTime();renderCase();
 })();
 </script>

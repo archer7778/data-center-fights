@@ -39,6 +39,8 @@ export function validate(data) {
       if (!/^https:\/\/[^\s]+$/.test(src[1])) bad(id, `source is not an https link: ${src[1]}`);
     }
     for (const t of s.timeline || []) if (!Array.isArray(t) || !DATE.test(t[0] || '') || !t[1]) bad(id, 'timeline entries are ["YYYY-MM-DD", "what happened"]');
+    for (const t of s.tags || []) if (!(data.tags || {})[t]) bad(id, `unknown tag "${t}" (tags are defined in "tags" at the top level)`);
+    if ((s.tags || []).includes('withdrawn') && s.outcome !== 'stopped') bad(id, '"withdrawn" is only for stopped cases');
     if ((s.summary || '').length > 160) bad(id, 'summary is longer than 160 characters (it is used on share cards)');
   }
   return errs;
