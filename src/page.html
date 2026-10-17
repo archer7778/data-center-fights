@@ -1,0 +1,424 @@
+<!--HEAD-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Public+Sans:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a planning docket. Map and case list side by side, the case file below,
+   then the megawatt ledger and the national buildout. Outcome colors are data, not decoration. */
+:root{
+  --bg:#f3f5f2; --panel:#ffffff; --sunk:#e9ece7; --ink:#18201d; --ink2:#47514c; --muted:#6c7671; --line:#d6dbd5;
+  --accent:#1d5869; --accent-bg:#e1ecef;
+  --land:#e4e8e2; --border:#c2c9c2;
+  --o-stopped:#2a78d6; --o-approved:#eb6834; --o-contested:#1baf7a; --o-quiet:#7d8782; --o-pending:#9aa39e;
+  --f-display:"Barlow Condensed","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Public Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1412; --panel:#161c1a; --sunk:#1d2421; --ink:#e7ece9; --ink2:#bac3be; --muted:#8b9590; --line:#29312d;
+  --accent:#7db9ca; --accent-bg:#1b2c31;
+  --land:#1d2522; --border:#36423d;
+  --o-stopped:#3987e5; --o-approved:#d95926; --o-contested:#199e70; --o-quiet:#86908b; --o-pending:#6c7671;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0f1412; --panel:#161c1a; --sunk:#1d2421; --ink:#e7ece9; --ink2:#bac3be; --muted:#8b9590; --line:#29312d;
+  --accent:#7db9ca; --accent-bg:#1b2c31;
+  --land:#1d2522; --border:#36423d;
+  --o-stopped:#3987e5; --o-approved:#d95926; --o-contested:#199e70; --o-quiet:#86908b; --o-pending:#6c7671;
+  color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font:15px/1.5 var(--f-body);margin:0}
+a{color:var(--accent);text-underline-offset:2px}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible,input:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1240px;margin:0 auto;padding-block:20px 48px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));display:flex;flex-direction:column;gap:22px}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;letter-spacing:.01em;text-wrap:balance;margin:0;line-height:1.1}
+h1{font-size:clamp(34px,5vw,52px);font-weight:700;text-transform:uppercase;letter-spacing:.02em}
+h2{font-size:24px;text-transform:uppercase;letter-spacing:.04em}
+h3{font-size:20px}
+.eyebrow{font:600 12px/1.2 var(--f-mono);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lede{max-width:66ch;color:var(--ink2);margin:6px 0 0}
+.num{font-variant-numeric:tabular-nums}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:12px 24px;border-bottom:2px solid var(--ink);padding-bottom:14px}
+header .stamp{font:500 12px/1.4 var(--f-mono);color:var(--muted);text-align:right}
+
+/* national strip */
+.strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.tile{background:var(--panel);padding:12px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.tile .v{font:600 30px/1 var(--f-display);font-variant-numeric:tabular-nums}
+.tile .s{font-size:12.5px;color:var(--ink2)}
+.tile .src{font:400 11px/1.3 var(--f-mono);color:var(--muted)}
+
+/* docket: map + list */
+.docket{display:grid;grid-template-columns:minmax(0,1.7fr) minmax(0,1fr);gap:16px;align-items:start}
+.panel{background:var(--panel);border:1px solid var(--line);min-width:0}
+.ph{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:6px 12px;padding:12px 14px 8px}
+.pb{padding:0 14px 14px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;padding:0 14px 8px;font-size:12.5px;color:var(--ink2)}
+.legend button{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:500 12.5px var(--f-body);padding:3px 9px 3px 6px;border-radius:999px;cursor:pointer}
+.legend button[aria-pressed="false"]{opacity:.45;text-decoration:line-through}
+.legend svg{flex:none}
+.map{position:relative;padding:0 6px}
+.map svg{display:block;width:100%;height:auto}
+.land{fill:var(--land);stroke:var(--border);stroke-width:.8}
+.borders{fill:none;stroke:var(--border);stroke-width:.6}
+.pin{cursor:pointer}
+.pin .halo{fill:none;stroke:var(--panel);stroke-width:2.5}
+.pin.sel .ring{fill:none;stroke:var(--ink);stroke-width:1.6}
+.pin:hover .shape,.pin:focus-visible .shape{filter:brightness(1.08)}
+.timeline{display:grid;grid-template-columns:auto minmax(0,1fr) auto;gap:10px;align-items:center;padding:6px 14px 14px}
+.timeline input{width:100%;accent-color:var(--accent)}
+.timeline .when{font:500 13px var(--f-mono);min-width:7.5ch;text-align:right}
+.btn{font:600 13px var(--f-body);border:1px solid var(--line);background:var(--sunk);color:var(--ink);padding:6px 12px;border-radius:4px;cursor:pointer}
+.btn:hover{border-color:var(--muted)}
+.tip{position:absolute;pointer-events:none;background:var(--ink);color:var(--bg);font:12.5px/1.35 var(--f-body);padding:6px 9px;border-radius:4px;max-width:240px;transform:translate(-50%,calc(-100% - 12px));white-space:normal;z-index:3}
+.tip b{display:block;font-weight:700}
+.tip[hidden]{display:none}
+
+.list{max-height:640px;overflow:auto;border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:18px minmax(0,1fr) auto;gap:4px 10px;align-items:start;width:100%;text-align:left;background:none;border:0;border-bottom:1px solid var(--line);padding:9px 14px;font:inherit;color:inherit;cursor:pointer}
+.row:hover{background:var(--sunk)}
+.row[aria-current="true"]{background:var(--accent-bg)}
+.row .t{font-weight:600;font-size:14px}
+.row .p{font-size:12.5px;color:var(--muted)}
+.row .m{font:500 12px var(--f-mono);color:var(--ink2);text-align:right;white-space:nowrap}
+.row svg{margin-top:3px}
+.row.dim{opacity:.5}
+.counts{font:500 12px var(--f-mono);color:var(--muted)}
+
+/* case file */
+.case{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:0;border:1px solid var(--line);background:var(--panel)}
+.case>div{padding:16px 18px;min-width:0}
+.case .side{border-left:1px solid var(--line);background:var(--sunk);display:flex;flex-direction:column;gap:14px}
+.case h3{font-size:30px;text-transform:none}
+.pill{display:inline-flex;align-items:center;gap:6px;font:600 11.5px/1 var(--f-mono);letter-spacing:.05em;text-transform:uppercase;padding:5px 8px;border-radius:3px;border:1px solid currentColor;color:var(--ink2)}
+.facts{display:grid;grid-template-columns:auto minmax(0,1fr);gap:4px 12px;margin:0;font-size:13.5px}
+.facts dt{color:var(--muted);font:500 12px/1.6 var(--f-mono);text-transform:uppercase;letter-spacing:.04em}
+.facts dd{margin:0}
+.history{max-width:68ch;margin:10px 0 0}
+.sumline{font-size:17px;font-weight:600;margin:10px 0 0;max-width:60ch}
+.tl{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;border-left:2px solid var(--line);padding-left:12px}
+.tl li{font-size:13.5px}
+.tl time{display:block;font:500 11.5px var(--f-mono);color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:14px}
+.two h4,.side h4{margin:0 0 4px;font:600 12px var(--f-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.two ul{margin:0;padding-left:18px;font-size:13.5px}
+.two p{margin:0;font-size:13.5px}
+.src{font-size:13px;margin:0;padding-left:18px}
+.after{font-size:13.5px;margin:12px 0 0;padding:8px 10px;border-left:3px solid var(--line);color:var(--ink2)}
+
+/* ledger + buildout */
+.sec{display:flex;flex-direction:column;gap:12px}
+.grid2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.grid4{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.chart svg{display:block;width:100%;height:auto;overflow:visible}
+.chart text{font:11.5px var(--f-mono);fill:var(--muted)}
+.chart .lbl{fill:var(--ink);font-weight:500}
+.chart .grid{stroke:var(--line);stroke-width:1}
+.note{font-size:12.5px;color:var(--muted);margin:0;max-width:72ch}
+.bars{display:flex;flex-direction:column;gap:10px}
+.bar{display:grid;grid-template-columns:minmax(0,13ch) minmax(0,1fr) auto;gap:10px;align-items:center;font-size:13px}
+.bar .track{height:14px;background:var(--sunk);position:relative}
+.bar .fill{position:absolute;inset:0 auto 0 0;border-radius:0 4px 4px 0}
+.bar .v{font:500 12.5px var(--f-mono);white-space:nowrap}
+.facts3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.facts3 div{display:flex;flex-direction:column}
+.facts3 b{font:600 26px/1.1 var(--f-display)}
+.facts3 span{font-size:12.5px;color:var(--ink2)}
+.method{columns:2 320px;column-gap:28px;font-size:14px;color:var(--ink2)}
+.method p{margin:0 0 10px;break-inside:avoid}
+.method b{color:var(--ink)}
+footer{font:12px/1.6 var(--f-mono);color:var(--muted);border-top:1px solid var(--line);padding-top:10px;display:flex;flex-direction:column;gap:4px}
+footer a{color:var(--accent)}
+.share{display:flex;flex-wrap:wrap;align-items:center;gap:6px 12px;font-size:13px;border-top:1px solid var(--line);padding-top:10px}
+.share .btn{padding:3px 9px;font-size:12px}
+
+@media (max-width:900px){
+  .docket,.case,.grid2{grid-template-columns:minmax(0,1fr)}
+  .case .side{border-left:0;border-top:1px solid var(--line)}
+  .list{max-height:420px}
+  .strip{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  .grid4,.two,.facts3{grid-template-columns:minmax(0,1fr)}
+  .tile .v{font-size:26px}
+  .bar{grid-template-columns:minmax(0,1fr) auto}
+  .bar .track{grid-column:1 / -1;order:3}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <div class="eyebrow">A docket of US data center fights · 2022 to today</div>
+      <h1>Data Center Fights</h1>
+      <p class="lede">Where communities fought data centers, who won, and how many megawatts were at stake, set against how fast the national buildout is growing. Each site has a short sourced history.</p>
+    </div>
+    <div class="stamp">Researched to <span id="asof"></span><br><span id="nsites"></span> documented sites</div>
+  </header>
+
+  <section class="strip" aria-label="The national buildout in four numbers" id="strip"></section>
+
+  <section class="docket">
+    <div class="panel">
+      <div class="ph"><h2>The map</h2><span class="counts" id="mapCounts"></span></div>
+      <div class="legend" id="legend" role="group" aria-label="Show or hide outcomes"></div>
+      <div class="map" id="map"><div class="tip" id="tip" hidden></div></div>
+      <div class="timeline">
+        <button class="btn" id="play" type="button" aria-label="Play the timeline">Play</button>
+        <input type="range" id="t" min="0" max="1" value="1" step="1" aria-label="Month shown on the map">
+        <span class="when" id="when"></span>
+      </div>
+      <p class="note pb">Pins appear when a project became public and take their outcome color on the date it was decided. Size shows announced or planned megawatts; sites without a published figure are drawn small.</p>
+    </div>
+    <div class="panel">
+      <div class="ph"><h2>Cases</h2><span class="counts" id="listCounts"></span></div>
+      <div class="list" id="list" role="list"></div>
+    </div>
+  </section>
+
+  <section class="case" id="case" aria-live="polite"></section>
+
+  <section class="sec">
+    <div><div class="eyebrow">Megawatt ledger</div><h2>What was at stake</h2>
+      <p class="lede">Announced or planned capacity of the documented sites by outcome, as of the month on the timeline. These are maximums the developers or utilities stated, not measured use.</p></div>
+    <div class="grid2">
+      <div class="panel"><div class="ph"><h3>By outcome</h3><span class="counts" id="ledgerWhen"></span></div><div class="pb"><div class="bars" id="ledger"></div><p class="note" id="ledgerNote" style="margin-top:10px"></p></div></div>
+      <div class="panel"><div class="ph"><h3>Decided over time</h3><span class="counts">cumulative MW</span></div><div class="pb chart" id="cumChart"></div></div>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div><div class="eyebrow">The national buildout</div><h2>How big the boom is</h2>
+      <p class="lede">Four public measures of the buildout. None covers everything: each counts a different part of it.</p></div>
+    <div class="grid4" id="national"></div>
+  </section>
+
+  <section class="sec">
+    <div><div class="eyebrow">Method</div><h2>How this is put together</h2></div>
+    <div class="method panel pb" style="padding-top:14px">
+      <p><b>The sites are a documented sample, not a census.</b> They are well-reported cases chosen to show each outcome, so fights are over-represented. The US has about 4,800 data centers of all sizes; most were never contested in public.</p>
+      <p><b>Stopped</b> means rejected, withdrawn or banned after public opposition. It does not mean the project is dead everywhere: developers sometimes move. <b>Approved despite opposition</b> means it went ahead over organized objections. <b>Still being fought</b> means approval is in court or not final.</p>
+      <p><b>Little or no organized opposition found</b> means we searched and found no organized campaign at the time of approval. Individual objections and later complaints are noted on each case. Absence of coverage is not proof that nobody objected.</p>
+      <p><b>Dates.</b> A pin appears at the earliest date we could source: an announcement, a filing or the first coverage. It takes its color on the date of the decision that set its current status.</p>
+      <p><b>Megawatts</b> are announced or planned figures from developers, utilities or filings. They are maximums, not usage, and many sites never publish one. Totals count only sites with a figure.</p>
+      <p><b>Cause.</b> We say a project was stopped by opposition only when sources link the two. Both sides' arguments are given where reported. Private residents are not named.</p>
+      <p><b>National figures</b> come from the Census Bureau (via reporting on its tables), Lawrence Berkeley National Laboratory, Epoch AI and Data Center Watch, each linked on its panel.</p>
+      <p><b>Corrections and new cases.</b> Facts change quickly in these fights. Each case shows when it was last checked and the date of its newest source. If you know of a ruling or vote we've missed, or a fight that should be here, send it with a public source<span id="contrib"></span>.</p>
+    </div>
+  </section>
+  <footer><span>Independent project. Not affiliated with any developer, utility or campaign. Researched to <span id="asof2"></span>.</span>
+    <span id="links"></span>
+    <span>Code MIT · data and case histories CC BY 4.0: reuse freely with credit and a link.</span></footer>
+</div>
+
+<script>
+const DATA=/*DATA*/null;
+const GEO=/*GEO*/null;
+const CFG=/*CFG*/{site:'',repo:'',select:null,base:''};
+(()=>{
+'use strict';
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const safe=u=>/^https:\/\//i.test(String(u||''))?String(u):'#';
+const n0=v=>v==null?'—':Math.round(v).toLocaleString('en-US');
+const OUT=['stopped','approved','contested','quiet'];
+const LAB=DATA.outcomes;
+const SHORT={stopped:'Stopped',approved:'Approved over opposition',contested:'Still being fought',quiet:'Little or no organized opposition'};
+const MON=['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+// month index since Jan 2000; a bare year counts as mid-year
+function mi(s){if(!s)return null;const p=String(s).split('-');return (+p[0]-2000)*12+(p[1]?+p[1]-1:6)}
+function fmtM(m){return MON[m%12]+' '+(2000+Math.floor(m/12))}
+function fmtD(s){if(!s)return '';const p=s.split('-');if(p.length===1)return p[0];const m=MON[+p[1]-1];return p[2]?`${+p[2]} ${m} ${p[0]}`:`${m} ${p[0]}`}
+const S=DATA.sites.map(s=>Object.assign(s,{m0:mi(s.start),m1:mi(s.decided)}));
+const ASOF=mi(DATA.as_of);
+const M0=Math.min(...S.map(s=>s.m0));
+let T=ASOF,SEL=null,SHOW=new Set(OUT),timer=null;
+if(CFG.select&&S.some(s=>s.id===CFG.select))SEL=CFG.select;
+try{const h=decodeURIComponent(location.hash.slice(1));if(S.some(s=>s.id===h))SEL=h}catch(e){}
+if(!SEL)SEL='pw-digital-gateway';
+
+function state(s,t){if(s.m0>t)return null;if(s.outcome==='contested')return 'contested';return s.m1!=null&&s.m1<=t?s.outcome:'pending'}
+const CV=o=>`var(--o-${o})`;
+// shapes keep outcomes apart without relying on color
+function shape(o,r){
+  const c=CV(o);
+  if(o==='stopped')return `<rect class="shape" x="${-r*.88}" y="${-r*.88}" width="${r*1.76}" height="${r*1.76}" rx="1.5" fill="${c}"/>`;
+  if(o==='approved')return `<circle class="shape" r="${r}" fill="${c}"/>`;
+  if(o==='contested')return `<path class="shape" d="M0 ${-r*1.2}L${r*1.2} 0L0 ${r*1.2}L${-r*1.2} 0Z" fill="${c}"/>`;
+  if(o==='quiet')return `<path class="shape" d="M0 ${-r*1.15}L${r*1.05} ${r*.75}L${-r*1.05} ${r*.75}Z" fill="${c}"/>`;
+  return `<circle class="shape" r="${Math.max(3.5,r*.8)}" fill="var(--sunk)" stroke="var(--ink2)" stroke-width="1.5" stroke-dasharray="2.5 1.8"/>`;
+}
+function icon(o,size=14){const r=size/2-2;return `<svg width="${size}" height="${size}" viewBox="${-size/2} ${-size/2} ${size} ${size}" aria-hidden="true">${shape(o,r)}</svg>`}
+const rad=s=>s.mw?Math.min(17,5+9*Math.sqrt(s.mw/2000)):4.5;
+
+/* ---------- strip ---------- */
+function renderStrip(){
+  const N=DATA.national,c=N.construction.points,e=N.electricity,o=N.opposition;
+  const last=c[c.length-1],prev=c[c.length-2];
+  const tiles=[
+    {l:'Construction pace',v:'$'+last[1].toFixed(0)+' bn a year',s:`Data center buildings, ${fmtD(last[0])}; up ${Math.round((last[1]/prev[1]-1)*100)}% in a year`,src:'Census Bureau'},
+    {l:'Share of US electricity',v:'4.4% → 12%',s:'2023 use, and the central 2030 projection',src:'Berkeley Lab'},
+    {l:'Largest AI sites, worldwide',v:N.compute.facts[1][0],s:`${N.compute.facts[0][0]} sites, ${N.compute.facts[2][0]} H100-equivalents`,src:'Epoch AI, Oct 2026'},
+    {l:'Blocked or delayed by locals',v:`${o.points[0][1]} + ${o.points[1][1]}`,s:`projects in Q1 and Q2 2026 ($${o.points[0][2]} bn and $${o.points[1][2]} bn); ${o.groups} local groups`,src:'Data Center Watch'}];
+  $('#strip').innerHTML=tiles.map(t=>`<div class="tile"><span class="eyebrow">${esc(t.l)}</span><span class="v">${esc(t.v)}</span><span class="s">${esc(t.s)}</span><span class="src">${esc(t.src)}</span></div>`).join('');
+}
+
+/* ---------- map ---------- */
+function renderLegend(){
+  const cnt=o=>S.filter(s=>state(s,T)===o).length;
+  $('#legend').innerHTML=OUT.map(o=>`<button type="button" data-o="${o}" aria-pressed="${SHOW.has(o)}">${icon(o)}${esc(SHORT[o])} <span class="num">${cnt(o)}</span></button>`).join('')+
+    (S.some(s=>state(s,T)==='pending')?`<span style="display:inline-flex;align-items:center;gap:6px">${icon('pending')}Before a decision <span class="num">${cnt('pending')}</span></span>`:'');
+}
+function renderMap(){
+  const vis=S.filter(s=>{const st=state(s,T);return st&&(st==='pending'||SHOW.has(st))}).sort((a,b)=>(b.mw||0)-(a.mw||0));
+  const pins=vis.map(s=>{const st=state(s,T),r=rad(s);
+    return `<g class="pin${s.id===SEL?' sel':''}" data-id="${s.id}" transform="translate(${s.x} ${s.y})" tabindex="0" role="button" aria-label="${esc(s.name+', '+s.place+' '+s.state+': '+(st==='pending'?'before a decision':LAB[st]))}">
+      ${s.id===SEL?`<circle class="ring" r="${r+5}"/>`:''}${st==='pending'?shape(st,r):shape(st,r).replace('class="shape"','class="shape" stroke="var(--panel)" stroke-width="1.5"')}</g>`}).join('');
+  const svg=`<svg viewBox="0 0 ${GEO.w} ${GEO.h}" role="img" aria-label="Map of the United States with ${vis.length} data center sites">
+    <path class="land" d="${GEO.nation}"/><path class="borders" d="${GEO.borders}"/>${pins}</svg>`;
+  const tip=$('#tip');$('#map').innerHTML=svg;$('#map').appendChild(tip);
+  $('#mapCounts').textContent=`${vis.length} sites shown · ${fmtM(T)}`;
+}
+function showTip(el){
+  const s=S.find(x=>x.id===el.dataset.id),st=state(s,T),box=$('#map').getBoundingClientRect(),b=el.getBoundingClientRect();
+  const tip=$('#tip');tip.innerHTML=`<b>${esc(s.name)}</b>${esc(s.place)}, ${esc(s.state)}<br>${esc(st==='pending'?'Before a decision':LAB[st])}${s.mw?' · '+n0(s.mw)+' MW':''}`;
+  tip.hidden=false;tip.style.left=Math.min(Math.max(b.left+b.width/2-box.left,120),box.width-120)+'px';tip.style.top=(b.top-box.top)+'px';
+}
+
+/* ---------- list ---------- */
+function renderList(){
+  const rows=[...S].sort((a,b)=>OUT.indexOf(a.outcome)-OUT.indexOf(b.outcome)||(b.m1??b.m0)-(a.m1??a.m0));
+  $('#list').innerHTML=rows.map(s=>{const st=state(s,T)||'pending',hidden=!state(s,T)||(st!=='pending'&&!SHOW.has(st));
+    return `<button class="row${hidden?' dim':''}" role="listitem" data-id="${s.id}" aria-current="${s.id===SEL}">${icon(state(s,T)?st:'pending')}
+      <span><span class="t">${esc(s.name)}</span><br><span class="p">${esc(s.place)}, ${esc(s.state)} · ${esc(s.decided?fmtD(s.decided):'undecided')}</span></span>
+      <span class="m">${s.mw?n0(s.mw)+' MW':''}</span></button>`}).join('');
+  $('#listCounts').textContent=`${S.length} documented`;
+}
+
+/* ---------- case file ---------- */
+function newest(s){const ds=s.sources.map(x=>x[0].match(/(Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) (\d{4})/)).filter(Boolean).map(m=>(+m[2]-2000)*12+MON.indexOf(m[1]));return ds.length?fmtM(Math.max(...ds)):''}
+function renderCase(){
+  const s=S.find(x=>x.id===SEL);if(!s)return;
+  const facts=[['Developer',s.developer],['End user',s.end_user],['Capacity',s.mw?`${n0(s.mw)} MW${s.mw_note?' ('+s.mw_note+')':''}`:(s.mw_note?'Not published'+(s.mw_note!=='not published'?' · '+s.mw_note:''):'—')],
+    ['Investment',s.invest_bn?`$${s.invest_bn} billion`:'Not published'],['Land',s.acres?`${n0(s.acres)} acres`:'Not published'],['First public',`${fmtD(s.start)}${s.start_note?' · '+s.start_note:''}`]];
+  $('#case').innerHTML=`<div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center"><span class="pill" style="color:${CV(s.outcome)}">${icon(s.outcome,12)}<span style="color:var(--ink)">${esc(LAB[s.outcome])}</span></span><span class="eyebrow">${esc(s.place)}, ${esc(s.state)}</span></div>
+      <h3 style="margin-top:8px">${esc(s.name)}</h3>
+      <p class="sumline">${esc(s.summary)}</p>
+      <p class="history">${esc(s.history)}</p>
+      <div class="two">
+        <div><h4>What opponents objected to</h4><ul>${s.objections.map(o=>`<li>${esc(o)}</li>`).join('')}</ul></div>
+        <div><h4>The case made for it</h4><p>${esc(s.case_for||'No public argument for the project was reported in our sources.')}</p></div>
+      </div>
+      ${s.after?`<p class="after"><b>Since then:</b> ${esc(s.after)}</p>`:''}
+    </div>
+    <div class="side">
+      <dl class="facts">${facts.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl>
+      <div><h4>Timeline</h4><ol class="tl">${s.timeline.map(([d,t])=>`<li><time>${esc(fmtD(d))}</time>${esc(t)}</li>`).join('')}</ol></div>
+      <div><h4>Sources · newest ${esc(newest(s))}</h4><ul class="src">${s.sources.map(([t,u])=>`<li><a href="${esc(safe(u))}" target="_blank" rel="noopener">${esc(t)}</a></li>`).join('')}</ul></div>
+      <div class="share"><span class="eyebrow">Checked ${esc(fmtD(s.checked))}</span>
+        ${CFG.site?`<a href="${esc(CFG.base)}case/${esc(s.id)}/">Page for this case</a> <button type="button" class="btn copy" data-url="${esc(CFG.site)}case/${esc(s.id)}/">Copy link</button>`:''}
+        ${CFG.repo?`<a href="${esc(CFG.repo)}/issues/new?template=correction.yml&title=${encodeURIComponent('Correction: '+s.name)}" target="_blank" rel="noopener">Report a correction</a>`:''}</div>
+    </div>`;
+}
+
+/* ---------- ledger ---------- */
+function renderLedger(){
+  const rows=OUT.map(o=>{const ss=S.filter(s=>state(s,T)===o);const w=ss.filter(s=>s.mw);return {o,n:ss.length,k:w.length,mw:w.reduce((a,s)=>a+s.mw,0)}});
+  const max=Math.max(1,...rows.map(r=>r.mw));
+  $('#ledger').innerHTML=rows.map(r=>`<div class="bar"><span>${icon(r.o,12)} ${esc(SHORT[r.o])}</span><span class="track" title="${n0(r.mw)} MW"><span class="fill" style="width:${(100*r.mw/max).toFixed(1)}%;background:${CV(r.o)}"></span></span><span class="v">${n0(r.mw)} MW · ${r.k} of ${r.n}</span></div>`).join('');
+  $('#ledgerWhen').textContent=fmtM(T);
+  const pend=S.filter(s=>state(s,T)==='pending');
+  const big=S.filter(s=>state(s,T)&&state(s,T)!=='pending'&&s.mw).sort((a,b)=>b.mw-a.mw)[0];
+  $('#ledgerNote').textContent='“3 of 10” means 3 of the 10 sites in that group published a megawatt figure; stopped projects rarely get far enough to publish one.'+(big?` The largest single figure is ${big.name} at ${n0(big.mw)} MW (${big.mw_note||'announced'}).`:'')+(pend.length?` ${pend.length} more site${pend.length>1?'s were':' was'} public but not yet decided in ${fmtM(T)}.`:'');
+}
+function renderCum(){
+  const W=560,H=240,L=46,R=168,Tp=12,B=26,x0=M0,x1=ASOF;
+  const sx=m=>L+(m-x0)/(x1-x0)*(W-L-R);
+  const series=['approved','quiet','stopped'].map(o=>{let acc=0;const ev=S.filter(s=>s.outcome===o&&s.mw&&s.m1!=null).sort((a,b)=>a.m1-b.m1);const pts=[[x0,0]];for(const s of ev){pts.push([s.m1,acc]);acc+=s.mw;pts.push([s.m1,acc])}pts.push([x1,acc]);return {o,pts,end:acc}});
+  const top=Math.max(...series.map(s=>s.end)),step=[1000,2000,5000,10000,20000].find(s=>top/s<=5)||50000;
+  const ymax=Math.ceil(top/step)*step||step;
+  const sy=v=>Tp+(1-v/ymax)*(H-Tp-B);
+  let g='';for(let v=0;v<=ymax;v+=step)g+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${sy(v)}" y2="${sy(v)}"/><text x="${L-6}" y="${sy(v)+4}" text-anchor="end">${v?n0(v/1000)+' GW':'0'}</text>`;
+  for(let y=Math.ceil((x0+1)/12)*12;y<=x1;y+=12)g+=`<text x="${sx(y)}" y="${H-6}" text-anchor="middle">${2000+y/12}</text>`;
+  const ends=series.map(s=>({s,y:sy(s.end)})).sort((a,b)=>a.y-b.y);for(let i=1;i<ends.length;i++)if(ends[i].y-ends[i-1].y<14)ends[i].y=ends[i-1].y+14;
+  const lines=series.map(s=>`<path d="${s.pts.map((p,i)=>(i?'L':'M')+sx(p[0]).toFixed(1)+' '+sy(p[1]).toFixed(1)).join('')}" fill="none" stroke="${CV(s.o)}" stroke-width="2"/>`).join('');
+  const NAME={approved:'Approved',quiet:'Little opposition',stopped:'Stopped'};
+  const labels=ends.map(e=>`<text class="lbl" x="${W-R+6}" y="${e.y+4}">${NAME[e.s.o]} ${n0(e.s.end)} MW</text>`).join('');
+  const cur=`<line x1="${sx(T)}" x2="${sx(T)}" y1="${Tp}" y2="${H-B}" stroke="var(--ink)" stroke-dasharray="3 3" stroke-width="1"/>`;
+  $('#cumChart').innerHTML=`<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cumulative megawatts decided over time by outcome">${g}${lines}${cur}${labels}</svg>
+    <p class="note">Cumulative announced MW of documented sites by decision date. The dashed line is the month on the timeline. Labels show the total in MW; still-contested sites have no decision and aren't drawn.</p>`;
+}
+
+/* ---------- national ---------- */
+function renderNational(){
+  const N=DATA.national;
+  const srcs=a=>a.map(([t,u])=>`<a href="${esc(safe(u))}" target="_blank" rel="noopener">${esc(t)}</a>`).join(' · ');
+  // construction: three readings on a time axis
+  const c=N.construction,W=520,H=200,L=40,R=16,Tp=18,B=26;
+  const cm=c.points.map(p=>[mi(p[0]),p[1]]),x0=mi('2021-01')-2,x1=ASOF;
+  const sx=m=>L+(m-x0)/(x1-x0)*(W-L-R),ymax=100,sy=v=>Tp+(1-v/ymax)*(H-Tp-B);
+  let g='';for(let v=0;v<=ymax;v+=25)g+=`<line class="grid" x1="${L}" x2="${W-R}" y1="${sy(v)}" y2="${sy(v)}"/><text x="${L-6}" y="${sy(v)+4}" text-anchor="end">$${v}</text>`;
+  for(let y=2021;y<=2026;y++)g+=`<text x="${sx((y-2000)*12)}" y="${H-6}" text-anchor="middle">${y}</text>`;
+  const line=`<path d="${cm.map((p,i)=>(i?'L':'M')+sx(p[0])+' '+sy(p[1])).join('')}" fill="none" stroke="var(--accent)" stroke-width="2" stroke-dasharray="5 4"/>`;
+  const dots=cm.map((p,i)=>{const first=i===0;return `<circle cx="${sx(p[0])}" cy="${sy(p[1])}" r="5" fill="var(--accent)" stroke="var(--panel)" stroke-width="2"/><text class="lbl" x="${sx(p[0])+(first?0:-10)}" y="${sy(p[1])+(first?-12:4)}" text-anchor="${first?'start':'end'}">$${p[1].toFixed(2)} bn · ${fmtD(c.points[i][0])}</text>`}).join('');
+  const p1=`<div class="panel"><div class="ph"><h3>Spending on data center buildings</h3><span class="counts">$ bn a year, annual rate</span></div><div class="pb chart">
+    <svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Data center construction spending rose from $9.26 billion a year in January 2021 to $84.95 billion in August 2026">${g}${line}${dots}</svg>
+    <p class="note">${esc(c.note)} Only three readings are shown; the dashed line joins them and is not the monthly path. ${srcs(c.sources)}</p></div></div>`;
+  // electricity: actuals and projection ranges
+  const e=N.electricity,W2=520,H2=200,L2=44,Tp2=14,B2=26,ymax2=900,sy2=v=>Tp2+(1-v/ymax2)*(H2-Tp2-B2);
+  const xs=e.points.map((p,i)=>L2+40+i*((W2-L2-80)/(e.points.length-1)));
+  let g2='';for(let v=0;v<=ymax2;v+=300)g2+=`<line class="grid" x1="${L2}" x2="${W2-10}" y1="${sy2(v)}" y2="${sy2(v)}"/><text x="${L2-6}" y="${sy2(v)+4}" text-anchor="end">${v}</text>`;
+  const bars=e.points.map((p,i)=>{const x=xs[i],[yr,v,lo,hi]=p;let s='';
+    if(v!=null&&lo==null)s+=`<rect x="${x-18}" y="${sy2(v)}" width="36" height="${sy2(0)-sy2(v)}" fill="var(--accent)" rx="3"/><text class="lbl" x="${x}" y="${sy2(v)-6}" text-anchor="middle">${v}</text>`;
+    if(lo!=null){s+=`<rect x="${x-18}" y="${sy2(hi)}" width="36" height="${sy2(lo)-sy2(hi)}" fill="var(--accent-bg)" stroke="var(--accent)" stroke-dasharray="3 2"/><text class="lbl" x="${x}" y="${sy2(hi)-6}" text-anchor="middle">${lo}–${hi}</text>`;
+      if(v!=null)s+=`<line x1="${x-18}" x2="${x+18}" y1="${sy2(v)}" y2="${sy2(v)}" stroke="var(--accent)" stroke-width="2.5"/>`}
+    return s+`<text x="${x}" y="${H2-6}" text-anchor="middle">${yr}${lo!=null?' (proj.)':''}</text>`}).join('');
+  const p2=`<div class="panel"><div class="ph"><h3>Electricity used by US data centers</h3><span class="counts">TWh a year</span></div><div class="pb chart">
+    <svg viewBox="0 0 ${W2} ${H2}" role="img" aria-label="58 TWh in 2014, 176 in 2023, projected 325 to 580 in 2028 and 521 to 843 in 2030">${g2}${bars}</svg>
+    <p class="note">${esc(e.note)} Share of all US electricity: ${esc(Object.entries(e.shares).map(([k,v])=>k+' '+v).join('; '))}. ${srcs(e.sources)}</p></div></div>`;
+  const cp=N.compute;
+  const p3=`<div class="panel"><div class="ph"><h3>${esc(cp.label)}</h3><span class="counts">compute and power</span></div><div class="pb">
+    <div class="facts3">${cp.facts.map(([v,l])=>`<div><b>${esc(v)}</b><span>${esc(l)}</span></div>`).join('')}</div>
+    <p class="note" style="margin-top:10px">${esc(cp.note)} ${srcs(cp.sources)}</p></div></div>`;
+  const op=N.opposition,mx=Math.max(...op.points.map(p=>p[1]));
+  const p4=`<div class="panel"><div class="ph"><h3>${esc(op.label)}</h3><span class="counts">projects per quarter</span></div><div class="pb">
+    <div class="bars">${op.points.map(p=>`<div class="bar"><span>${esc(p[0])}</span><span class="track"><span class="fill" style="width:${100*p[1]/mx}%;background:var(--accent)"></span></span><span class="v">${p[1]} projects · $${p[2]} bn</span></div>`).join('')}</div>
+    <p class="note" style="margin-top:10px">${esc(op.note)} ${srcs(op.sources)}</p></div></div>`;
+  $('#national').innerHTML=p1+p2+p3+p4;
+}
+
+/* ---------- wiring ---------- */
+function renderTime(){$('#when').textContent=fmtM(T);renderLegend();renderMap();renderList();renderLedger();renderCum()}
+function select(id,scroll){SEL=id;try{history.replaceState(null,'','#'+id)}catch(e){}renderMap();renderList();renderCase();if(scroll)$('#case').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'})}
+const slider=$('#t');slider.min=M0;slider.max=ASOF;slider.value=T;
+slider.addEventListener('input',()=>{T=+slider.value;renderTime()});
+$('#play').addEventListener('click',()=>{
+  if(timer){clearInterval(timer);timer=null;$('#play').textContent='Play';return}
+  if(T>=ASOF)T=M0;$('#play').textContent='Pause';
+  timer=setInterval(()=>{T++;slider.value=T;renderTime();if(T>=ASOF){clearInterval(timer);timer=null;$('#play').textContent='Play'}},380);
+});
+document.addEventListener('click',e=>{
+  const lg=e.target.closest('#legend button');if(lg){const o=lg.dataset.o;SHOW.has(o)?SHOW.delete(o):SHOW.add(o);if(!SHOW.size)OUT.forEach(x=>SHOW.add(x));renderLegend();renderMap();renderList();return}
+  const pin=e.target.closest('.pin');if(pin){select(pin.dataset.id,true);return}
+  const row=e.target.closest('.row');if(row){select(row.dataset.id,true)}
+});
+document.addEventListener('keydown',e=>{const pin=e.target.closest&&e.target.closest('.pin');if(pin&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(pin.dataset.id,true)}});
+const mapEl=$('#map');
+mapEl.addEventListener('pointerover',e=>{const p=e.target.closest('.pin');if(p)showTip(p)});
+mapEl.addEventListener('pointerout',e=>{if(e.target.closest('.pin'))$('#tip').hidden=true});
+mapEl.addEventListener('focusin',e=>{const p=e.target.closest('.pin');if(p)showTip(p)});
+mapEl.addEventListener('focusout',()=>{$('#tip').hidden=true});
+$('#asof').textContent=$('#asof2').textContent=fmtD(DATA.as_of);
+if(CFG.repo){
+  $('#links').innerHTML=`<a href="${esc(CFG.base)}data/sites.csv">Download the data (CSV)</a> · <a href="${esc(CFG.base)}data/sites.json">JSON</a> · <a href="${esc(CFG.repo)}" target="_blank" rel="noopener">Source on GitHub</a> · <a href="${esc(CFG.repo)}/issues/new?template=new-case.yml" target="_blank" rel="noopener">Suggest a case</a>`;
+  $('#contrib').innerHTML=` through <a href="${esc(CFG.repo)}/issues/new/choose" target="_blank" rel="noopener">GitHub</a>`;
+}
+document.addEventListener('click',async e=>{const b=e.target.closest('.copy');if(!b)return;
+  try{await navigator.clipboard.writeText(b.dataset.url);b.textContent='Copied'}catch(err){b.textContent=b.dataset.url}
+  setTimeout(()=>{b.textContent='Copy link'},2500)});
+$('#nsites').textContent=S.length;
+renderStrip();renderNational();renderTime();renderCase();
+})();
+</script>

@@ -1,0 +1,22 @@
+{
+  "name": "data-center-fights",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A sourced map of US data center fights, with a megawatt ledger and national buildout figures.",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "validate": "node tools/validate.mjs",
+    "build": "node tools/build.mjs",
+    "cards": "node tools/cards.mjs",
+    "all": "node tools/validate.mjs && node tools/build.mjs && node tools/cards.mjs"
+  },
+  "dependencies": {
+    "d3-geo": "3.1.1",
+    "topojson-client": "3.1.0",
+    "us-atlas": "3.0.1"
+  },
+  "devDependencies": {
+    "playwright-core": "1.61.1"
+  }
+}

@@ -1,0 +1,32 @@
+name: Report a correction
+description: Something on the map is wrong, out of date or missing a newer ruling or vote.
+title: "Correction: "
+labels: ["correction"]
+body:
+  - type: input
+    id: case
+    attributes:
+      label: Which case?
+      description: Its name, or the link to its page.
+    validations:
+      required: true
+  - type: textarea
+    id: wrong
+    attributes:
+      label: What's wrong or out of date?
+    validations:
+      required: true
+  - type: textarea
+    id: right
+    attributes:
+      label: What should it say?
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Source
+      description: A public link that shows the correct fact.
+      placeholder: "https://..."
+    validations:
+      required: true

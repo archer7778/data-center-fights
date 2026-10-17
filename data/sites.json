@@ -1,0 +1,2524 @@
+{
+ "as_of": "2026-10-17",
+ "outcomes": {
+  "stopped": "Stopped",
+  "approved": "Approved despite opposition",
+  "contested": "Still being fought",
+  "quiet": "Little or no organized opposition found"
+ },
+ "sites": [
+  {
+   "id": "tucson-project-blue",
+   "name": "Project Blue",
+   "place": "Tucson",
+   "state": "AZ",
+   "lat": 32.13,
+   "lon": -110.85,
+   "developer": "Beale Infrastructure (owned by Blue Owl)",
+   "end_user": "Amazon Web Services, per public records; never publicly confirmed",
+   "mw": 600,
+   "mw_note": "reported planned capacity",
+   "invest_bn": null,
+   "acres": 290,
+   "outcome": "stopped",
+   "start": "2024-06",
+   "start_note": "Pima County under a non-disclosure agreement from at least June 2024",
+   "decided": "2025-08-06",
+   "summary": "Tucson's council unanimously refused to bring the campus into the city.",
+   "history": "Beale Infrastructure planned a 290-acre campus of up to 10 buildings, reported at 600 MW, that needed annexation into Tucson for city water. Records obtained by Arizona Luminaria named Amazon Web Services as the end user. The site would have cooled with drinking water for at least two years before switching to treated wastewater, in a region under long drought. Residents organized as No Desert Data Center, angered also that Pima County had sold land to the developer before any public meeting. On 6 August 2025 the city council voted unanimously against the project and began work on a data-center ordinance.",
+   "timeline": [
+    [
+     "2024-06",
+     "Pima County officials under a non-disclosure agreement"
+    ],
+    [
+     "2025-08-06",
+     "Tucson City Council votes unanimously against the project"
+    ],
+    [
+     "2025-08-19",
+     "Council begins work on a data-center ordinance"
+    ]
+   ],
+   "objections": [
+    "Drinking water used for cooling in a drought",
+    "Secrecy and NDAs",
+    "Energy use"
+   ],
+   "case_for": "The developer called the vote a missed opportunity for tax revenue, infrastructure and jobs, and said it had held public meetings to earn trust.",
+   "after": "A council member said the developers still intended to build somewhere in the region; nothing firm has been reported.",
+   "sources": [
+    [
+     "DatacenterDynamics, Aug 2025",
+     "https://www.datacenterdynamics.com/en/news/residents-cheer-as-tucson-rejects-amazons-massive-project-blue-data-center-campus-in-arizona/"
+    ],
+    [
+     "KJZZ, Aug 2025",
+     "https://www.kjzz.org/community-outrage-shut-down-project-blue-data-center-project-in-tucson-but-its-not-dead-yet"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "franklin-township-google",
+   "name": "Project Flo (Google)",
+   "place": "Franklin Township, Indianapolis",
+   "state": "IN",
+   "lat": 39.67,
+   "lon": -86.03,
+   "developer": "Deep Meadows LLC, a Google affiliate",
+   "end_user": "Google",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 468,
+   "outcome": "stopped",
+   "start": "2025-03",
+   "start_note": "rezoning filed",
+   "decided": "2025-09-22",
+   "summary": "Google withdrew its rezoning request just before a council vote it was expected to lose.",
+   "history": "A Google affiliate asked to rezone 468 acres along I-74 for four data-center buildings, with ten years of tax cuts. Google was confirmed as the backer in July 2025, and the Metropolitan Development Commission approved the plan 8–1 in August. Opposition grew over the environment and secrecy: a council member had signed a non-disclosure agreement, and residents got a comment period instead of the public hearing they asked for. Facing a council majority against it, Google withdrew on 22 September 2025.",
+   "timeline": [
+    [
+     "2025-03",
+     "Rezoning proposal filed"
+    ],
+    [
+     "2025-07",
+     "Google confirmed as the company behind it"
+    ],
+    [
+     "2025-08",
+     "Metropolitan Development Commission approves, 8–1"
+    ],
+    [
+     "2025-09-22",
+     "Google withdraws before the council vote"
+    ]
+   ],
+   "objections": [
+    "Environmental impact",
+    "Secrecy, including a council member's NDA",
+    "No public hearing"
+   ],
+   "case_for": "Google said it was disappointed the project would not go ahead.",
+   "after": "Organizers said they would stay alert, since Google could refile after three months.",
+   "sources": [
+    [
+     "DatacenterDynamics, Sep 2025",
+     "https://www.datacenterdynamics.com/en/news/google-withdraws-rezoning-proposal-for-468-acre-data-center-project-in-franklin-township-indianapolis"
+    ],
+    [
+     "Mirror Indy, Sep 2025",
+     "https://mirrorindy.org/google-withdraws-southside-data-center-proposal-franklin-township/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "college-station-aggie",
+   "name": "Project Aggie",
+   "place": "College Station",
+   "state": "TX",
+   "lat": 30.59,
+   "lon": -96.29,
+   "developer": "Priority Power Management (backed by I Squared Capital)",
+   "end_user": "not named",
+   "mw": 600,
+   "mw_note": "conceptual full build-out",
+   "invest_bn": null,
+   "acres": 200,
+   "outcome": "stopped",
+   "start": "2025-09",
+   "start_note": "earliest coverage found",
+   "decided": "2025-09-11",
+   "summary": "The council unanimously refused to sell city land for the campus.",
+   "history": "Priority Power Management offered $30 million for about 200 acres of city-owned land in the Midtown Business Park, for a campus that could reach 600 MW with two 300 MW substations. City staff recommended the sale. More than 75 people signed up to speak and a petition gathered over 5,000 signatures, citing noise, the environment, demand on utilities and the process. On 11 September 2025 the council voted unanimously against the sale.",
+   "timeline": [
+    [
+     "2025-09-09",
+     "Residents push back against the land sale"
+    ],
+    [
+     "2025-09-11",
+     "Council votes unanimously against selling the land"
+    ]
+   ],
+   "objections": [
+    "Noise",
+    "Environmental impact",
+    "Demand on city utilities",
+    "How the deal was handled"
+   ],
+   "case_for": "City staff recommended approving the $30 million sale.",
+   "after": null,
+   "sources": [
+    [
+     "DatacenterDynamics, Sep 2025",
+     "https://www.datacenterdynamics.com/en/news/college-station-texas-rejects-land-sale-for-data-center/"
+    ],
+    [
+     "KBTX, Sep 2025",
+     "https://www.kbtx.com/2025/09/12/college-station-city-council-unanimously-rejects-land-sale-ai-data-center/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "peculiar-diode",
+   "name": "Harper Road Technology Park",
+   "place": "Peculiar",
+   "state": "MO",
+   "lat": 38.72,
+   "lon": -94.46,
+   "developer": "Diode Ventures",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 1.5,
+   "acres": 504,
+   "outcome": "stopped",
+   "start": "2024-01",
+   "start_note": "mayor first revealed the plans",
+   "decided": "2024-10-21",
+   "summary": "The town removed data centers from its zoning code, ending a $1.5 billion plan.",
+   "history": "Diode Ventures planned up to seven 300,000 sq ft buildings on 504 acres next to a new Evergy substation, after the town added data centers to its light-industrial zoning. Opposition grew fast: a Facebook group reached about 1,000 members, roughly one in six local residents, and \"No Hyperscale Data Centers\" signs filled the aldermen's meetings. On 21 October 2024 the Board of Aldermen reversed itself and removed data centers from the code. The mayor, who backed the project, said the fight had hurt the town's reputation with the Kansas City Area Development Council.",
+   "timeline": [
+    [
+     "2024-01",
+     "Mayor reveals the plans"
+    ],
+    [
+     "2024-09",
+     "Planning commission proposes removing data centers from the zoning code"
+    ],
+    [
+     "2024-10-21",
+     "Board of Aldermen removes data centers from the code"
+    ]
+   ],
+   "objections": [
+    "Scale of a hyperscale campus in a small town",
+    "Process"
+   ],
+   "case_for": "The mayor supported the project and called opponents \"boisterous and ill-informed\".",
+   "after": "Diode said it had no active application under the town's extended moratorium.",
+   "sources": [
+    [
+     "DatacenterDynamics, Oct 2024",
+     "https://datacenterdynamics.com/en/news/peculiar-officials-in-missouri-remove-data-centers-from-ordinance-blocking-15bn-diode-project"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "st-charles-cumulus",
+   "name": "Project Cumulus",
+   "place": "St. Charles",
+   "state": "MO",
+   "lat": 38.8,
+   "lon": -90.55,
+   "developer": "CRG Cumulus",
+   "end_user": "an unnamed Fortune 100 company",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 440,
+   "outcome": "stopped",
+   "start": "2025-08",
+   "start_note": "earliest coverage found",
+   "decided": "2025-08-19",
+   "summary": "The developer withdrew, and the city then paused all data-center projects for a year.",
+   "history": "CRG proposed an AI data center on 440 acres off Highway 370 for an end user its lawyer would only call a Fortune 100 company; city officials had signed non-disclosure agreements. Residents turned out to meeting after meeting over energy use, water quality and secrecy. CRG withdrew its permit application before the council's August 2025 vote, saying it would come back with a revised plan, and the council then passed a one-year moratorium on data centers. The mayor said: \"There's not enough transparency, and it turned into a lack of public trust.\"",
+   "timeline": [
+    [
+     "2025-08",
+     "Residents repeatedly pack public meetings"
+    ],
+    [
+     "2025-08-19",
+     "CRG withdraws before the council vote"
+    ],
+    [
+     "2025-08",
+     "Council approves a one-year pause on data-center projects"
+    ]
+   ],
+   "objections": [
+    "Energy use",
+    "Water quality",
+    "Unnamed end user and officials' NDAs"
+   ],
+   "case_for": "CRG said it withdrew to incorporate community feedback and would work on a revised proposal.",
+   "after": null,
+   "sources": [
+    [
+     "KBIA / St. Louis Public Radio, Aug 2025",
+     "https://www.kbia.org/missouri-news/2025-08-19/public-opposition-sinks-st-charles-data-center-plans"
+    ],
+    [
+     "KFVS, Aug 2025",
+     "https://www.kfvs12.com/2025/08/23/st-charles-places-1-year-pause-data-center-projects/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "pittsylvania-balico",
+   "name": "Balico gas-powered campus",
+   "place": "Pittsylvania County",
+   "state": "VA",
+   "lat": 36.82,
+   "lon": -79.4,
+   "developer": "Balico",
+   "end_user": "not named",
+   "mw": 300,
+   "mw_note": "first phase of IT load; with a planned 3.5 GW gas plant",
+   "invest_bn": null,
+   "acres": 750,
+   "outcome": "stopped",
+   "start": "2024",
+   "start_note": "plans first revealed",
+   "decided": "2025-04-15",
+   "summary": "Supervisors rejected a data-center campus with its own 3.5 GW gas plant.",
+   "history": "Balico proposed data centers powered by an on-site 3.5 GW gas plant fed by the Mountain Valley Pipeline, first across about 2,200 acres and then, after resident opposition, on about 750. A study commissioned by the Southern Environmental Law Center estimated the plant would emit at least 326 tons of fine particles a year and add up to $48 million in health costs by 2040. Balico said the plant would meet all air-quality rules. On 15 April 2025 the Board of Supervisors voted 6–1 to reject the rezoning, which Balico had already said it would withdraw.",
+   "timeline": [
+    [
+     "2024",
+     "Plans revealed; first version withdrawn after opposition"
+    ],
+    [
+     "2025",
+     "Revised application filed: 12 buildings, 300 MW first phase"
+    ],
+    [
+     "2025-04-15",
+     "Supervisors reject the rezoning, 6–1"
+    ]
+   ],
+   "objections": [
+    "Air pollution from the gas plant",
+    "Rural character",
+    "Health costs"
+   ],
+   "case_for": "Balico said the plant would comply with federal and state air-quality rules.",
+   "after": "Balico said it was considering housing on the land instead.",
+   "sources": [
+    [
+     "DatacenterDynamics, Apr 2025",
+     "https://datacenterdynamics.com/en/news/plan-for-gas-powered-data-center-campus-in-pittsylvania-county-virginia-withdrawn-again"
+    ],
+    [
+     "WVTF, Apr 2025",
+     "https://www.wvtf.org/news/2025-04-14/balico-withdraws-application-to-build-data-centers-in-pittsylvania-county"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "chesterton-provident",
+   "name": "Provident campus",
+   "place": "Chesterton",
+   "state": "IN",
+   "lat": 41.61,
+   "lon": -87.06,
+   "developer": "Provident Realty Advisors",
+   "end_user": "a hyperscaler, unnamed",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 1.3,
+   "acres": 200,
+   "outcome": "stopped",
+   "start": "2024-05",
+   "start_note": "campus announced",
+   "decided": "2024-06-10",
+   "summary": "Withdrawn within weeks after residents and the town council objected.",
+   "history": "Provident Realty Advisors announced a $1.3 billion campus of eight 150,000 sq ft buildings on about 200 acres, aimed at a hyperscale tenant. Residents raised air, water, energy, wetland and wildlife concerns and worried about home values. Town council members said they could never support a project of that size in that place. Provident told the town on 10 June 2024 that it was withdrawing.",
+   "timeline": [
+    [
+     "2024-05",
+     "Campus announced"
+    ],
+    [
+     "2024-06-10",
+     "Provident withdraws the proposal"
+    ]
+   ],
+   "objections": [
+    "Air, water and energy",
+    "Wetlands and wildlife",
+    "Home values"
+   ],
+   "case_for": "Provident offered landscaped buffers and generator noise limits of 42 decibels.",
+   "after": null,
+   "sources": [
+    [
+     "DatacenterDynamics, Jun 2024",
+     "https://datacenterdynamics.com/en/news/application-for-13bn-data-center-in-chesterton-indiana-withdrawn"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "new-carlisle-second",
+   "name": "Chicago Trail campus",
+   "place": "near New Carlisle, St. Joseph County",
+   "state": "IN",
+   "lat": 41.72,
+   "lon": -86.55,
+   "developer": "a New York-based developer",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 12,
+   "acres": 1000,
+   "outcome": "stopped",
+   "start": "2025-09",
+   "start_note": "plan commission review",
+   "decided": "2025-12-10",
+   "summary": "Next to Amazon's campus, a second giant proposal was voted down 7–2.",
+   "history": "A developer sought to rezone about 1,000 acres of farmland along Chicago Trail for 14 buildings, reported as a $12 billion project, near the campus Amazon was building. The county plan commission voted unanimously against it in September 2025 and the New Carlisle town council passed a resolution opposing it. Supporters, including the county Republican chair and the commissioners' president, argued it would replace property-tax revenue lost to state cuts, backed by TV ads and door-to-door canvassing. After an eight-hour meeting that ended around 4 a.m. on 10 December 2025, the county council rejected the rezoning 7–2.",
+   "timeline": [
+    [
+     "2025-09-16",
+     "Area Plan Commission votes unanimously against"
+    ],
+    [
+     "2025-10",
+     "New Carlisle town council resolution opposing the rezoning"
+    ],
+    [
+     "2025-12-10",
+     "County council rejects the rezoning, 7–2"
+    ]
+   ],
+   "objections": [
+    "Loss of farmland and rural character",
+    "Water and electricity use",
+    "A second campus beside Amazon's"
+   ],
+   "case_for": "Property-tax revenue to offset state cuts, argued by county Republican leaders and commissioners.",
+   "after": null,
+   "sources": [
+    [
+     "WVPE, Dec 2025",
+     "https://www.wvpe.org/wvpe-news/2025-12-10/council-denies-rezoning-for-data-center-near-new-carlisle"
+    ],
+    [
+     "WNDU, Oct 2025",
+     "https://www.wndu.com/2025/10/23/new-carlisle-town-council-opposes-proposed-12-billion-data-center"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "archbald-provident",
+   "name": "Archbald 1",
+   "place": "Archbald",
+   "state": "PA",
+   "lat": 41.49,
+   "lon": -75.54,
+   "developer": "Provident Realty Advisors (as Archbald 1 LLC)",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": null,
+   "outcome": "stopped",
+   "start": "2025-10",
+   "start_note": "first Provident application",
+   "decided": "2026-03-27",
+   "summary": "One of several proposals in a small borough; council denied this 18-building plan.",
+   "history": "Five data-center projects across six sites were announced in Archbald, a borough near Scranton, during 2025. Provident's application for an 18-building cluster became the focus: residents raised noise, light and air pollution, property values, wildlife habitat and water and power demand, and the fight changed the council's leadership. A hearing was canceled over a newspaper printing error, and on 27 March 2026 the council voted the application down at a special meeting attended by about 200 people.",
+   "timeline": [
+    [
+     "2025-10",
+     "Provident files a 22-building application across two sites"
+    ],
+    [
+     "2025-11-24",
+     "Council passes new data-center zoning rules, 5–2"
+    ],
+    [
+     "2026-03-18",
+     "Council changes its president"
+    ],
+    [
+     "2026-03-27",
+     "Council denies the 18-building application"
+    ]
+   ],
+   "objections": [
+    "Noise, light and air pollution",
+    "Property values",
+    "Wildlife habitat",
+    "Water and power demand"
+   ],
+   "case_for": "The developer described itself as a good neighbor; residents disputed that.",
+   "after": "Provident's earlier October 2025 application, which did not need a special vote, and other proposals in the borough are unresolved.",
+   "sources": [
+    [
+     "DeSmog, Mar 2026",
+     "https://www.desmog.com/2026/03/31/archbald-pennsylvania-residents-vote-no-data-center-provident-realty-advisors/"
+    ],
+    [
+     "WVIA, Mar 2026",
+     "https://www.wvia.org/news/local/2026-03-19/data-center-concerns-prompt-regime-change-in-archbald"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "monterey-park",
+   "name": "Saturn business park",
+   "place": "Monterey Park",
+   "state": "CA",
+   "lat": 34.06,
+   "lon": -118.12,
+   "developer": "SDCF Monterey Park, LLC",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": null,
+   "outcome": "stopped",
+   "start": "2026-01",
+   "start_note": "residents learned of it; discussed with the city since 2024",
+   "decided": "2026-06",
+   "summary": "The council rejected it, then voters banned data centers permanently.",
+   "history": "A 247,000 sq ft data center was proposed for a largely empty business park, hundreds of feet from homes, after discussions with the city since 2024. Residents said they had only recently learned of it and packed hearings over electricity, water, noise and air pollution; reports said it would use about three times the electricity of the whole city of 60,000. The council considered a moratorium in January 2026 and then rejected the project. To stop future councils reversing course, residents put a permanent ban on the June 2026 ballot, and more than 86% voted for it.",
+   "timeline": [
+    [
+     "2026-01-21",
+     "Council considers a moratorium"
+    ],
+    [
+     "2026",
+     "Council rejects the project"
+    ],
+    [
+     "2026-06",
+     "Voters approve a permanent ban, over 86% in favor"
+    ]
+   ],
+   "objections": [
+    "Electricity use",
+    "Water",
+    "Noise and air pollution near homes"
+   ],
+   "case_for": null,
+   "after": "First voter-enacted permanent ban on data centers in the US, according to reports.",
+   "sources": [
+    [
+     "LAist, Jan 2026",
+     "https://laist.com/news/monterey-park-data-center-moratorium"
+    ],
+    [
+     "AP via Anchorage Daily News, Jun 2026",
+     "https://www.adn.com/nation-world/2026/06/05/in-this-city-near-la-voters-backed-a-first-in-the-nation-permanent-ban-on-data-centers/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "saline-stargate",
+   "name": "Stargate Michigan",
+   "place": "Saline Township",
+   "state": "MI",
+   "lat": 42.17,
+   "lon": -83.86,
+   "developer": "Related Digital",
+   "end_user": "OpenAI and Oracle (Stargate)",
+   "mw": 1400,
+   "mw_note": "DTE supply",
+   "invest_bn": 16,
+   "acres": 575,
+   "outcome": "approved",
+   "start": "2025-09",
+   "start_note": "rezoning hearings",
+   "decided": "2025-10-15",
+   "summary": "The township voted no, was sued, and settled within weeks; construction began.",
+   "history": "Related Digital asked to rezone 575 acres of farmland for a data-center campus to be supplied with about 1.4 GW by DTE. In September 2025 the planning commission recommended against it and the township board voted 4–1 to deny it. Related and the landowners sued on 12 September alleging exclusionary zoning, and the township settled; a consent judgment was filed on 15 October 2025 with about $14 million in community benefits. The site was later announced as an OpenAI–Oracle Stargate campus and groundbreaking followed in November.",
+   "timeline": [
+    [
+     "2025-09",
+     "Planning commission and township board (4–1) reject the rezoning"
+    ],
+    [
+     "2025-09-12",
+     "Developer and landowners sue the township"
+    ],
+    [
+     "2025-10-15",
+     "Consent judgment filed: the project can proceed"
+    ],
+    [
+     "2025-11",
+     "Groundbreaking"
+    ],
+    [
+     "2026-02",
+     "Judge rejects a neighbor's challenge to the settlement"
+    ]
+   ],
+   "objections": [
+    "Loss of farmland",
+    "A settlement that bypassed the board's vote",
+    "Power and water demand"
+   ],
+   "case_for": "About $14 million in community benefits, including $4 million for farmland preservation; two-thirds of the wider site kept as open space.",
+   "after": "Residents filed appeals and started a recall effort against three board members; construction continues.",
+   "sources": [
+    [
+     "Fortune via Yahoo Finance, May 2026",
+     "https://finance.yahoo.com/economy/policy/articles/michigan-farm-town-voted-down-070000429.html"
+    ],
+    [
+     "DatacenterDynamics, Oct 2025",
+     "https://www.datacenterdynamics.com/en/news/township-in-michigan-settles-lawsuit-allows-data-center-project-to-proceed/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "port-washington-lighthouse",
+   "name": "Lighthouse (Stargate)",
+   "place": "Port Washington",
+   "state": "WI",
+   "lat": 43.39,
+   "lon": -87.88,
+   "developer": "Vantage Data Centers",
+   "end_user": "OpenAI and Oracle (Stargate)",
+   "mw": 1300,
+   "mw_note": "four buildings; up to 3.5 GW at full build-out per Clean Wisconsin",
+   "invest_bn": 15,
+   "acres": null,
+   "outcome": "approved",
+   "start": "2025-10-22",
+   "start_note": "Stargate site announced",
+   "decided": "2025-11-04",
+   "summary": "Approved unanimously by the council; voters later demanded a say on big incentives.",
+   "history": "Vantage's $15 billion Lake Michigan campus was announced as an OpenAI–Oracle Stargate site in October 2025, with four buildings expected to need 1.3 GW. On 4 November 2025 the council unanimously created a tax increment district to repay Vantage's estimated $175 million of public infrastructure, at a meeting moved to a hotel ballroom for the crowd. Opponents, led by Great Lakes Neighbors United, cited the speed and lack of input, a proposed transmission line, and Clean Wisconsin's estimate of large off-site water use for power generation. They launched a recall of the mayor, and in April 2026 about two-thirds of voters approved requiring a public vote on incentives above $10 million.",
+   "timeline": [
+    [
+     "2025-10-22",
+     "Announced as a Stargate site"
+    ],
+    [
+     "2025-11-04",
+     "Council creates the tax increment district, unanimously"
+    ],
+    [
+     "2025-12",
+     "Recall effort against the mayor"
+    ],
+    [
+     "2026-04",
+     "Referendum: voter approval needed for incentives over $10 million"
+    ]
+   ],
+   "objections": [
+    "Fast approval with little input",
+    "Transmission line route",
+    "Water used to generate the power",
+    "Location by the Great Lakes"
+   ],
+   "case_for": "Vantage projects over 4,000 construction jobs and about 330 permanent staff, with about 700 jobs for the tenants, and pays upfront for water, sewer, roads and power infrastructure.",
+   "after": "A judge dismissed a lawsuit against the tax district.",
+   "sources": [
+    [
+     "WPR, Nov 2025",
+     "https://www.wpr.org/news/port-washington-council-approves-tid"
+    ],
+    [
+     "Washington Examiner, Apr 2026",
+     "https://www.washingtonexaminer.com/policy/energy-and-environment/4520622/port-washington-wisconsin-restrict-data-centers/"
+    ],
+    [
+     "BizTimes, Oct 2025",
+     "https://biztimes.com/openai-and-oracle-will-run-port-washington-data-center-as-part-of-stargate-project/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "meta-hyperion",
+   "name": "Hyperion (Meta)",
+   "place": "Holly Ridge, Richland Parish",
+   "state": "LA",
+   "lat": 32.48,
+   "lon": -91.68,
+   "developer": "Meta, in a joint venture managed by Blue Owl",
+   "end_user": "Meta",
+   "mw": 2000,
+   "mw_note": "about 2 GW by 2030; up to 5 GW planned",
+   "invest_bn": 50,
+   "acres": 2250,
+   "outcome": "approved",
+   "start": "2024-12-04",
+   "start_note": "announced",
+   "decided": "2025-08",
+   "summary": "Regulators approved three new gas plants to power Meta's largest data center.",
+   "history": "Meta announced a data center in rural Richland Parish in December 2024 at over $10 billion; by July 2026 it had raised the planned investment to more than $50 billion for a campus of about 2,250 acres that could reach 5 GW. To power it, Entergy Louisiana proposed three new gas plants and transmission lines. Consumer and environmental groups warned of higher bills after Meta's 15-year contract, climate impact and a non-public contract between two corporations. In August 2025 the Public Service Commission approved the plan 4–1.",
+   "timeline": [
+    [
+     "2024-12-04",
+     "Meta announces the campus"
+    ],
+    [
+     "2025-08",
+     "Public Service Commission approves Entergy's gas plants, 4–1"
+    ],
+    [
+     "2025-10",
+     "Blue Owl joint venture to finance at least $27 billion"
+    ],
+    [
+     "2026-07",
+     "Meta raises planned investment to more than $50 billion"
+    ]
+   ],
+   "objections": [
+    "Bills after Meta's contract ends",
+    "Climate impact of new gas plants",
+    "Water near small towns",
+    "Jobs not guaranteed to local people"
+   ],
+   "case_for": "Meta pays the full cost of the new plants for 15 years; Entergy put the net bill impact at about a dollar a month; 500 direct jobs announced.",
+   "after": "Under construction. Residents have complained about construction traffic and outages; Entergy denies the project harms the grid.",
+   "sources": [
+    [
+     "WWNO, Aug 2025",
+     "https://www.wwno.org/coastal-desk/2025-08-20/entergys-plan-to-power-new-meta-data-center-gets-regulatory-approval"
+    ],
+    [
+     "Wikipedia: Hyperion Data Center",
+     "https://en.wikipedia.org/wiki/Hyperion_Data_Center"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "xai-colossus",
+   "name": "Colossus (xAI)",
+   "place": "Memphis",
+   "state": "TN",
+   "lat": 35.06,
+   "lon": -90.08,
+   "developer": "xAI",
+   "end_user": "xAI",
+   "mw": null,
+   "mw_note": "150 MW grid connection plus on-site gas turbines; SELC counted 35 turbines rated 422 MW",
+   "invest_bn": null,
+   "acres": null,
+   "outcome": "approved",
+   "start": "2024-07",
+   "start_note": "came online",
+   "decided": "2025-07-02",
+   "summary": "Built fast in a former factory, run partly on gas turbines; the permit came later.",
+   "history": "xAI turned a former Electrolux factory in Memphis into the Colossus AI supercomputer, online in July 2024, powered partly by temporary gas turbines. The Southern Environmental Law Center's aerial photos showed 35 turbines capable of 422 MW, while it said only 15 were permitted; groups including Memphis Communities Against Pollution opposed them over air quality. Some turbines were removed in May 2025 as a new 150 MW substation came online. On 2 July 2025 the Shelby County Health Department permitted 15 permanent turbines; the NAACP and others appealed.",
+   "timeline": [
+    [
+     "2024-07",
+     "Colossus comes online in a former Electrolux factory"
+    ],
+    [
+     "2025-05",
+     "Some turbines removed as a 150 MW substation connects"
+    ],
+    [
+     "2025-07-02",
+     "County permits 15 permanent turbines"
+    ],
+    [
+     "2025-07",
+     "NAACP and others appeal the permit"
+    ]
+   ],
+   "objections": [
+    "Air pollution from unpermitted turbines",
+    "A neighborhood already burdened by industry",
+    "Doubts about enforcement"
+   ],
+   "case_for": "The city said air tests found no dangerous pollutant levels; xAI said its controls make it the lowest-emitting facility of its kind.",
+   "after": "xAI bought a second site in the Whitehaven area in 2025.",
+   "sources": [
+    [
+     "Action News 5, Jul 2025",
+     "https://www.actionnews5.com/2025/07/02/health-dept-grants-permit-xai-turbines/"
+    ],
+    [
+     "Bisnow, May 2025",
+     "https://www.bisnow.com/news/national/data-center/musks-xai-removes-gas-turbines-from-memphis-data-center-after-public-outcry-129274"
+    ],
+    [
+     "Tennessee Lookout, Jul 2025",
+     "https://tennesseelookout.com/2025/07/17/naacp-others-appeal-xai-turbine-permits-for-memphis-data-center/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "bessemer-marvel",
+   "name": "Project Marvel",
+   "place": "Bessemer",
+   "state": "AL",
+   "lat": 33.36,
+   "lon": -86.98,
+   "developer": "Logistic Land Investments",
+   "end_user": "none secured",
+   "mw": 1200,
+   "mw_note": "full capacity, per the developer's law firm",
+   "invest_bn": 14.5,
+   "acres": 700,
+   "outcome": "approved",
+   "start": "2025-04",
+   "start_note": "neighbors' lawsuit filed",
+   "decided": "2025-11",
+   "summary": "Rezoned 5–2 over near-unanimous opposition in the room.",
+   "history": "Logistic Land Investments proposed 18 buildings totalling 4.5 million sq ft on about 700 mostly wooded acres, a $14.5 billion project with no tenant yet that could draw about 1,200 MW, enough to raise Alabama's electricity demand by up to 10%. Neighbors sued in April 2025 to make the city disclose what council members reviewed before voting; critics said officials who signed non-disclosure agreements weren't open with the public. Residents wearing red packed the November 2025 meeting over water, power, 300 to 500 diesel backup generators and an imperiled fish on the site, the Birmingham darter. The council approved the rezoning 5–2.",
+   "timeline": [
+    [
+     "2025-04",
+     "Neighbors sue for disclosure"
+    ],
+    [
+     "2025-11",
+     "Council approves the rezoning, 5–2"
+    ],
+    [
+     "2026-06-22",
+     "Disclosure lawsuit dismissed by agreement of both sides"
+    ]
+   ],
+   "objections": [
+    "Water and electricity use",
+    "Diesel generator emissions",
+    "Birmingham darter habitat",
+    "Officials' NDAs"
+   ],
+   "case_for": "Supporters, including school officials, pointed to tax revenue; the developer said there would be no power-rate increases, which Alabama Power has not publicly guaranteed.",
+   "after": "Project under way.",
+   "sources": [
+    [
+     "Inside Climate News, Nov 2025",
+     "https://insideclimatenews.org/news/18112025/alabama-city-council-approves-rezoning-for-massive-data-center/"
+    ],
+    [
+     "WBRC, Jun 2026",
+     "https://www.wbrc.com/2026/06/25/bessemer-data-center-rezoning-lawsuit-dismissed/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "coweta-sail",
+   "name": "Project Sail",
+   "place": "Coweta County",
+   "state": "GA",
+   "lat": 33.38,
+   "lon": -84.93,
+   "developer": "Atlas Development; Prologis acquiring",
+   "end_user": "not named",
+   "mw": 900,
+   "mw_note": "",
+   "invest_bn": null,
+   "acres": 832,
+   "outcome": "approved",
+   "start": "2025-01",
+   "start_note": "proposal filed",
+   "decided": "2026-04-07",
+   "summary": "Commissioners approved a 900 MW campus 15 months after it was proposed.",
+   "history": "Atlas Development proposed a nine-building, 4.3 million sq ft campus on 832 acres west of Newnan in January 2025, and the logistics company Prologis later moved to buy the site. Residents argued it would strain the area's resources; a Facebook group of about 4,800 members discussed legal action and a fundraiser raised about $27,000 for lawyers. In April 2026 the county commissioners approved the rezoning.",
+   "timeline": [
+    [
+     "2025-01",
+     "Atlas files the proposal"
+    ],
+    [
+     "2025-05",
+     "Reports that Prologis will buy the site"
+    ],
+    [
+     "2026-04-07",
+     "Commissioners approve the rezoning"
+    ]
+   ],
+   "objections": [
+    "Strain on local resources",
+    "Rural character"
+   ],
+   "case_for": null,
+   "after": "Opponents were raising money for a possible legal challenge.",
+   "sources": [
+    [
+     "DatacenterDynamics, Apr 2026",
+     "https://www.datacenterdynamics.com/en/news/prologis-900mw-project-sail-gets-the-go-ahead-in-coweta-county-georgia"
+    ],
+    [
+     "Atlanta News First, Apr 2026",
+     "https://www.atlantanewsfirst.com/2026/04/08/coweta-county-commissioners-approve-rezoning-massive-data-center/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "farmington-tract",
+   "name": "Farmington Technology Park",
+   "place": "Farmington",
+   "state": "MN",
+   "lat": 44.64,
+   "lon": -93.14,
+   "developer": "Tract",
+   "end_user": "not yet identified",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 5,
+   "acres": 340,
+   "outcome": "approved",
+   "start": "2024-10",
+   "start_note": "Castle Rock Township objects",
+   "decided": "2024-12",
+   "summary": "Approved; residents sued, then dropped the suit over legal costs. A township's suit continues.",
+   "history": "Tract plans up to 12 buildings and 2.5 million sq ft on 340 acres, about $5 billion at full build-out. Residents formed the Coalition for Responsible Data Center Development, more than 350 members, and sued in November 2024 over air, noise, water and power use and building heights. The council approved the final plan in December 2024, and neighboring Castle Rock Township sued in January 2025 saying the city broke an annexation agreement. In September 2026 the coalition dropped its suit because a few residents could no longer carry the cost.",
+   "timeline": [
+    [
+     "2024-10-17",
+     "Castle Rock Township asks the Metropolitan Council to deny the rezoning"
+    ],
+    [
+     "2024-11-29",
+     "Residents' coalition sues"
+    ],
+    [
+     "2024-12",
+     "Council approves the final plan"
+    ],
+    [
+     "2025-01-14",
+     "Castle Rock Township votes to sue"
+    ],
+    [
+     "2026-09-09",
+     "Coalition withdraws its suit, citing legal costs"
+    ]
+   ],
+   "objections": [
+    "Air, noise and water",
+    "Power demand and who pays for infrastructure",
+    "80-foot buildings",
+    "Annexation agreement"
+   ],
+   "case_for": "Tract says the planning commission and council each approved by large majorities, twice.",
+   "after": "The township's lawsuit is unaffected by the coalition's withdrawal.",
+   "sources": [
+    [
+     "GovTech, Jan 2025",
+     "https://www.govtech.com/infrastructure/farmington-minn-residents-sue-to-stop-data-center-park"
+    ],
+    [
+     "Blandin on Broadband, Sep 2026",
+     "https://blandinonbroadband.org/2026/09/09/coalition-for-responsible-data-center-development-withdraws-lawsuit-due-in-farmington-to-litigation-costs-dakota-county/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "pw-digital-gateway",
+   "name": "PW Digital Gateway",
+   "place": "Gainesville, Prince William County",
+   "state": "VA",
+   "lat": 38.83,
+   "lon": -77.6,
+   "developer": "QTS and Compass Datacenters (as H&H Capital Acquisitions and GW Acquisition Co.)",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 2100,
+   "outcome": "contested",
+   "start": "2023-12",
+   "start_note": "rezoning approved",
+   "decided": null,
+   "summary": "A 2,100-acre rezoning beside a Civil War battlefield was approved, then voided by the courts.",
+   "history": "In December 2023, after a 29-hour public hearing, Prince William's supervisors narrowly rezoned about 2,100 acres beside Manassas National Battlefield Park for 23 million sq ft of data centers. Neighbors in the Oak Valley Homeowners Association and the American Battlefield Trust sued. In August 2025 a circuit judge voided the rezoning because the county failed to give proper public notice, and the Court of Appeals upheld that on 31 March 2026. The county then dropped its defense and Compass stepped back; QTS appealed to the Supreme Court of Virginia, which could decide whether to hear it from autumn 2026.",
+   "timeline": [
+    [
+     "2023-12",
+     "Supervisors approve the rezoning after a 29-hour hearing"
+    ],
+    [
+     "2025-08",
+     "Circuit court voids the rezoning over public notice"
+    ],
+    [
+     "2025-11",
+     "Builders barred from starting while appeals continue"
+    ],
+    [
+     "2026-03-31",
+     "Court of Appeals upholds the ruling"
+    ],
+    [
+     "2026-04-14",
+     "County withdraws from the appeals"
+    ],
+    [
+     "2026-04-28",
+     "Compass says it won't appeal"
+    ],
+    [
+     "2026-04-30",
+     "QTS appeals to the Supreme Court of Virginia"
+    ]
+   ],
+   "objections": [
+    "Next to a Civil War battlefield",
+    "Improper public notice",
+    "Taxpayer money spent defending it"
+   ],
+   "case_for": "The county board approved it in 2023 and spent about $1.7 million defending it before withdrawing.",
+   "after": "If the Supreme Court takes the case, a final ruling could come around mid-2027.",
+   "sources": [
+    [
+     "Virginia Lawyers Weekly, Apr 2026",
+     "https://valawyersweekly.com/2026/04/01/virginia-court-upholds-block-prince-william-digital-gateway/"
+    ],
+    [
+     "InsideNoVa, Apr 2026",
+     "https://www.insidenova.com/news/prince_william/prince-william-county-withdraws-from-digital-gateway-lawsuit-reversing-course-from-2023/article_2aa0e791-1ac9-490e-8e30-a1c4880bce35.html"
+    ],
+    [
+     "InsideNoVa, May 2026",
+     "https://www.insidenova.com/news/prince_william/digital-gateway-legal-proceedings-could-stretch-into-mid-2027-attorney-says/article_c6e5a62f-e064-4674-b86b-ad76a4af177e.html"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "warrenton-amazon",
+   "name": "Amazon Warrenton",
+   "place": "Warrenton",
+   "state": "VA",
+   "lat": 38.71,
+   "lon": -77.8,
+   "developer": "Amazon Web Services",
+   "end_user": "Amazon Web Services",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 42,
+   "outcome": "contested",
+   "start": "2022-06",
+   "start_note": "Amazon applies",
+   "decided": null,
+   "summary": "Approved in 2023, then stalled for three years in court.",
+   "history": "Amazon bought a 42-acre site on Blackwell Road and applied to build a single-story, 220,000 sq ft data center in this small Virginia town. The town council granted a special use permit in February 2023 over local opposition, and Citizens for Fauquier County and residents sued, arguing the 2021 zoning change that first allowed data centers was void. The council removed data centers as a permitted use in July 2025, which did not cancel Amazon's permit. Trial began in March 2026 with a final hearing set for June, while construction has not started.",
+   "timeline": [
+    [
+     "2022-06",
+     "Amazon applies to build"
+    ],
+    [
+     "2023-02-14",
+     "Town council grants a special use permit"
+    ],
+    [
+     "2023",
+     "Residents and Citizens for Fauquier County sue"
+    ],
+    [
+     "2025-07-08",
+     "Council removes data centers as a permitted use, 6–0"
+    ],
+    [
+     "2026-03-09",
+     "Trial begins; final hearing set for 15 June 2026"
+    ]
+   ],
+   "objections": [
+    "Noise",
+    "Small-town character",
+    "How the 2021 zoning change was made"
+   ],
+   "case_for": "Amazon argues the permit was a separate, publicly vetted decision and that no one knew of any problem with the zoning amendment.",
+   "after": "We have not found a ruling from the June 2026 hearing yet.",
+   "sources": [
+    [
+     "Fauquier Times, Mar 2026",
+     "https://www.fauquier.com/localnews/trial-begins-in-lawsuit-delaying-amazon-data-center/article_559d2c34-4dad-4907-b2f6-51a21079b263.html"
+    ],
+    [
+     "FauquierNow, Jul 2025",
+     "https://www.fauquiernow.com/news/warrenton-town-council-pushes-back-against-data-centers-amends-zoning-ordinance/article_67ce814a-e880-4c95-8099-bac067988a25.html"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "abilene-stargate",
+   "name": "Stargate Abilene",
+   "place": "Abilene",
+   "state": "TX",
+   "lat": 32.5,
+   "lon": -99.78,
+   "developer": "Stargate (OpenAI and Oracle with their investors)",
+   "end_user": "OpenAI and Oracle",
+   "mw": 1200,
+   "mw_note": "eventual draw",
+   "invest_bn": 3.5,
+   "acres": 1100,
+   "outcome": "quiet",
+   "start": "2024-06",
+   "start_note": "work began quietly",
+   "decided": "2025-02",
+   "summary": "Two people spoke at the meeting that approved its tax break; concerns came later.",
+   "history": "The first Stargate campus began quietly in June 2024: eight buildings, 4 million sq ft on 1,100 acres, eventually drawing about 1.2 GW, with an on-site gas plant. At a sparsely attended special meeting in February 2025 the city council unanimously approved an 85% property-tax abatement; only one resident spoke against it. Two buildings were running by early 2026. Concerns since have centered on construction traffic, gas-plant emissions, the size of the tax break and a housing crunch.",
+   "timeline": [
+    [
+     "2024-06",
+     "Work begins"
+    ],
+    [
+     "2025-02",
+     "Council unanimously approves the tax abatement"
+    ],
+    [
+     "2026-01",
+     "Two buildings operating"
+    ]
+   ],
+   "objections": [
+    "Raised later: traffic, gas-plant emissions, tax abatement, housing costs"
+   ],
+   "case_for": "An economic impact of up to $4 billion over two decades claimed by boosters; 357 full-time jobs required by the deal.",
+   "after": null,
+   "sources": [
+    [
+     "Texas Monthly, Jan 2026",
+     "https://www.texasmonthly.com/news-politics/abilene-stargate-artificial-intelligence/"
+    ],
+    [
+     "KTTZ, Aug 2026",
+     "https://radio.kttz.org/2026-08-12/officials-say-data-centers-can-boost-local-economies-in-abilene-they-have-spurred-a-housing-crisis"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "cheyenne-jade",
+   "name": "Project Jade",
+   "place": "south of Cheyenne, Laramie County",
+   "state": "WY",
+   "lat": 41.03,
+   "lon": -104.82,
+   "developer": "Crusoe, with Tallgrass building the power plant",
+   "end_user": "not named",
+   "mw": 1800,
+   "mw_note": "designed to scale to 10 GW",
+   "invest_bn": null,
+   "acres": null,
+   "outcome": "quiet",
+   "start": "2025-07",
+   "start_note": "announced",
+   "decided": "2026-01-05",
+   "summary": "A 1.8 GW campus approved with only scattered objections.",
+   "history": "Crusoe and Tallgrass announced a 1.8 GW AI campus near the Colorado border, powered by an adjacent 2.7 GW gas-fired plant, which reports said would use more electricity than every home in Wyoming. Laramie County approved it in January 2026. A neighboring rancher objected to lights, dust and the changed landscape, and some residents asked about water; Crusoe said closed-loop cooling keeps water use minimal. We found no organized campaign against it.",
+   "timeline": [
+    [
+     "2025-07",
+     "Project announced"
+    ],
+    [
+     "2026-01-05",
+     "Laramie County approves the campus and power plant"
+    ]
+   ],
+   "objections": [
+    "Individual objections: views, lights, dust, water"
+   ],
+   "case_for": "Tallgrass cites $7 billion of energy infrastructure; total cost could reach $50 billion.",
+   "after": null,
+   "sources": [
+    [
+     "DatacenterDynamics, Jan 2026",
+     "https://www.datacenterdynamics.com/en/news/crusoe-gets-go-ahead-for-18gw-data-center-campus-and-power-plant-in-cheyenne-wyoming"
+    ],
+    [
+     "AP via KSAT, Jul 2025",
+     "https://www.ksat.com/business/2025/07/28/cheyenne-to-host-massive-ai-data-center-using-more-electricity-than-all-wyoming-homes-combined/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "new-carlisle-amazon",
+   "name": "AWS New Carlisle",
+   "place": "New Carlisle",
+   "state": "IN",
+   "lat": 41.68,
+   "lon": -86.47,
+   "developer": "Amazon Web Services",
+   "end_user": "Amazon Web Services",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 11,
+   "acres": null,
+   "outcome": "quiet",
+   "start": "2024-04-25",
+   "start_note": "announced",
+   "decided": "2024-04-25",
+   "summary": "An $11 billion campus that went ahead with state incentives and little early resistance.",
+   "history": "Amazon announced an $11 billion data-center campus in April 2024 inside the Indiana Enterprise Center, a planned industrial park of nearly 3,000 acres beside a town of about 1,600 people, with at least 1,000 jobs promised. The state offered performance-based tax credits and grants, and Amazon agreed to put up to $7 million toward roads. We found no organized opposition to it at the time. When a second giant campus was proposed nearby in 2025, opponents argued the area's rural character was already changing as Amazon built.",
+   "timeline": [
+    [
+     "2024-04-25",
+     "Amazon announces the campus"
+    ],
+    [
+     "2025-12-10",
+     "County rejects a second campus nearby"
+    ]
+   ],
+   "objections": [
+    "None organized at the time found"
+   ],
+   "case_for": "At least 1,000 jobs; state tax credits are claimable only after investment is made.",
+   "after": null,
+   "sources": [
+    [
+     "REBusinessOnline, Apr 2024",
+     "https://rebusinessonline.com/amazon-web-services-to-develop-11b-data-center-campus-in-northern-indiana/"
+    ],
+    [
+     "WVPE, Dec 2025",
+     "https://www.wvpe.org/wvpe-news/2025-12-10/council-denies-rezoning-for-data-center-near-new-carlisle"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "mount-pleasant-fairwater",
+   "name": "Fairwater (Microsoft)",
+   "place": "Mount Pleasant",
+   "state": "WI",
+   "lat": 42.7,
+   "lon": -87.93,
+   "developer": "Microsoft",
+   "end_user": "Microsoft",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": null,
+   "outcome": "quiet",
+   "start": "2024-05",
+   "start_note": "Wisconsin investment announced",
+   "decided": "2024-05",
+   "summary": "Built without an organized fight; neighbors sued over fan noise after it opened.",
+   "history": "Microsoft announced its Wisconsin data-center investment in May 2024 and finished the first Fairwater building in Mount Pleasant in 2026, calling it the world's most powerful AI supercomputer; a second building is due in 2028. We found no organized opposition before construction. In July 2026, three neighbors in Sturtevant filed a proposed class action saying the cooling fans' constant noise had invaded their homes, on behalf of more than 1,000 households within 1.5 miles.",
+   "timeline": [
+    [
+     "2024-05",
+     "Microsoft announces its Wisconsin investment"
+    ],
+    [
+     "2026-04",
+     "First building's equipment brought online"
+    ],
+    [
+     "2026-07",
+     "Neighbors file a class action over noise"
+    ]
+   ],
+   "objections": [
+    "After opening: cooling-fan noise"
+   ],
+   "case_for": "About 550 full-time staff at the first building and 10,000 construction workers over two years, per Microsoft; $4.7 billion of local construction spending estimated for 2024 to 2028.",
+   "after": null,
+   "sources": [
+    [
+     "Microsoft, Jun 2026",
+     "https://news.microsoft.com/source/2026/06/23/microsoft-completes-construction-on-first-datacenter-facility-in-mount-pleasant-wisconsin/"
+    ],
+    [
+     "Wisconsin Examiner, Jul 2026",
+     "https://wisconsinexaminer.com/2026/07/02/mount-pleasant-residents-file-class-action-suit-over-microsoft-data-center-noise/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "caledonia-nova",
+   "name": "Project Nova (Microsoft)",
+   "place": "Caledonia, Racine County",
+   "state": "WI",
+   "lat": 42.83,
+   "lon": -87.9,
+   "developer": "Microsoft",
+   "end_user": "Microsoft",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 244,
+   "outcome": "stopped",
+   "start": "2025-08",
+   "start_note": "application submitted",
+   "decided": "2025-10-08",
+   "summary": "Microsoft dropped the site after a local campaign, Stop Project Nova, days before a rezoning vote.",
+   "history": "Microsoft applied in August 2025 to rezone 244 acres west of We Energies' Oak Creek coal plant, with a 15-acre substation; its involvement became public in late September. Residents organized as Stop Project Nova, and about 30 people spoke against it at a September meeting. On 8 October 2025, ahead of a 14 October vote, Microsoft withdrew, citing community feedback, and said it would look for a site that \"aligns with community priorities\". At the same time it announced another $4 billion to double its campus in nearby Mount Pleasant.",
+   "timeline": [
+    [
+     "2025-08",
+     "Rezoning application submitted"
+    ],
+    [
+     "2025-09",
+     "Microsoft named; about 30 speak against at a meeting"
+    ],
+    [
+     "2025-10-08",
+     "Microsoft withdraws"
+    ]
+   ],
+   "objections": [
+    "Community opposition organized as Stop Project Nova"
+   ],
+   "case_for": "Microsoft said it remained committed to investing in southeast Wisconsin.",
+   "after": "Microsoft expanded its nearby Mount Pleasant campus instead.",
+   "sources": [
+    [
+     "DatacenterDynamics, Oct 2025",
+     "https://www.datacenterdynamics.com/en/news/microsoft-cancels-plans-for-data-center-caledonia-wisconsin/"
+    ],
+    [
+     "WISN, Oct 2025",
+     "https://www.wisn.com/article/microsoft-drops-caledonia-data-center-after-community-pushback/68905827"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "san-marcos-highlander",
+   "name": "Francis Harris Lane",
+   "place": "San Marcos",
+   "state": "TX",
+   "lat": 29.83,
+   "lon": -97.98,
+   "developer": "Highlander SM One LLC",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 1.5,
+   "acres": 200,
+   "outcome": "stopped",
+   "start": "2025-03",
+   "start_note": "planning commission review",
+   "decided": "2026-02-18",
+   "summary": "Turned down twice; the second time 5–2 at 2:14 in the morning.",
+   "history": "A Fort Worth developer sought to rezone about 200 acres next to the Hays Energy power plant, between San Marcos and New Braunfels, for a $1.5 billion data center. The planning commission recommended denial in March 2025 and a zoning change failed to reach the council supermajority it needed that summer. The developer returned with water-use concessions, but 182 people signed up to speak, most against, in a region in long drought. At 2:14 a.m. on 18 February 2026 the council voted 5–2 to deny the land-use change.",
+   "timeline": [
+    [
+     "2025-03",
+     "Planning and Zoning Commission recommends denial"
+    ],
+    [
+     "2025",
+     "Zoning change fails to get a council supermajority"
+    ],
+    [
+     "2026-02-18",
+     "Council denies the land-use change, 5–2"
+    ]
+   ],
+   "objections": [
+    "Water in a drought-hit region",
+    "Environment",
+    "Noise and pollution"
+   ],
+   "case_for": "Construction jobs lasting up to five years, backed by union workers, and city tax revenue; the developer offered water-use concessions.",
+   "after": "The developer can refile after six months. Hays County's judge proposed a moratorium on new water-intensive permits.",
+   "sources": [
+    [
+     "Texas Public Radio, Feb 2026",
+     "https://www.tpr.org/news/2026-02-18/san-marcos-city-council-blocks-proposed-data-center"
+    ],
+    [
+     "DatacenterDynamics, Mar 2025",
+     "https://datacenterdynamics.com/en/news/data-center-proposal-rejected-in-san-marcos-texas"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "mooresville-tract",
+   "name": "Mooresville Technology Park",
+   "place": "Mooresville, Iredell County",
+   "state": "NC",
+   "lat": 35.58,
+   "lon": -80.81,
+   "developer": "Tract",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 400,
+   "outcome": "stopped",
+   "start": "2025",
+   "start_note": "rezoning meetings",
+   "decided": "2025-08",
+   "summary": "Tract withdrew a campus on land once owned by NASCAR's Dale Earnhardt.",
+   "history": "Tract sought to rezone 400 acres outside Mooresville, owned by Teresa Earnhardt, widow of the NASCAR driver, for 1.5 million sq ft of data centers that residents nicknamed the \"Concrete Monster\". About 200 residents protested over several meetings and set up a campaign website; Dale Earnhardt's son Kerry spoke against it. In August 2025 Tract withdrew fully before the council could discuss it, and the mayor said there was no active data-center request in the town.",
+   "timeline": [
+    [
+     "2025",
+     "Residents protest the rezoning over several meetings"
+    ],
+    [
+     "2025-08",
+     "Tract withdraws the plan"
+    ]
+   ],
+   "objections": [
+    "Scale beside homes and farmland",
+    "The site's family history"
+   ],
+   "case_for": null,
+   "after": null,
+   "sources": [
+    [
+     "DatacenterDynamics, Aug 2025",
+     "https://www.datacenterdynamics.com/en/news/tract-pulls-plans-for-north-carolina-data-center-on-land-formerly-owned-by-nascar-legend-dale-earnhardt/"
+    ],
+    [
+     "WBTV, Aug 2025",
+     "https://www.wbtv.com/2025/08/13/developers-withdraw-plans-data-center-nascar-legends-land-mooresville/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "chandler-price-road",
+   "name": "Price Road AI campus",
+   "place": "Chandler",
+   "state": "AZ",
+   "lat": 33.27,
+   "lon": -111.89,
+   "developer": "Active Infrastructure",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 40,
+   "outcome": "stopped",
+   "start": "2025-10",
+   "start_note": "lobbying for approval reported",
+   "decided": "2025-12-11",
+   "summary": "Rejected unanimously despite a former US senator lobbying for it.",
+   "history": "A New York developer proposed an AI data center on 40 acres in Chandler's Price Road corridor, home to Intel and Wells Fargo. Former Senator Kyrsten Sinema attended several city meetings urging approval, framing it as part of the national AI push. The city received over 250 emails against and 10 in favor. On 11 December 2025 the council voted unanimously no; the mayor said \"almost-jobless buildings\" did not fit the corridor's plans for employment.",
+   "timeline": [
+    [
+     "2025-10",
+     "Former Sen. Sinema urges the council to advance it"
+    ],
+    [
+     "2025-12-11",
+     "Council rejects it unanimously"
+    ]
+   ],
+   "objections": [
+    "Few jobs for the land used",
+    "Fit with the employment corridor"
+   ],
+   "case_for": "Supporters, including former Sen. Kyrsten Sinema, tied it to national AI priorities.",
+   "after": null,
+   "sources": [
+    [
+     "KJZZ, Dec 2025",
+     "https://www.kjzz.org/business/2025-12-12/this-arizona-city-council-rejected-a-proposed-ai-data-center"
+    ],
+    [
+     "Arizona's Family, Dec 2025",
+     "https://www.azfamily.com/2025/12/12/chandler-unanimously-votes-against-proposed-ai-data-center/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "menomonie-balloonist",
+   "name": "Balloonist campus",
+   "place": "Menomonie, Dunn County",
+   "state": "WI",
+   "lat": 44.88,
+   "lon": -91.92,
+   "developer": "Balloonist LLC",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 1.6,
+   "acres": 320,
+   "outcome": "stopped",
+   "start": "2025-08",
+   "start_note": "land annexed and rezoned",
+   "decided": "2025-09-22",
+   "summary": "The mayor halted a $1.6 billion plan weeks after the city annexed the land for it.",
+   "history": "In August 2025 Menomonie annexed and rezoned about 320 acres of farmland for a $1.6 billion data center by Balloonist LLC, whose end user was never named; the city administrator had signed a non-disclosure agreement. Opposition grew across the city and region over secrecy and the use of farmland. On 22 September 2025 the mayor announced he would not pursue a tax district or development agreement, calling it \"not a suitable fit\".",
+   "timeline": [
+    [
+     "2025-08",
+     "City annexes and rezones the land"
+    ],
+    [
+     "2025-09-22",
+     "Mayor puts the project on hold"
+    ],
+    [
+     "2025-12",
+     "Protest in Dunn County"
+    ]
+   ],
+   "objections": [
+    "Secrecy and NDAs",
+    "Unknown end user",
+    "Loss of farmland"
+   ],
+   "case_for": "A city FAQ cited up to 1,000 construction jobs and 50 to 75 full-time jobs.",
+   "after": "The annexation and rezoning still stand; organizers expected possible legal action by the developer.",
+   "sources": [
+    [
+     "WPR, Sep 2025",
+     "https://www.wpr.org/news/menomonie-mayor-puts-data-center-proposal-on-hold"
+    ],
+    [
+     "Civic Media, Sep 2025",
+     "https://civicmedia.us/news/2025/09/24/menomonie-data-center-plans-paused"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "matthews-accelerate",
+   "name": "Project Accelerate",
+   "place": "Matthews",
+   "state": "NC",
+   "lat": 35.12,
+   "lon": -80.71,
+   "developer": "Matthews DC LLC, with Crosland Southeast",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 123,
+   "outcome": "stopped",
+   "start": "2025",
+   "start_note": "rezoning petition",
+   "decided": "2025-10-07",
+   "summary": "Withdrawn a week before the rezoning hearing in a Charlotte suburb.",
+   "history": "Developers petitioned to rezone 123 acres along East John Street in Matthews, southeast of Charlotte, for a data center. Residents raised power demand, property taxes, noise and environmental impact. On 7 October 2025, ahead of a 13 October hearing, the mayor announced the petition had been withdrawn; the developer said it wanted more time to explore options.",
+   "timeline": [
+    [
+     "2025",
+     "Rezoning petition filed"
+    ],
+    [
+     "2025-10-07",
+     "Mayor announces the withdrawal"
+    ]
+   ],
+   "objections": [
+    "Power demand",
+    "Property taxes",
+    "Noise",
+    "Environmental impact"
+   ],
+   "case_for": null,
+   "after": null,
+   "sources": [
+    [
+     "DatacenterDynamics, Oct 2025",
+     "https://www.datacenterdynamics.com/en/news/project-accelerate-data-center-proposal-withdrawn/"
+    ],
+    [
+     "WFAE, Oct 2025",
+     "https://www.wfae.org/business/2025-10-08/matthews-data-center-plan-is-withdrawn-mayor-says"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "howell-township",
+   "name": "Howell Township campus",
+   "place": "Howell Township, Livingston County",
+   "state": "MI",
+   "lat": 42.64,
+   "lon": -83.97,
+   "developer": "the landowning Van Gilder family",
+   "end_user": "reportedly Meta",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 1000,
+   "outcome": "stopped",
+   "start": "2025",
+   "start_note": "rezoning request",
+   "decided": "2025-12-07",
+   "summary": "A rezoning for more than 1,000 acres of farmland was pulled the night before the vote.",
+   "history": "A local landowning family sought to rezone more than 1,000 acres of farmland for a data center reportedly backed by Meta. The township passed a six-month data-center moratorium while it wrote rules, which opponents said did not cover this request. Stop the Data Centers Livingston County urged the board to keep to its master plan. On 7 December 2025 the family withdrew the request, the night before the board's meeting, saying it would respect the moratorium.",
+   "timeline": [
+    [
+     "2025",
+     "Township adopts a six-month moratorium"
+    ],
+    [
+     "2025-12-07",
+     "Rezoning request withdrawn"
+    ]
+   ],
+   "objections": [
+    "Farmland and the township master plan",
+    "Need for study before deciding"
+   ],
+   "case_for": "The family said its proposal was a good use of the land.",
+   "after": "The township is drafting data-center rules; opponents expect the request to return.",
+   "sources": [
+    [
+     "Michigan Advance, Dec 2025",
+     "https://michiganadvance.com/2025/12/08/rezoning-request-for-rural-michigan-data-center-project-pulled-from-consideration/"
+    ],
+    [
+     "DatacenterDynamics, Dec 2025",
+     "https://www.datacenterdynamics.com/en/news/proposal-for-data-center-in-howell-township-michigan-has-been-withdrawn/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "pataskala-aligned",
+   "name": "Aligned campus",
+   "place": "Pataskala, Licking County",
+   "state": "OH",
+   "lat": 40.0,
+   "lon": -82.67,
+   "developer": "Aligned Data Centers",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": null,
+   "outcome": "stopped",
+   "start": "2026-06",
+   "start_note": "planning commission vote",
+   "decided": "2026-08-25",
+   "summary": "East of Columbus, a city council turned down Aligned Data Centers unanimously.",
+   "history": "Aligned Data Centers proposed a campus in Pataskala, in Licking County east of Columbus; the planning and zoning commission voted 5–2 to deny it. Residents cited water, land, new substations and power lines, permanent noise and a four-story building. On 25 August 2026 the city council unanimously accepted the commission's recommendation.",
+   "timeline": [
+    [
+     "2026-06",
+     "Planning and Zoning Commission recommends denial, 5–2"
+    ],
+    [
+     "2026-08-25",
+     "Council rejects it unanimously"
+    ]
+   ],
+   "objections": [
+    "Water and land",
+    "Substations and transmission lines",
+    "Noise",
+    "Building height"
+   ],
+   "case_for": null,
+   "after": "A November ballot measure in the area concerns data centers over 25 MW.",
+   "sources": [
+    [
+     "NBC4, Aug 2026",
+     "https://www.nbc4i.com/news/local-news/central-ohio-news/datacenters/pataskala-city-council-votes-against-data-center-proposal/amp/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "buckeye-tract",
+   "name": "West Valley campus",
+   "place": "near Buckeye, Maricopa County",
+   "state": "AZ",
+   "lat": 33.44,
+   "lon": -112.48,
+   "developer": "Tract",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 14,
+   "acres": 1000,
+   "outcome": "stopped",
+   "start": "2024-03",
+   "start_note": "first coverage",
+   "decided": "2024-04",
+   "summary": "A $14 billion park withdrawn after neighboring cities' planners objected.",
+   "history": "Tract applied to rezone about 1,000 acres in an unincorporated county island near Yuma and Perryville roads for up to 30 buildings and 5.6 million sq ft, a $14 billion project. Staff in Goodyear and Buckeye objected that it did not fit the land uses planned for the area. Tract withdrew the request in April 2024. Here the pushback came mainly from city planners rather than an organized residents' campaign.",
+   "timeline": [
+    [
+     "2024-03",
+     "Plan reported"
+    ],
+    [
+     "2024-04",
+     "Tract withdraws after Goodyear and Buckeye object"
+    ]
+   ],
+   "objections": [
+    "Incompatible with planned land uses (city staff)"
+   ],
+   "case_for": null,
+   "after": null,
+   "sources": [
+    [
+     "ABC15 / Phoenix Business Journal, Apr 2024",
+     "https://www.abc15.com/news/business/14-billion-west-valley-data-center-project-request-withdrawn-after-cities-push-back"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "spartanburg-jones-road",
+   "name": "Jones Road",
+   "place": "Spartanburg County",
+   "state": "SC",
+   "lat": 34.95,
+   "lon": -81.93,
+   "developer": "Jones Road Associates",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": null,
+   "outcome": "stopped",
+   "start": "2026-06",
+   "start_note": "county staff denial",
+   "decided": "2026-08-25",
+   "summary": "A small 200,000 sq ft project caught as the county weighed a moratorium.",
+   "history": "County staff denied a 200,000 sq ft data center on Jones Road in June 2026, citing violations of the land-management ordinance, while the county council considered a moratorium. The developer appealed, saying the county had been positive until late June and that it had already invested over $28 million. In August 2026 the Board of Zoning Appeals unanimously upheld the denial.",
+   "timeline": [
+    [
+     "2026-06",
+     "County staff deny the application"
+    ],
+    [
+     "2026-08-25",
+     "Board of Zoning Appeals upholds the denial"
+    ]
+   ],
+   "objections": [
+    "Ordinance violations",
+    "Residents asking for county rules first"
+   ],
+   "case_for": "The developer said it had invested over $28 million on the county's earlier signals.",
+   "after": "The developer can reapply, though a county moratorium could block it.",
+   "sources": [
+    [
+     "Fox Carolina, Aug 2026",
+     "https://www.foxcarolina.com/2026/08/26/spartanburg-county-zoning-board-upholds-denial-data-center-jones-road/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "louisa-aws-third",
+   "name": "AWS third Louisa campus",
+   "place": "Louisa County",
+   "state": "VA",
+   "lat": 38.01,
+   "lon": -77.91,
+   "developer": "Amazon Web Services",
+   "end_user": "Amazon Web Services",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": 1370,
+   "outcome": "stopped",
+   "start": "2025-05",
+   "start_note": "permit application filed",
+   "decided": "2025-07-23",
+   "summary": "After two by-right campuses, Amazon's third needed a public permit and was withdrawn.",
+   "history": "Amazon has invested $11 billion in two Louisa County campuses that were allowed by right. In 2024 the county shrank its technology zone and required a conditional use permit for new projects, and in May 2025 AWS applied for a third campus of up to 7.2 million sq ft and seven substations on 1,370 acres by the Northeast Creek Reservoir. Residents objected to light, noise, air quality, water, nearby schools and the pace of development; some felt betrayed by earlier approvals. AWS withdrew on 23 July 2025.",
+   "timeline": [
+    [
+     "2024",
+     "County requires a public permit for new data centers"
+    ],
+    [
+     "2025-05",
+     "AWS applies for a third campus"
+    ],
+    [
+     "2025-07-23",
+     "AWS withdraws"
+    ],
+    [
+     "2026-01",
+     "AWS buys about 1,920 acres near the reservoir for about $72 million"
+    ]
+   ],
+   "objections": [
+    "Light, noise and air quality",
+    "Water for cooling",
+    "Schools nearby",
+    "Farmland and pace of growth"
+   ],
+   "case_for": "A county supervisor pointed to tax revenue and jobs; AWS said it heard the community and wanted more input on future projects.",
+   "after": "Amazon later bought land near the reservoir, saying it was for water infrastructure; the board chair said he opposes any data center there.",
+   "sources": [
+    [
+     "DatacenterDynamics, Jul 2025",
+     "https://www.datacenterdynamics.com/en/news/aws-withdraws-plans-for-third-data-center-campus-in-louisa-county-virginia/"
+    ],
+    [
+     "Virginia Mercury, Jul 2025",
+     "https://virginiamercury.com/2025/07/28/amazon-pulls-louisa-county-data-center-proposal-after-strong-resistance/"
+    ],
+    [
+     "WVVA, Jan 2026",
+     "https://www.wvva.com/2026/01/16/amazon-web-services-purchases-nearly-2000-acres-land-louisa-county"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "southaven-xai",
+   "name": "xAI Southaven power plant",
+   "place": "Southaven",
+   "state": "MS",
+   "lat": 34.97,
+   "lon": -89.99,
+   "developer": "xAI (as MZX Tech)",
+   "end_user": "xAI's Colossus 2 in Memphis",
+   "mw": null,
+   "mw_note": "power plant of about 1.2 GW, not a data center load",
+   "invest_bn": null,
+   "acres": null,
+   "outcome": "approved",
+   "start": "2025-08",
+   "start_note": "turbines began running",
+   "decided": "2026-03-10",
+   "summary": "Turbines ran without permits for months; the state then approved 41 permanent ones.",
+   "history": "To power Colossus 2 across the state line in Memphis, an xAI affiliate set up temporary gas turbines at a plant it bought in Southaven, running from August 2025 without a permit; regulators said temporary-mobile units are exempt for up to a year. It then applied for 41 permanent turbines, about 1.2 GW, less than half a mile from homes. Residents unanimously opposed it at a February 2026 hearing over noise and air pollution, and the NAACP and Southern Environmental Law Center gave notice of a Clean Air Act suit. On 10 March 2026 the state permit board approved it unanimously.",
+   "timeline": [
+    [
+     "2025-08",
+     "Temporary turbines begin running"
+    ],
+    [
+     "2026-02-13",
+     "NAACP gives notice of a Clean Air Act challenge"
+    ],
+    [
+     "2026-02-17",
+     "Public hearing; residents oppose"
+    ],
+    [
+     "2026-03-10",
+     "Permit board approves 41 turbines, unanimously"
+    ]
+   ],
+   "objections": [
+    "Noise day and night",
+    "Nitrogen oxides and particulates near homes",
+    "Unpermitted running",
+    "Rushed process"
+   ],
+   "case_for": "Regulators said modeling showed the area would stay within national air-quality standards.",
+   "after": "Groups said they would pursue legal action.",
+   "sources": [
+    [
+     "Mississippi Today, Mar 2026",
+     "https://mississippitoday.org/2026/03/10/xai-permit-approved-southaven/"
+    ],
+    [
+     "Mississippi Free Press, Mar 2026",
+     "https://www.mississippifreepress.org/xai-faces-fierce-opposition-over-southaven-mississippi-power-plant-permit/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "homer-city",
+   "name": "Homer City campus",
+   "place": "Homer City, Indiana County",
+   "state": "PA",
+   "lat": 40.51,
+   "lon": -79.2,
+   "developer": "Homer City Redevelopment, with Kiewit",
+   "end_user": "not named",
+   "mw": null,
+   "mw_note": "4.5 GW gas plant planned; data-center load not published",
+   "invest_bn": 10,
+   "acres": 3200,
+   "outcome": "approved",
+   "start": "2025-04",
+   "start_note": "plan announced",
+   "decided": "2025-11-18",
+   "summary": "A coal town welcomed it; statewide environmental groups are appealing the gas plant.",
+   "history": "The former Homer City coal plant, once Pennsylvania's largest, is being turned into a 3,200-acre AI data-center campus powered by a 4.5 GW gas plant, with more than $10 billion of initial investment. Local business and labor leaders and the governor welcomed it. Statewide groups including PennFuture, Clean Air Council, Sierra Club and Earthjustice objected to its emissions, which they said would be almost three times the CO2 of any other single plant in the state. The state approved the air plan on 18 November 2025, and the groups appealed in December.",
+   "timeline": [
+    [
+     "2025-04",
+     "Plan announced with Kiewit"
+    ],
+    [
+     "2025-11-18",
+     "State issues the air-quality plan approval"
+    ],
+    [
+     "2025-12",
+     "Environmental groups appeal to the Environmental Hearing Board"
+    ]
+   ],
+   "objections": [
+    "Air pollution and health",
+    "Climate emissions",
+    "Little economic benefit (environmental groups)"
+   ],
+   "case_for": "About 10,000 construction jobs and around 1,000 permanent jobs claimed; local leaders said it would put the town on the map.",
+   "after": "The appeal is pending; power is targeted for 2027.",
+   "sources": [
+    [
+     "The Allegheny Front, Apr 2025",
+     "https://www.alleghenyfront.org/homer-city-pennsylvania-gas-plant-data-center-ai/"
+    ],
+    [
+     "DatacenterDynamics, Oct 2025",
+     "https://www.datacenterdynamics.com/en/news/campaigners-call-on-regulator-to-block-45gw-gas-powered-ai-data-center-in-homer-city-pennsylvania/"
+    ],
+    [
+     "PennFuture, Dec 2025",
+     "https://www.pennfuture.org/News-Clean-Air-Council-PennFuture-and-Sierra-Club-Appeal-Air-Pollution-Permit-for-Nations-Largest-Proposed-Fracked-Gas-Power-Plant-for-Homer-City-Data-Center"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "mason-county-ky",
+   "name": "Mason County campus",
+   "place": "Mason County",
+   "state": "KY",
+   "lat": 38.62,
+   "lon": -83.8,
+   "developer": "Maysville-Mason County Industrial Authority, for an unnamed company",
+   "end_user": "a \"Fortune 50 technology company\", unnamed",
+   "mw": 2200,
+   "mw_note": "as previously reported",
+   "invest_bn": null,
+   "acres": 2080,
+   "outcome": "approved",
+   "start": "2025-11",
+   "start_note": "land surveyed",
+   "decided": "2026-05-22",
+   "summary": "Rezoned for an unnamed tech giant despite a 4,300-member opposition group.",
+   "history": "An anonymous developer surveyed land near the Ohio River in November 2025, and the county industrial authority proposed rezoning 2,080 acres across 28 properties for a campus reported at about 2.2 GW, for an unnamed Fortune 50 technology company. Residents formed a Facebook group of about 4,300 members, gathered more than 1,200 petition signatures and called for a moratorium. On 22 May 2026 the county fiscal court rezoned the land for rural industrial use.",
+   "timeline": [
+    [
+     "2025-11",
+     "Anonymous developer surveys land"
+    ],
+    [
+     "2026-05-22",
+     "Fiscal court rezones 2,080 acres"
+    ]
+   ],
+   "objections": [
+    "An unnamed end user",
+    "Rural land",
+    "Calls for a moratorium"
+   ],
+   "case_for": "The company would pay all electrical, water and road costs; up to 2,600 jobs, mostly in construction.",
+   "after": null,
+   "sources": [
+    [
+     "DatacenterDynamics, Jun 2026",
+     "https://www.datacenterdynamics.com/en/news/2000-acre-land-parcel-rezoned-for-data-center-use-in-mason-county-kentucky/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "lancaster-coreweave",
+   "name": "Greenfield Road (CoreWeave)",
+   "place": "Lancaster",
+   "state": "PA",
+   "lat": 40.05,
+   "lon": -76.33,
+   "developer": "Chirisa Technology Parks and Machine Investment Group",
+   "end_user": "CoreWeave",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 6,
+   "acres": null,
+   "outcome": "approved",
+   "start": "2025-02",
+   "start_note": "zoning determination",
+   "decided": "2025-02",
+   "summary": "Approved by a zoning officer without a hearing; residents have been trying to reopen it since.",
+   "history": "CoreWeave committed $6 billion to data centers in two former printing plants in Lancaster. In February 2025 the city's zoning officer classed them as warehouses, a permitted use that needed no public hearing. The planning commission questioned that classification and held a hearing, saying the city had lost its chance to control the project, and asked for data-center zoning rules. Construction began, and in September 2026 a residents' group, Lancaster Residents Against Glut and Exhaust, appealed the approval of a second building.",
+   "timeline": [
+    [
+     "2025-02",
+     "Zoning officer approves without a hearing"
+    ],
+    [
+     "2025-10-01",
+     "Planning commission hearing on the decision"
+    ],
+    [
+     "2026-09",
+     "Residents' group appeals the second building's approval"
+    ]
+   ],
+   "objections": [
+    "No public hearing",
+    "Strain on local resources",
+    "Environmental effects"
+   ],
+   "case_for": "The developer says the use is permitted and the appeal has no merit.",
+   "after": "The first building is under construction for 2027.",
+   "sources": [
+    [
+     "GovTech / LNP, Aug 2025",
+     "https://www.govtech.com/products/lancaster-pa-hearing-to-revisit-data-center-zoning-decision"
+    ],
+    [
+     "The Cool Down, Sep 2026",
+     "https://www.thecooldown.com/green-business/lancaster-residents-appeal-data-center-approval/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "hobart-amazon",
+   "name": "Amazon Hobart",
+   "place": "Hobart, Lake County",
+   "state": "IN",
+   "lat": 41.53,
+   "lon": -87.25,
+   "developer": "Amazon",
+   "end_user": "Amazon",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 11,
+   "acres": null,
+   "outcome": "approved",
+   "start": "2026-01",
+   "start_note": "council approval",
+   "decided": "2026-01",
+   "summary": "Approved with tax breaks before any site plan existed; a resident sued.",
+   "history": "In January 2026 Hobart's council approved an $11 billion Amazon project on hundreds of acres, designating it an economic revitalization area with a ten-year tax abatement and a long IT-equipment exemption, while Amazon paid the city $47 million with more payments tied to milestones. No site plan, renderings or environmental study had been released. A resident's group, No Data Centers Hobart Indiana, filed two lawsuits, arguing the land did not qualify for the abatement and that required steps were skipped, and sought to stop the soil-testing fill permit.",
+   "timeline": [
+    [
+     "2026-01",
+     "Council approves the project and tax breaks"
+    ],
+    [
+     "2026-02",
+     "Plan commission approves a fill permit; lawsuits filed"
+    ]
+   ],
+   "objections": [
+    "No site plan or environmental study",
+    "Speed of approval",
+    "Influence over local officials"
+   ],
+   "case_for": "Amazon promises more than 400 permanent jobs averaging about $37 an hour; the mayor called it minimally impactful and economically beneficial.",
+   "after": "Amazon targets completion in 2028.",
+   "sources": [
+    [
+     "Fox 32, Feb 2026",
+     "https://fox32chicago.com/news/hobart-approves-11b-amazon-data-center-details-still-unclear"
+    ],
+    [
+     "Fox 32, Feb 2026",
+     "https://www.fox32chicago.com/news/lawsuit-seeks-block-amazon-data-center-permit-hobart-ind"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "tucker-ridgeline",
+   "name": "Ridgeline",
+   "place": "near Thomas, Tucker County",
+   "state": "WV",
+   "lat": 39.15,
+   "lon": -79.5,
+   "developer": "Fundamental Data",
+   "end_user": "not named",
+   "mw": 2000,
+   "mw_note": "first-phase computing load; with 800 MW gas and 1.3 GW solar",
+   "invest_bn": null,
+   "acres": 291,
+   "outcome": "approved",
+   "start": "2025-08",
+   "start_note": "air permit issued",
+   "decided": "2026-02-05",
+   "summary": "An off-grid gas-and-solar complex in the mountains; its air permit survived appeal.",
+   "history": "Fundamental Data plans a 5 GW complex on 291 acres near Thomas: in its first phase, 800 MW of gas, 1.3 GW of solar and 14 data-center buildings with more than 2 GW of computing load, under the state's Power Generation and Consumption Act. The state issued the gas plant's air permit in August 2025. Tucker United, the West Virginia Highlands Conservancy and Sierra Club appealed, but the Air Quality Board upheld the permit on 5 February 2026, and in August regulators found the developer had shown control of the site.",
+   "timeline": [
+    [
+     "2025-08-15",
+     "State issues the gas plant's air permit"
+    ],
+    [
+     "2026-02-05",
+     "Air Quality Board upholds the permit"
+    ],
+    [
+     "2026-08-13",
+     "Regulators find site control was satisfied"
+    ]
+   ],
+   "objections": [
+    "Air pollution",
+    "Gas plant classified as a minor source",
+    "Accuracy of land ownership filings"
+   ],
+   "case_for": "The developer says users bear the power costs, it seeks no state or county money, and solar cuts gas use.",
+   "after": "Commercial operation is targeted for 2028.",
+   "sources": [
+    [
+     "POWER, Aug 2026",
+     "https://www.powermag.com/contested-5-gw-ridgeline-gas-solar-and-data-center-complex-in-west-virginia-clears-site-control-question/"
+    ],
+    [
+     "WV MetroNews, Dec 2025",
+     "https://wvmetronews.com/2025/12/03/protesters-oppose-tucker-county-data-center-as-air-quality-board-considers-permit-appeal/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "fermi-amarillo",
+   "name": "HyperGrid (Fermi America)",
+   "place": "near Amarillo",
+   "state": "TX",
+   "lat": 35.3,
+   "lon": -101.56,
+   "developer": "Fermi America, with Texas Tech University System",
+   "end_user": "not named",
+   "mw": 11000,
+   "mw_note": "planned IT capacity; 1 GW targeted for 2026",
+   "invest_bn": null,
+   "acres": 6000,
+   "outcome": "approved",
+   "start": "2025-07",
+   "start_note": "first gas turbines bought",
+   "decided": "2025-10",
+   "summary": "An 11 GW plan on the Ogallala Aquifer, backed by a former energy secretary.",
+   "history": "Fermi America, co-founded by former Energy Secretary Rick Perry, is building a campus of about 6,000 acres outside Amarillo with Texas Tech, planned at 11 GW and powered by its own grid of gas, solar, wind and, eventually, nuclear reactors. Amarillo approved a water supply agreement in October 2025. Dozens of residents formed a coalition against it, calling it an existential threat to the Ogallala Aquifer; the city says there is enough water, and Fermi says closed-loop cooling uses little.",
+   "timeline": [
+    [
+     "2025-07",
+     "Fermi buys its first gas turbines"
+    ],
+    [
+     "2025-10",
+     "City approves a water supply agreement"
+    ],
+    [
+     "2026-02",
+     "First turbines delivered"
+    ]
+   ],
+   "objections": [
+    "Ogallala Aquifer water",
+    "Trust in the developer's claims"
+   ],
+   "case_for": "Economic growth; the developer says closed-loop cooling needs little water.",
+   "after": null,
+   "sources": [
+    [
+     "Spectrum News, Nov 2025",
+     "https://spectrumlocalnews.com/tx/austin/news/2025/11/21/fermi-data-center"
+    ],
+    [
+     "DatacenterDynamics, Sep 2025",
+     "https://www.datacenterdynamics.com/en/news/macquarie-invests-in-fermi-america-to-support-development-of-11gw-ai-campus-in-amarillo-texas/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "king-george-amazon",
+   "name": "Amazon Birchwood campus",
+   "place": "King George County",
+   "state": "VA",
+   "lat": 38.27,
+   "lon": -77.2,
+   "developer": "Amazon",
+   "end_user": "Amazon",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": 6,
+   "acres": 869,
+   "outcome": "contested",
+   "start": "2023-09",
+   "start_note": "county approval",
+   "decided": null,
+   "summary": "The county approved it, a new board reversed course, and Amazon sued.",
+   "history": "Amazon bought the 869-acre former Birchwood power plant site for almost $169 million to build up to 17 data centers, up to $6 billion. The county approved the project in 2023 and a performance agreement on 19 December 2023, then reversed the agreement on 2 January 2024 under new officials who said Amazon's payments did not justify giving up the land, and began moves to downzone it. Amazon sued in April 2025 claiming vested rights.",
+   "timeline": [
+    [
+     "2023-09",
+     "County approves the campus"
+    ],
+    [
+     "2023-12-19",
+     "Performance agreement approved"
+    ],
+    [
+     "2024-01-02",
+     "New board reverses the agreement"
+    ],
+    [
+     "2025-04-24",
+     "Amazon sues"
+    ],
+    [
+     "2026-09",
+     "Trial scheduled"
+    ]
+   ],
+   "objections": [
+    "Payments too small to justify the land (new board)"
+   ],
+   "case_for": "Amazon says the board already approved the rezoning and plan changes, and that downzoning would wipe out its investment.",
+   "after": "We have not found a verdict from the trial set for September 2026.",
+   "sources": [
+    [
+     "GovTech / Richmond Times-Dispatch, May 2026",
+     "https://govtech.com/artificial-intelligence/virginia-court-case-could-influence-other-data-center-fights"
+    ],
+    [
+     "DatacenterDynamics, May 2025",
+     "https://www.datacenterdynamics.com/en/news/amazon-takes-king-george-county-supervisors-to-court-over-denied-data-center-project/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "hermantown-google",
+   "name": "Hermantown (Google)",
+   "place": "Hermantown, near Duluth",
+   "state": "MN",
+   "lat": 46.81,
+   "lon": -92.24,
+   "developer": "not named; Google as end user",
+   "end_user": "Google",
+   "mw": null,
+   "mw_note": "not published",
+   "invest_bn": null,
+   "acres": null,
+   "outcome": "contested",
+   "start": "2025-09",
+   "start_note": "environmental review",
+   "decided": null,
+   "summary": "Kept secret, then sued, then shrunk; Google dropped its tax break request in October 2026.",
+   "history": "A large data center near Duluth surfaced through records in September 2025. A citizen petition paused it, and in November 2025 the Minnesota Center for Environmental Advocacy and Stop the Hermantown Data Center sued over the environmental review. Google was revealed as the end user in March 2026 and agreed to a smaller footprint and a new review. The city granted a tax abatement worth up to $80 million in May 2026, but Google dropped the request on 14 October 2026.",
+   "timeline": [
+    [
+     "2025-09",
+     "Project revealed; environmental review comments"
+    ],
+    [
+     "2025-11-05",
+     "Environmental groups and residents sue"
+    ],
+    [
+     "2026-03",
+     "Google named; smaller footprint and new review"
+    ],
+    [
+     "2026-05-20",
+     "City grants up to $80 million in tax abatements"
+    ],
+    [
+     "2026-10-14",
+     "Google drops the tax abatement request"
+    ]
+   ],
+   "objections": [
+    "Adequacy of environmental review",
+    "Secrecy",
+    "Tax abatement"
+   ],
+   "case_for": "The city projects over $240 million in property taxes over 20 years.",
+   "after": "A permit hearing was set for 20 October 2026.",
+   "sources": [
+    [
+     "KAXE, Oct 2026",
+     "https://www.kaxe.org/local-news/2026-10-15/google-drops-request-tax-relief-hermantown-data-center-proposal"
+    ],
+    [
+     "KAXE, Nov 2025",
+     "https://www.kaxe.org/local-news/2025-11-05/environmental-groups-sue-hermantown-data-center-review"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "hood-county-comanche",
+   "name": "Comanche Circle",
+   "place": "near Tolar, Hood County",
+   "state": "TX",
+   "lat": 32.39,
+   "lon": -97.92,
+   "developer": "Sailfish Development",
+   "end_user": "not named",
+   "mw": 5000,
+   "mw_note": "nine campuses combined, as proposed",
+   "invest_bn": null,
+   "acres": 2600,
+   "outcome": "contested",
+   "start": "2026-02",
+   "start_note": "moratorium debate",
+   "decided": null,
+   "summary": "Residents asked for a pause; commissioners refused 3–2 after a state senator's warning.",
+   "history": "Hood County has at least four proposed data centers. The largest, Comanche Circle, would put nine campuses totaling up to 5 GW on about 2,600 acres near the Comanche Peak nuclear plant, over a recharge zone of the Upper Trinity Aquifer. Residents pushed for a six-month moratorium to study water, power, air and noise. A state senator wrote that counties lack that power and asked the attorney general to investigate such pauses, and on 10 February 2026 commissioners rejected the moratorium 3–2.",
+   "timeline": [
+    [
+     "2026-02-10",
+     "Commissioners reject a six-month moratorium, 3–2"
+    ]
+   ],
+   "objections": [
+    "Aquifer water, up to 1 million gallons a day at full build-out",
+    "Air, noise, light and traffic",
+    "Gas plants to power it"
+   ],
+   "case_for": "The Data Center Coalition cites jobs and tax revenue; a state senator said counties lack the legal power to pause development.",
+   "after": null,
+   "sources": [
+    [
+     "Texas Tribune, Feb 2026",
+     "https://www.texastribune.org/2026/02/10/texas-hood-county-rejects-data-center-development-pause-ai/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "frontier-shackelford",
+   "name": "Frontier (Vantage)",
+   "place": "Shackelford County",
+   "state": "TX",
+   "lat": 32.74,
+   "lon": -99.33,
+   "developer": "Vantage Data Centers",
+   "end_user": "not named",
+   "mw": 1400,
+   "mw_note": "",
+   "invest_bn": 25,
+   "acres": 1200,
+   "outcome": "quiet",
+   "start": "2025-08-19",
+   "start_note": "announced",
+   "decided": "2025-08-19",
+   "summary": "A $25 billion campus announced to a welcome from the county judge.",
+   "history": "Vantage announced Frontier in August 2025: ten buildings and 3.7 million sq ft on 1,200 acres in a rural county outside Abilene, 1.4 GW of AI capacity and more than $25 billion, its largest project. Construction had already begun, with the first building due in late 2026. The county judge and the governor welcomed it, and we found no reported local opposition.",
+   "timeline": [
+    [
+     "2025-08-19",
+     "Announced, with construction under way"
+    ]
+   ],
+   "objections": [
+    "None reported"
+   ],
+   "case_for": "Jobs and education opportunities, per the county judge; closed-loop cooling with minimal water.",
+   "after": null,
+   "sources": [
+    [
+     "DatacenterDynamics, Aug 2025",
+     "https://www.datacenterdynamics.com/en/news/vantage-plots-14gw-data-center-campus-in-texas/"
+    ]
+   ],
+   "checked": "2026-10-17"
+  },
+  {
+   "id": "ellendale-applied",
+   "name": "Polaris Forge 1 (Applied Digital)",
+   "place": "Ellendale",
+   "state": "ND",
+   "lat": 46.0,
+   "lon": -98.52,
+   "developer": "Applied Digital",
+   "end_user": "CoreWeave",
+   "mw": 530,
+   "mw_note": "state-approved; aims for 1 GW",
+   "invest_bn": 7,
+   "acres": null,
+   "outcome": "quiet",
+   "start": "2025-05",
+   "start_note": "first coverage of the AI campus",
+   "decided": "2025-05",
+   "summary": "A town of 1,100 accepted it as a lifeline, with some worries.",
+   "history": "Applied Digital's campus outside Ellendale started as a bitcoin mine and is adding AI buildings for CoreWeave under a lease worth about $7 billion over 15 years, with state approval for up to 530 MW. The mayor called it a once-in-a-lifetime opportunity for a shrinking town. Some residents worried about brownouts, bills, noise and the town's identity, and one said she wished she'd known before buying her house, but we found no organized campaign against it.",
+   "timeline": [
+    [
+     "2025-05",
+     "AI buildings under construction beside the bitcoin site"
+    ],
+    [
+     "2025-06",
+     "CoreWeave lease announced"
+    ]
+   ],
+   "objections": [
+    "Individual concerns: brownouts, bills, noise, town identity"
+   ],
+   "case_for": "300 to 350 jobs, new housing and a larger tax base after annexation.",
+   "after": null,
+   "sources": [
+    [
+     "KFYR, May 2025",
+     "https://www.kfyrtv.com/2025/05/14/massive-ai-footprint-is-ellendale-its-there-stay/"
+    ],
+    [
+     "Grand Forks Herald, Jun 2025",
+     "https://www.grandforksherald.com/news/north-dakota/7-billion-data-center-deal-in-southeast-north-dakota-is-worth-the-growing-pains-residents-say"
+    ]
+   ],
+   "checked": "2026-10-17"
+  }
+ ],
+ "national": {
+  "construction": {
+   "label": "Private spending on data-center construction",
+   "unit": "$ billion a year (seasonally adjusted annual rate)",
+   "points": [
+    [
+     "2021-01",
+     9.26
+    ],
+    [
+     "2025-08",
+     49.05
+    ],
+    [
+     "2026-08",
+     84.95
+    ]
+   ],
+   "note": "Census Bureau construction-spending tables. Counts the buildings only: not the servers and racks inside, and not the power plants and lines built for them.",
+   "sources": [
+    [
+     "Tom's Hardware, Oct 2026 (Census data)",
+     "https://www.tomshardware.com/tech-industry/data-centers/spending-on-u-s-data-center-buildings-hits-record-usd85-billion-annual-pace-up-73-percent-in-a-year-and-census-doesnt-count-the-servers-and-racks-inside"
+    ]
+   ]
+  },
+  "electricity": {
+   "label": "Electricity used by US data centers",
+   "unit": "TWh a year",
+   "points": [
+    [
+     "2014",
+     58,
+     null,
+     null
+    ],
+    [
+     "2023",
+     176,
+     null,
+     null
+    ],
+    [
+     "2028",
+     null,
+     325,
+     580
+    ],
+    [
+     "2030",
+     649,
+     521,
+     843
+    ]
+   ],
+   "shares": {
+    "2023": "4.4%",
+    "2028": "6.7–12%",
+    "2030": "9.5–15.3% (11.8% central)"
+   },
+   "note": "Lawrence Berkeley National Laboratory for the Department of Energy. 2028 and 2030 are projections; bars show the range.",
+   "sources": [
+    [
+     "DOE, Dec 2024",
+     "https://www.energy.gov/articles/doe-releases-new-report-evaluating-increase-electricity-demand-data-centers"
+    ],
+    [
+     "LBNL 2025 update",
+     "https://eta-publications.lbl.gov/publications/united-states-data-center-energy-2025"
+    ]
+   ]
+  },
+  "compute": {
+   "label": "The largest AI data centers, worldwide",
+   "facts": [
+    [
+     "94",
+     "sites tracked"
+    ],
+    [
+     "18.3 GW",
+     "facility power"
+    ],
+    [
+     "14.6 million",
+     "H100-equivalent chips"
+    ]
+   ],
+   "note": "Epoch AI's Frontier Data Centers hub, estimated from satellite imagery, permits and disclosures (CC BY 4.0). The US has the most sites: Texas 14, Ohio 7, Virginia 7. As of October 2026.",
+   "sources": [
+    [
+     "Epoch AI",
+     "https://epoch.ai/data/frontier-data-centers"
+    ]
+   ]
+  },
+  "opposition": {
+   "label": "Projects blocked or delayed by local opposition",
+   "points": [
+    [
+     "2026 Q1",
+     75,
+     130
+    ],
+    [
+     "2026 Q2",
+     45,
+     68
+    ]
+   ],
+   "groups": 843,
+   "states": 49,
+   "note": "Data Center Watch quarterly reports: at least 75 projects worth about $130 billion in Q1 2026 and 45 worth about $68 billion in Q2; 843 local groups in 49 states. Its methods are not published in detail, and a project can appear in more than one quarter.",
+   "sources": [
+    [
+     "Data Center Watch, Q1 2026",
+     "https://datacenterwatch.org/q1-2026"
+    ],
+    [
+     "AI Weekly on Q2 2026",
+     "https://aiweekly.co/alerts/data-center-watch-45-us-ai-data-center-projects-worth-68b-blocked-or-delayed-in"
+    ]
+   ]
+  },
+  "count": {
+   "value": 4767,
+   "label": "data centers of all sizes in the US",
+   "date": "April 2026",
+   "sources": [
+    [
+     "Statista",
+     "https://statista.com/statistics/1228433/data-centers-worldwide-by-country"
+    ]
+   ]
+  }
+ }
+}

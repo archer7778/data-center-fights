@@ -1,0 +1,57 @@
+name: Suggest a case
+description: A US data center fight (or a quiet approval) that should be on the map.
+title: "New case: "
+labels: ["new case"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks. Every case on the map is checked against public sources before it goes up, so links matter more than anything else here.
+        Please don't name private residents: public officials, companies and organized groups are fine.
+  - type: input
+    id: place
+    attributes:
+      label: Place
+      description: Town or county, and state.
+      placeholder: "Example: Saline Township, MI"
+    validations:
+      required: true
+  - type: input
+    id: project
+    attributes:
+      label: Project
+      description: Project name, developer or company, if known.
+  - type: dropdown
+    id: outcome
+    attributes:
+      label: What happened?
+      options:
+        - Stopped (rejected, withdrawn or banned after opposition)
+        - Approved despite opposition
+        - Still being fought (pending, in court)
+        - Approved with little or no organized opposition
+        - Not sure
+    validations:
+      required: true
+  - type: textarea
+    id: story
+    attributes:
+      label: Short summary
+      description: A few sentences, with dates of the key votes or decisions if you have them.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: Links to news stories, council minutes, filings or official statements. At least one is required.
+      placeholder: "https://..."
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Before you submit
+      options:
+        - label: My sources are public, and I haven't named private individuals.
+          required: true
