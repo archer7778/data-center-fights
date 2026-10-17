@@ -1108,6 +1108,10 @@
     [
      "2026-03-09",
      "Trial begins; final hearing set for 15 June 2026"
+    ],
+    [
+     "2026-06",
+     "Final hearing held; no ruling reported yet"
     ]
    ],
    "objections": [
@@ -1116,8 +1120,12 @@
     "How the 2021 zoning change was made"
    ],
    "case_for": "Amazon argues the permit was a separate, publicly vetted decision and that no one knew of any problem with the zoning amendment.",
-   "after": "We have not found a ruling from the June 2026 hearing yet.",
+   "after": "The final hearing took place in June 2026. As of mid-October 2026 we have not found a reported ruling.",
    "sources": [
+    [
+     "Fauquier Times, Jun 2026",
+     "https://www.fauquier.com/localnews/judge-hears-arguments-in-lawsuit-delaying-amazon-s-planned-warrenton-data-center/article_d5b6fd9e-278f-4bfc-b3f1-98ae345a7474.html"
+    ],
     [
      "Fauquier Times, Mar 2026",
      "https://www.fauquier.com/localnews/trial-begins-in-lawsuit-delaying-amazon-data-center/article_559d2c34-4dad-4907-b2f6-51a21079b263.html"
@@ -2309,12 +2317,12 @@
    "mw_note": "not published",
    "invest_bn": 6,
    "acres": 869,
-   "outcome": "contested",
+   "outcome": "approved",
    "start": "2023-09",
    "start_note": "county approval",
-   "decided": null,
-   "summary": "The county approved it, a new board reversed course, and Amazon sued.",
-   "history": "Amazon bought the 869-acre former Birchwood power plant site for almost $169 million to build up to 17 data centers, up to $6 billion. The county approved the project in 2023 and a performance agreement on 19 December 2023, then reversed the agreement on 2 January 2024 under new officials who said Amazon's payments did not justify giving up the land, and began moves to downzone it. Amazon sued in April 2025 claiming vested rights.",
+   "decided": "2026-09",
+   "summary": "The county approved it, a new board reversed course, Amazon sued, and the county settled just before trial.",
+   "history": "Amazon bought the 869-acre former Birchwood power plant site for almost $169 million to build up to 17 data centers, up to $6 billion. The county approved the project in 2023 and a performance agreement on 19 December 2023, then reversed the agreement on 2 January 2024 under new officials who said Amazon's payments did not justify giving up the land, and began moves to downzone it. Amazon sued in April 2025 claiming vested rights. Before a trial set for late September 2026, the county settled: it accepted that Amazon has vested rights to build, Amazon agreed to pay $10 million toward a school building and not to put data centers beside the Rappahannock River, and the county gave up rezoning the whole site.",
    "timeline": [
     [
      "2023-09",
@@ -2334,15 +2342,25 @@
     ],
     [
      "2026-09",
-     "Trial scheduled"
+     "County settles before trial; the project can proceed"
     ]
    ],
    "objections": [
-    "Payments too small to justify the land (new board)"
+    "Payments too small to justify the land (the board, in 2024)",
+    "Water, a supervisor's top concern",
+    "Some residents wanted the county to keep fighting"
    ],
-   "case_for": "Amazon says the board already approved the rezoning and plan changes, and that downzoning would wipe out its investment.",
-   "after": "We have not found a verdict from the trial set for September 2026.",
+   "case_for": "Amazon pledges more than 100 jobs and $10 million toward a school building; the board chair said fighting on risked costly lawsuits and that Amazon could legally have built anyway.",
+   "after": "A water agreement, a final performance agreement and tax figures are still being negotiated. Amazon withdrew a state application to draw groundwater from the Potomac aquifer.",
    "sources": [
+    [
+     "Fredericksburg Free Press, Sep 2026",
+     "https://www.fredericksburgfreepress.com/2026/09/29/amazon-moving-forward-with-birchwood-data-center-after-reaching-settlement-with-king-george/"
+    ],
+    [
+     "Fredericksburg Free Press, Oct 2026",
+     "https://www.fredericksburgfreepress.com/2026/10/07/king-george-board-of-supervisors-defends-its-settlement-with-amazon/"
+    ],
     [
      "GovTech / Richmond Times-Dispatch, May 2026",
      "https://govtech.com/artificial-intelligence/virginia-court-case-could-influence-other-data-center-fights"
@@ -2353,7 +2371,6 @@
     ]
    ],
    "checked": "2026-10-17",
-   "contested_from": "2024-01-02",
    "tags": [
     "court"
    ]
@@ -2397,6 +2414,10 @@
     [
      "2026-10-14",
      "Google drops the tax abatement request"
+    ],
+    [
+     "2026-10-26",
+     "City council to decide the special use permit"
     ]
    ],
    "objections": [
@@ -2405,7 +2426,7 @@
     "Tax abatement"
    ],
    "case_for": "The city projects over $240 million in property taxes over 20 years.",
-   "after": "A permit hearing was set for 20 October 2026.",
+   "after": "The planning and zoning commission hears Google's special use permit on 20 October 2026, and the city council decides it at a dedicated meeting on 26 October.",
    "sources": [
     [
      "KAXE, Oct 2026",
@@ -2414,6 +2435,10 @@
     [
      "KAXE, Nov 2025",
      "https://www.kaxe.org/local-news/2025-11-05/environmental-groups-sue-hermantown-data-center-review"
+    ],
+    [
+     "BusinessNorth, Oct 2026",
+     "https://www.businessnorth.com/daily_briefing/hermantown-city-council-meets-on-data-center-permit/article_0a95de82-484c-4f44-bde9-04ff148662f4.html"
     ]
    ],
    "checked": "2026-10-17",

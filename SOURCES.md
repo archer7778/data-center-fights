@@ -84,7 +84,7 @@ Every source behind [Data Center Fights](https://archer7778.github.io/data-cente
 - [WPR, Sep 2025](https://www.wpr.org/news/menomonie-mayor-puts-data-center-proposal-on-hold)
 - [Civic Media, Sep 2025](https://civicmedia.us/news/2025/09/24/menomonie-data-center-plans-paused)
 
-## Approved despite opposition (14)
+## Approved despite opposition (15)
 
 **Project Marvel**, Bessemer, AL (checked 2026-10-17)
 - [Inside Climate News, Nov 2025](https://insideclimatenews.org/news/18112025/alabama-city-council-approves-rezoning-for-massive-data-center/)
@@ -135,6 +135,12 @@ Every source behind [Data Center Fights](https://archer7778.github.io/data-cente
 - [Spectrum News, Nov 2025](https://spectrumlocalnews.com/tx/austin/news/2025/11/21/fermi-data-center)
 - [DatacenterDynamics, Sep 2025](https://www.datacenterdynamics.com/en/news/macquarie-invests-in-fermi-america-to-support-development-of-11gw-ai-campus-in-amarillo-texas/)
 
+**Amazon Birchwood campus**, King George County, VA (checked 2026-10-17)
+- [Fredericksburg Free Press, Sep 2026](https://www.fredericksburgfreepress.com/2026/09/29/amazon-moving-forward-with-birchwood-data-center-after-reaching-settlement-with-king-george/)
+- [Fredericksburg Free Press, Oct 2026](https://www.fredericksburgfreepress.com/2026/10/07/king-george-board-of-supervisors-defends-its-settlement-with-amazon/)
+- [GovTech / Richmond Times-Dispatch, May 2026](https://govtech.com/artificial-intelligence/virginia-court-case-could-influence-other-data-center-fights)
+- [DatacenterDynamics, May 2025](https://www.datacenterdynamics.com/en/news/amazon-takes-king-george-county-supervisors-to-court-over-denied-data-center-project/)
+
 **Lighthouse (Stargate)**, Port Washington, WI (checked 2026-10-17)
 - [WPR, Nov 2025](https://www.wpr.org/news/port-washington-council-approves-tid)
 - [Washington Examiner, Apr 2026](https://www.washingtonexaminer.com/policy/energy-and-environment/4520622/port-washington-wisconsin-restrict-data-centers/)
@@ -145,11 +151,12 @@ Every source behind [Data Center Fights](https://archer7778.github.io/data-cente
 - [POWER, Aug 2026](https://www.powermag.com/contested-5-gw-ridgeline-gas-solar-and-data-center-complex-in-west-virginia-clears-site-control-question/)
 - [WV MetroNews, Dec 2025](https://wvmetronews.com/2025/12/03/protesters-oppose-tucker-county-data-center-as-air-quality-board-considers-permit-appeal/)
 
-## Still being fought (5)
+## Still being fought (4)
 
 **Hermantown (Google)**, Hermantown, near Duluth, MN (checked 2026-10-17)
 - [KAXE, Oct 2026](https://www.kaxe.org/local-news/2026-10-15/google-drops-request-tax-relief-hermantown-data-center-proposal)
 - [KAXE, Nov 2025](https://www.kaxe.org/local-news/2025-11-05/environmental-groups-sue-hermantown-data-center-review)
+- [BusinessNorth, Oct 2026](https://www.businessnorth.com/daily_briefing/hermantown-city-council-meets-on-data-center-permit/article_0a95de82-484c-4f44-bde9-04ff148662f4.html)
 
 **Comanche Circle**, near Tolar, Hood County, TX (checked 2026-10-17)
 - [Texas Tribune, Feb 2026](https://www.texastribune.org/2026/02/10/texas-hood-county-rejects-data-center-development-pause-ai/)
@@ -159,11 +166,8 @@ Every source behind [Data Center Fights](https://archer7778.github.io/data-cente
 - [InsideNoVa, Apr 2026](https://www.insidenova.com/news/prince_william/prince-william-county-withdraws-from-digital-gateway-lawsuit-reversing-course-from-2023/article_2aa0e791-1ac9-490e-8e30-a1c4880bce35.html)
 - [InsideNoVa, May 2026](https://www.insidenova.com/news/prince_william/digital-gateway-legal-proceedings-could-stretch-into-mid-2027-attorney-says/article_c6e5a62f-e064-4674-b86b-ad76a4af177e.html)
 
-**Amazon Birchwood campus**, King George County, VA (checked 2026-10-17)
-- [GovTech / Richmond Times-Dispatch, May 2026](https://govtech.com/artificial-intelligence/virginia-court-case-could-influence-other-data-center-fights)
-- [DatacenterDynamics, May 2025](https://www.datacenterdynamics.com/en/news/amazon-takes-king-george-county-supervisors-to-court-over-denied-data-center-project/)
-
 **Amazon Warrenton**, Warrenton, VA (checked 2026-10-17)
+- [Fauquier Times, Jun 2026](https://www.fauquier.com/localnews/judge-hears-arguments-in-lawsuit-delaying-amazon-s-planned-warrenton-data-center/article_d5b6fd9e-278f-4bfc-b3f1-98ae345a7474.html)
 - [Fauquier Times, Mar 2026](https://www.fauquier.com/localnews/trial-begins-in-lawsuit-delaying-amazon-data-center/article_559d2c34-4dad-4907-b2f6-51a21079b263.html)
 - [FauquierNow, Jul 2025](https://www.fauquiernow.com/news/warrenton-town-council-pushes-back-against-data-centers-amends-zoning-ordinance/article_67ce814a-e880-4c95-8099-bac067988a25.html)
 - [DatacenterDynamics, Nov 2022](https://www.datacenterdynamics.com/en/news/officials-in-virginias-fauquier-county-indefinitely-postpone-aws-data-center-proposal/)
