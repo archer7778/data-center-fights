@@ -166,7 +166,7 @@ Every source behind [Data Center Fights](https://archer7778.github.io/data-cente
 - [InsideNoVa, Apr 2026](https://www.insidenova.com/news/prince_william/prince-william-county-withdraws-from-digital-gateway-lawsuit-reversing-course-from-2023/article_2aa0e791-1ac9-490e-8e30-a1c4880bce35.html)
 - [InsideNoVa, May 2026](https://www.insidenova.com/news/prince_william/digital-gateway-legal-proceedings-could-stretch-into-mid-2027-attorney-says/article_c6e5a62f-e064-4674-b86b-ad76a4af177e.html)
 
-**Amazon Warrenton**, Warrenton, VA (checked 2026-10-17)
+**Amazon Warrenton**, Warrenton, VA (checked 2026-10-18)
 - [Fauquier Times, Jun 2026](https://www.fauquier.com/localnews/judge-hears-arguments-in-lawsuit-delaying-amazon-s-planned-warrenton-data-center/article_d5b6fd9e-278f-4bfc-b3f1-98ae345a7474.html)
 - [Fauquier Times, Mar 2026](https://www.fauquier.com/localnews/trial-begins-in-lawsuit-delaying-amazon-data-center/article_559d2c34-4dad-4907-b2f6-51a21079b263.html)
 - [FauquierNow, Jul 2025](https://www.fauquiernow.com/news/warrenton-town-council-pushes-back-against-data-centers-amends-zoning-ordinance/article_67ce814a-e880-4c95-8099-bac067988a25.html)
