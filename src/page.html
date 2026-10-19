@@ -70,6 +70,18 @@ header .stamp{font:500 12px/1.4 var(--f-mono);color:var(--muted);text-align:righ
 .filters .res{font:500 12.5px var(--f-mono);color:var(--ink2);padding-bottom:7px}
 .filters .btn[hidden]{display:none}
 .row[hidden]{display:none}
+.camp .hex{fill:var(--ink2);fill-opacity:.12;stroke:var(--ink2);stroke-width:1.3}
+.camp.linked .hex{stroke-dasharray:none}
+.camp:hover .hex{fill-opacity:.3}
+.legend .lay{border-style:dashed}
+.camptab{border-top:1px solid var(--line)}
+.camptab summary{cursor:pointer;padding:12px 14px;font-weight:600}
+.camptab .tw{overflow-x:auto;padding:0 14px 14px}
+.camptab table{border-collapse:collapse;width:100%;font-size:13px;min-width:640px}
+.camptab th{font:600 11.5px var(--f-mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);text-align:left;border-bottom:1px solid var(--line);padding:6px 8px}
+.camptab td{border-bottom:1px solid var(--line);padding:6px 8px;vertical-align:top}
+.camptab td.n{font:500 12.5px var(--f-mono);text-align:right;white-space:nowrap}
+.camptab th.n{text-align:right}
 .map{position:relative;padding:0 6px}
 .map svg{display:block;width:100%;height:auto}
 .land{fill:var(--land);stroke:var(--border);stroke-width:.8}
@@ -204,6 +216,7 @@ footer a{color:var(--accent)}
         <input type="range" id="t" min="0" max="1" value="1" step="1" aria-label="Month shown on the map">
         <span class="when" id="when"></span>
       </div>
+      <details class="camptab" id="camptab" hidden><summary id="campsum"></summary><div class="tw"><p class="note" id="campnote" style="margin:0 0 8px"></p><table><thead><tr><th>Site</th><th>Place</th><th>Owner</th><th>Used by</th><th class="n">Power today</th><th>Our case</th></tr></thead><tbody id="campbody"></tbody></table></div></details>
       <p class="note pb">Pins appear when a project became public and take their outcome color on the date it was decided. Size shows announced or planned megawatts; sites without a published figure are drawn small.</p>
     </div>
     <div class="panel">
@@ -245,6 +258,7 @@ footer a{color:var(--accent)}
       <p><b>Megawatts</b> are announced or planned figures from developers, utilities or filings. They are maximums, not usage, and many sites never publish one. Totals count only sites with a figure.</p>
       <p><b>Cause and claims.</b> We say a project was stopped by opposition only when sources link the two. Both sides' arguments are given where reported. Claims that a person or company did something wrong are attributed to whoever made them, with the response where one was reported. Private residents are not named.</p>
       <p><b>Right of reply.</b> Anyone named here, including companies, officials and groups, can ask for a correction or for their response to be added<span id="reply"></span>. We aim to review requests within a few days and note significant corrections on the case.</p>
+      <p id="campmethod" hidden><b>The biggest AI campuses</b> layer is separate from the fights. It plots the US sites in Epoch AI's dataset of the largest AI data centers, sized by Epoch's estimate of the power each draws today, which is not the same measure as the announced maximums on the fight pins. It is not counted in the findings or the ledger, and it shows only at the latest month because it describes today.</p>
       <p><b>National figures</b> come from the Census Bureau (via reporting on its tables), Lawrence Berkeley National Laboratory, Epoch AI and Data Center Watch, each linked on its panel.</p>
       <p><b>Corrections and new cases.</b> Facts change quickly in these fights. Each case shows when it was last checked and the date of its newest source. If you know of a ruling or vote we've missed, or a fight that should be here, send it with a public source<span id="contrib"></span>.</p>
     </div>
@@ -285,6 +299,17 @@ function match(s){
   if(F.q){const hay=norm([s.name,s.place,s.state,s.developer,s.end_user].join(' '));if(!F.q.split(/\s+/).every(w=>hay.includes(w)))return false}
   return true}
 const filtering=()=>!!(F.q||F.st||F.tag);
+// AI campuses: Epoch AI's largest US AI data centers, a separate layer that is not part of the fights sample
+const CAMP=DATA.campuses?DATA.campuses.campuses:[];
+let SHOWC=CAMP.length>0;
+function campMatch(c){
+  if(F.tag)return false;
+  if(F.st&&c.state!==F.st)return false;
+  if(F.q){const hay=norm([c.name,c.place,c.state,c.owner,c.users,c.project].join(' '));if(!F.q.split(/\s+/).every(w=>hay.includes(w)))return false}
+  return true}
+const campOn=()=>SHOWC&&T===ASOF;
+function hex(r){let d='';for(let i=0;i<6;i++){const a=Math.PI/3*i+Math.PI/6;d+=(i?'L':'M')+(r*Math.cos(a)).toFixed(1)+' '+(r*Math.sin(a)).toFixed(1)}return `<path class="hex" d="${d}Z"/>`}
+const crad=c=>c.mw?Math.min(17,5+9*Math.sqrt(c.mw/2000)):4;
 if(CFG.select&&S.some(s=>s.id===CFG.select))SEL=CFG.select;
 try{const h=decodeURIComponent(location.hash.slice(1));if(S.some(s=>s.id===h))SEL=h}catch(e){}
 if(!SEL)SEL='pw-digital-gateway';
@@ -320,25 +345,33 @@ function renderStrip(){
 function renderLegend(){
   const cnt=o=>S.filter(s=>state(s,T)===o).length;
   $('#legend').innerHTML=OUT.map(o=>`<button type="button" data-o="${o}" aria-pressed="${SHOW.has(o)}">${icon(o)}${esc(SHORT[o])} <span class="num">${cnt(o)}</span></button>`).join('')+
-    (S.some(s=>state(s,T)==='pending')?`<span style="display:inline-flex;align-items:center;gap:6px">${icon('pending')}Before a decision <span class="num">${cnt('pending')}</span></span>`:'');
+    (S.some(s=>state(s,T)==='pending')?`<span style="display:inline-flex;align-items:center;gap:6px">${icon('pending')}Before a decision <span class="num">${cnt('pending')}</span></span>`:'')+
+    (CAMP.length?`<button type="button" class="lay" data-layer="camp" aria-pressed="${SHOWC}" title="${T===ASOF?'':'This layer shows today only: move the timeline to the latest month'}"><svg class="camp" width="14" height="14" viewBox="-7 -7 14 14" aria-hidden="true">${hex(5.5)}</svg>Biggest AI campuses <span class="num">${CAMP.length}</span></button>`:'');
 }
 function renderMap(){
   const vis=S.filter(s=>{const st=state(s,T);return st&&match(s)&&(st==='pending'||SHOW.has(st))}).sort((a,b)=>(b.mw||0)-(a.mw||0));
   const pins=vis.map(s=>{const st=state(s,T),r=rad(s);
     return `<g class="pin${s.id===SEL?' sel':''}" data-id="${s.id}" transform="translate(${s.x} ${s.y})" tabindex="0" role="button" aria-label="${esc(s.name+', '+s.place+' '+s.state+': '+(st==='pending'?'before a decision':LAB[st]))}">
       ${s.id===SEL?`<circle class="ring" r="${r+5}"/>`:''}${st==='pending'?shape(st,r):shape(st,r).replace('class="shape"','class="shape" stroke="var(--panel)" stroke-width="1.5"')}</g>`}).join('');
-  const svg=`<svg viewBox="0 0 ${GEO.w} ${GEO.h}" role="group" aria-label="Map of the United States with ${vis.length} data center sites; each pin opens its case">
-    <path class="land" d="${GEO.nation}"/><path class="borders" d="${GEO.borders}"/>${pins}</svg>`;
+  const cv=campOn()?CAMP.map((c,i)=>[c,i]).filter(([c])=>campMatch(c)).sort((a,b)=>(b[0].mw||0)-(a[0].mw||0)):[];
+  const camps=cv.map(([c,i])=>`<g class="camp${c.case?' linked':''}" data-c="${i}" transform="translate(${c.x} ${c.y})">${hex(crad(c))}</g>`).join('');
+  const svg=`<svg viewBox="0 0 ${GEO.w} ${GEO.h}" role="group" aria-label="Map of the United States with ${vis.length} data center fights${cv.length?' and '+cv.length+' large AI campuses':''}; each fight pin opens its case">
+    <path class="land" d="${GEO.nation}"/><path class="borders" d="${GEO.borders}"/>${camps}${pins}</svg>`;
   const tip=$('#tip');$('#map').innerHTML=svg;$('#map').appendChild(tip);
-  $('#mapCounts').textContent=`${vis.length} sites shown · ${fmtM(T)}`;
+  $('#mapCounts').textContent=`${vis.length} fights${cv.length?' · '+cv.length+(cv.length===1?' AI campus':' AI campuses'):''} · ${fmtM(T)}`;
   renderSizeKey();
 }
 // the key is drawn at the map's on-screen scale, so its circles match the pins exactly
 function renderSizeKey(){
   const svg=$('#map svg'),k=svg&&svg.clientWidth?svg.clientWidth/GEO.w:1;
   const item=(mw,label)=>{const r=rad({mw})*k,d=Math.ceil(2*r+3);return `<span class="k"><svg width="${d}" height="${d}" viewBox="${-d/2} ${-d/2} ${d} ${d}" aria-hidden="true"><circle r="${r.toFixed(2)}"/></svg>${label}</span>`};
-  $('#sizekey').innerHTML=`<span>Pin size: announced MW</span>${item(300,'300 MW')}${item(1000,'1 GW')}${item(2000,'2 GW')}${item(4000,'4 GW or more')}${item(null,'no figure published')}`;
+  $('#sizekey').innerHTML=`<span>Pin size: announced MW</span>${item(300,'300 MW')}${item(1000,'1 GW')}${item(2000,'2 GW')}${item(4000,'4 GW or more')}${item(null,'no figure published')}${CAMP.length?`<span class="k"><svg class="camp" width="14" height="14" viewBox="-7 -7 14 14" aria-hidden="true">${hex(5.5)}</svg>AI campuses are sized by Epoch AI's estimate of power in use today</span>`:''}`;
   $('#sizekey').setAttribute('aria-label','Pin size shows announced megawatts: larger pins for larger figures, the smallest for sites with no published figure');
+}
+function campTip(el){
+  const c=CAMP[+el.dataset.c],box=$('#map').getBoundingClientRect(),b=el.getBoundingClientRect(),cs=c.case&&S.find(s=>s.id===c.case);
+  const tip=$('#tip');tip.innerHTML=`<b>${esc(c.name)}</b>${esc(c.place)}, ${esc(c.state)}<br>AI campus${c.owner?' · '+esc(c.owner):''}${c.users?'<br>Used by '+esc(c.users):''}<br>${c.mw?'About '+n0(c.mw)+' MW in use today (Epoch AI estimate)':'Being built; no power in use yet in Epoch AI\'s data'}${cs?'<br>Also a case here: '+esc(cs.name)+' (select to open)':''}`;
+  tip.hidden=false;tip.style.left=Math.min(Math.max(b.left+b.width/2-box.left,120),box.width-120)+'px';tip.style.top=(b.top-box.top)+'px';
 }
 function showTip(el){
   const s=S.find(x=>x.id===el.dataset.id),st=state(s,T),box=$('#map').getBoundingClientRect(),b=el.getBoundingClientRect();
@@ -357,6 +390,16 @@ function renderList(){
   $('#listCounts').textContent=filtering()?`${n} of ${S.length} match`:`${S.length} documented`;
   $('#list').querySelector('.empty')?.remove();
   if(!n)$('#list').insertAdjacentHTML('beforeend','<p class="note pb empty" style="padding-top:12px">No cases match these filters.</p>');
+}
+
+function renderCamps(){
+  if(!CAMP.length)return;
+  const src=DATA.campuses.source,rows=CAMP.map((c,i)=>[c,i]).filter(([c])=>campMatch(c));
+  $('#camptab').hidden=false;
+  $('#campsum').textContent=`The biggest US AI campuses: ${rows.length} of ${CAMP.length}${filtering()?' match':''}, from Epoch AI`;
+  $('#campnote').innerHTML=`A separate layer, not part of the fights: Epoch AI's list of the largest AI data centers, with its estimate of the power each draws today (not an announced maximum). It shows on the map at the latest month only. Locations are town level. Data: <a href="${esc(safe(src.url))}" target="_blank" rel="noopener">${esc(src.name)}</a>, ${esc(src.licence)}, downloaded ${esc(fmtD(src.downloaded))}.`;
+  $('#campbody').innerHTML=rows.map(([c])=>{const cs=c.case&&S.find(s=>s.id===c.case);
+    return `<tr><td>${c.sheet?`<a href="${esc(safe(c.sheet))}" target="_blank" rel="noopener">${esc(c.name)}</a>`:esc(c.name)}</td><td>${esc(c.place)}, ${esc(c.state)}</td><td>${esc(c.owner||'—')}</td><td>${esc(c.users||'—')}</td><td class="n">${c.mw?n0(c.mw)+' MW':'being built'}</td><td>${cs?`<button type="button" class="btn row-open" data-id="${cs.id}" style="padding:2px 8px;font-size:12px">${esc(cs.name)}</button>`:''}</td></tr>`}).join('');
 }
 
 /* ---------- case file ---------- */
@@ -525,14 +568,17 @@ $('#play').addEventListener('click',()=>{
   timer=setInterval(()=>{T++;slider.value=T;renderTime();if(T>=ASOF){clearInterval(timer);timer=null;$('#play').textContent='Play'}},380);
 });
 document.addEventListener('click',e=>{
+  const ly=e.target.closest('#legend [data-layer]');if(ly){SHOWC=!SHOWC;renderLegend();renderMap();return}
+  const cp=e.target.closest('.camp[data-c]');if(cp){const c=CAMP[+cp.dataset.c];if(c.case)select(c.case,true);return}
+  const ro=e.target.closest('.row-open');if(ro){select(ro.dataset.id,true);return}
   const lg=e.target.closest('#legend button');if(lg){const o=lg.dataset.o;SHOW.has(o)?SHOW.delete(o):SHOW.add(o);if(!SHOW.size)OUT.forEach(x=>SHOW.add(x));renderLegend();renderMap();renderList();return}
   const pin=e.target.closest('.pin, .uc');if(pin){select(pin.dataset.id,true);return}
   const row=e.target.closest('.row');if(row){select(row.dataset.id,true)}
 });
 document.addEventListener('keydown',e=>{const pin=e.target.closest&&e.target.closest('.pin');if(pin&&(e.key==='Enter'||e.key===' ')){e.preventDefault();select(pin.dataset.id,true)}});
 const mapEl=$('#map');
-mapEl.addEventListener('pointerover',e=>{const p=e.target.closest('.pin');if(p)showTip(p)});
-mapEl.addEventListener('pointerout',e=>{if(e.target.closest('.pin'))$('#tip').hidden=true});
+mapEl.addEventListener('pointerover',e=>{const p=e.target.closest('.pin');if(p)return showTip(p);const c=e.target.closest('.camp[data-c]');if(c)campTip(c)});
+mapEl.addEventListener('pointerout',e=>{if(e.target.closest('.pin, .camp'))$('#tip').hidden=true});
 mapEl.addEventListener('focusin',e=>{const p=e.target.closest('.pin');if(p)showTip(p)});
 mapEl.addEventListener('focusout',()=>{$('#tip').hidden=true});
 $('#asof').textContent=$('#asof2').textContent=fmtD(DATA.as_of);
@@ -543,7 +589,7 @@ function applyFilters(){
   F.q=norm($('#fq').value).trim();F.st=$('#fstate').value;F.tag=$('#ftag').value;
   $('#fclear').hidden=!filtering();
   const n=S.filter(match).length;$('#fres').textContent=filtering()?`${n} of ${S.length} cases match`:'';
-  renderMap();renderList();
+  renderMap();renderList();renderCamps();
 }
 $('#fq').addEventListener('input',applyFilters);$('#fstate').addEventListener('change',applyFilters);$('#ftag').addEventListener('change',applyFilters);
 $('#fclear').addEventListener('click',()=>{$('#fq').value='';$('#fstate').value='';$('#ftag').value='';applyFilters();$('#fq').focus()});
@@ -557,6 +603,7 @@ document.addEventListener('click',async e=>{const b=e.target.closest('.copy');if
   try{await navigator.clipboard.writeText(b.dataset.url);b.textContent='Copied'}catch(err){b.textContent=b.dataset.url}
   setTimeout(()=>{b.textContent='Copy link'},2500)});
 $('#nsites').textContent=S.length;
-renderStrip();renderNational();renderFindings();renderTime();renderCase();
+renderStrip();renderNational();renderFindings();renderTime();renderCase();renderCamps();
+if(CAMP.length)$('#campmethod').hidden=false;
 })();
 </script>

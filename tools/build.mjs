@@ -31,6 +31,19 @@ const W = 975, H = 610;
 const proj = geoAlbersUsa().scale(1300).translate([W / 2, H / 2]);
 const geoPathFn = geoPath(proj).digits(1);
 const geo = { w: W, h: H, nation: geoPathFn(feature(topo, topo.objects.nation)), borders: geoPathFn(mesh(topo, topo.objects.states, (a, b) => a !== b)) };
+// the AI campuses layer (Epoch AI data, prepared by tools/campuses.mjs), if present
+const CAMP = path.join(ROOT, 'data/ai-campuses.json');
+if (fs.existsSync(CAMP)) {
+  const c = JSON.parse(fs.readFileSync(CAMP, 'utf8'));
+  const ids = new Set(data.sites.map(s => s.id));
+  for (const k of c.campuses) {
+    const p = proj([k.lon, k.lat]);
+    if (!p) { console.error(`AI campus ${k.name}: outside the map projection`); process.exit(1); }
+    if (k.case && !ids.has(k.case)) { console.error(`AI campus ${k.name}: links to unknown case "${k.case}"`); process.exit(1); }
+    k.x = +p[0].toFixed(1); k.y = +p[1].toFixed(1);
+  }
+  data.campuses = c;
+}
 for (const s of data.sites) {
   const p = proj([s.lon, s.lat]);
   if (!p) { console.error(`${s.id}: outside the map projection`); process.exit(1); }
@@ -109,6 +122,8 @@ for (const s of data.sites) {
 
 // the dataset
 const clean = JSON.parse(JSON.stringify(data));
+delete clean.campuses;
+if (data.campuses) fs.copyFileSync(CAMP, path.join(OUT, 'data/ai-campuses.json'));
 for (const s of clean.sites) { delete s.x; delete s.y; }
 fs.writeFileSync(path.join(OUT, 'data/sites.json'), JSON.stringify(clean, null, 1) + '\n');
 const cols = ['id', 'name', 'place', 'state', 'lat', 'lon', 'outcome', 'start', 'decided', 'developer', 'end_user', 'mw', 'mw_note',
