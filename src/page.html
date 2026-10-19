@@ -423,8 +423,8 @@ function renderFindings(){
   const reg=S.filter(s=>has(s,'state-regulator')),regOk=reg.filter(s=>s.outcome==='approved'||s.outcome==='quiet');
   const stoppedLocal=stopped.filter(s=>!has(s,'state-regulator'));
   if(reg.length)F.push({big:regOk.length===reg.length?`${reg.length} of ${reg.length}`:`${regOk.length} of ${reg.length}`,sub:'went ahead',h:'Where a state regulator decides, it gets built',
-    p:`${regOk.length===reg.length?`All ${reg.length}`:`${regOk.length} of the ${reg.length}`} projects whose outcome was set by a state regulator or permit board went ahead${reg.every(s=>s.outcome==='approved')?', every one over organized opposition':''}. ${stoppedLocal.length===stopped.length?`All ${stopped.length}`:`${stoppedLocal.length} of ${stopped.length}`} stopped projects were stopped locally: by a council, a zoning board, voters or the developer pulling out.`,
-    u:units([['Decided by a state regulator',reg],['Stopped, all locally',stoppedLocal]])});
+    p:`${regOk.length===reg.length?`All ${reg.length}`:`${regOk.length} of the ${reg.length}`} projects whose outcome was set by a state regulator or permit board went ahead${reg.every(s=>s.outcome==='approved')?', every one over organized opposition':''}. ${stoppedLocal.length===stopped.length?`None of the ${stopped.length}`:`${stopped.length-stoppedLocal.length} of the ${stopped.length}`} stopped projects ${stoppedLocal.length===stopped.length?'was':'were'} stopped by a state regulator: councils, zoning boards, courts, voters or developers pulling out stopped them.`,
+    u:units([['Decided by a state regulator',reg],[stoppedLocal.length===stopped.length?'Stopped, none by a state regulator':'Stopped, not by a state regulator',stoppedLocal]])});
   // 2 new gas
   const gas=S.filter(s=>has(s,'new-gas')),gasGo=gas.filter(s=>s.outcome==='approved'||s.outcome==='quiet'),gasStop=gas.filter(s=>s.outcome==='stopped');
   if(gas.length)F.push({big:`${gasGo.length} of ${gas.length}`,sub:'went ahead',h:'Projects that bring their own gas power go ahead',
@@ -455,7 +455,7 @@ function renderFindings(){
   // 6 courts
   const ct=S.filter(s=>has(s,'court')),cBy=o=>ct.filter(s=>s.outcome===o).length;
   F.push({big:`${cBy('stopped')} of ${ct.length}`,sub:'court cases ended in a stopped project',h:'Courts come after approval, not instead of it',
-    p:`${ct.length} cases went to court or a formal appeal: ${cBy('approved')} projects approved over opposition, ${cBy('contested')} still being fought and ${cBy('stopped')} stopped. Projects in this sample were stopped in council chambers, not courtrooms; lawsuits mostly follow an approval, and they cut both ways: in Saline Township and King George County it was the developer that sued.`,
+    p:`${ct.length} cases went to court or a formal appeal: ${cBy('approved')} projects approved over opposition, ${cBy('contested')} still being fought and ${cBy('stopped')} stopped. Most stopped projects died before any court was involved; lawsuits mostly follow an approval, and they cut both ways: in Saline Township and King George County it was the developer that sued.`,
     u:units([['Court case or formal appeal',ct]])});
   // 7 megawatt disclosure
   const k1=stopped.filter(s=>s.mw),k2=approved.filter(s=>s.mw);

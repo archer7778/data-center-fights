@@ -1,5 +1,5 @@
 {
- "as_of": "2026-10-17",
+ "as_of": "2026-10-19",
  "outcomes": {
   "stopped": "Stopped",
   "approved": "Approved despite opposition",
@@ -10,44 +10,72 @@
   {
    "id": "tucson-project-blue",
    "name": "Project Blue",
-   "place": "Tucson",
+   "place": "Tucson and unincorporated Pima County",
    "state": "AZ",
    "lat": 32.13,
    "lon": -110.85,
    "developer": "Beale Infrastructure (owned by Blue Owl)",
-   "end_user": "Amazon Web Services, per public records; never publicly confirmed",
-   "mw": 600,
-   "mw_note": "reported planned capacity",
+   "end_user": "Amazon Web Services, per public records; never publicly confirmed, and later reported to have pulled out",
+   "mw": 300,
+   "mw_note": "requested from Tucson Electric Power; earlier reports said 600 MW planned",
    "invest_bn": null,
    "acres": 290,
-   "outcome": "stopped",
+   "outcome": "approved",
    "start": "2024-06",
    "start_note": "Pima County under a non-disclosure agreement from at least June 2024",
-   "decided": "2025-08-06",
-   "summary": "Tucson's council unanimously refused to bring the campus into the city.",
-   "history": "Beale Infrastructure planned a 290-acre campus of up to 10 buildings, reported at 600 MW, that needed annexation into Tucson for city water. Records obtained by Arizona Luminaria named Amazon Web Services as the end user. The site would have cooled with drinking water for at least two years before switching to treated wastewater, in a region under long drought. Residents organized as No Desert Data Center, angered also that Pima County had sold land to the developer before any public meeting. On 6 August 2025 the city council voted unanimously against the project and began work on a data-center ordinance.",
+   "decided": "2025-12-03",
+   "summary": "Tucson said no; the developer stayed in the county, state regulators approved its power, and construction began.",
+   "history": "Beale Infrastructure planned a 290-acre campus of up to 10 buildings on county land just outside Tucson, first seeking annexation into the city for its water. Pima County approved selling it the land in June 2025, after officials had worked under a non-disclosure agreement. Residents organized as No Desert Data Center over drinking-water use in a drought and secrecy, and on 6 August 2025 Tucson's council voted unanimously against the project. Beale then revived it on the same county land, with closed-loop cooling and power from Tucson Electric Power. On 3 December 2025 the Arizona Corporation Commission approved the power deal 4–1 after nearly two dozen people spoke against it, and construction was under way by April 2026.",
    "timeline": [
     [
      "2024-06",
      "Pima County officials under a non-disclosure agreement"
     ],
     [
+     "2025-06",
+     "County supervisors approve selling the 290 acres"
+    ],
+    [
      "2025-08-06",
      "Tucson City Council votes unanimously against the project"
     ],
     [
-     "2025-08-19",
-     "Council begins work on a data-center ordinance"
+     "2025-09",
+     "Developer revives the plan in the county with closed-loop cooling and utility power"
+    ],
+    [
+     "2025-12-03",
+     "State utility regulators approve the power deal, 4–1"
+    ],
+    [
+     "2026-04",
+     "Construction under way; opponents protest at the site"
     ]
    ],
    "objections": [
-    "Drinking water used for cooling in a drought",
-    "Secrecy and NDAs",
-    "Energy use"
+    "Drinking water used for cooling in a drought (original plan)",
+    "Secrecy, NDAs and an unclear customer",
+    "Strain on the grid and costs for other customers"
    ],
-   "case_for": "The developer called the vote a missed opportunity for tax revenue, infrastructure and jobs, and said it had tried to earn trust by taking part in the city’s public meetings.",
-   "after": "A council member said the developers still intended to build somewhere in the region; nothing firm has been reported.",
+   "case_for": "Beale projects about $152 million in tax revenue over 10 years, $58.5 million of it for Pima County; the utility says it can supply the site from existing capacity without raising rates.",
+   "after": "Reports say Amazon Web Services pulled out, and the end user is unclear. The county expects the first building as soon as 2027.",
    "sources": [
+    [
+     "KJZZ, Dec 2025",
+     "https://www.kjzz.org/fronteras-desk/2025-12-05/project-blue-electricity-plan-approved-paving-the-way-for-controversial-tucson-data-center"
+    ],
+    [
+     "KOLD, Apr 2026",
+     "https://www.kold.com/2026/04/25/construction-begins-first-hyper-scale-data-center-pima-county/"
+    ],
+    [
+     "KJZZ, Sep 2025",
+     "https://www.kjzz.org/fronteras-desk/2025-09-19/developer-plans-to-revive-project-blue-data-center-in-pima-county-with-new-utility-deal"
+    ],
+    [
+     "Pima County: Project Blue FAQ",
+     "https://www.pima.gov/3552/Project-Blue-FAQ"
+    ],
     [
      "DatacenterDynamics, Aug 2025",
      "https://www.datacenterdynamics.com/en/news/residents-cheer-as-tucson-rejects-amazons-massive-project-blue-data-center-campus-in-arizona/"
@@ -57,8 +85,9 @@
      "https://www.kjzz.org/community-outrage-shut-down-project-blue-data-center-project-in-tucson-but-its-not-dead-yet"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
+    "state-regulator",
     "nda",
     "anonymous"
    ]
@@ -1005,12 +1034,12 @@
    "mw_note": "not published",
    "invest_bn": null,
    "acres": 2100,
-   "outcome": "contested",
+   "outcome": "stopped",
    "start": "2023-12",
    "start_note": "rezoning approved",
-   "decided": null,
-   "summary": "A 2,100-acre rezoning beside a Civil War battlefield was approved, then voided by the courts.",
-   "history": "In December 2023, after a 29-hour public hearing, Prince William's supervisors narrowly rezoned about 2,100 acres beside Manassas National Battlefield Park for 23 million sq ft of data centers. Neighbors in the Oak Valley Homeowners Association and the American Battlefield Trust sued. In August 2025 a circuit judge voided the rezoning, ruling that the county had not given proper public notice, and the Court of Appeals upheld that on 31 March 2026. The county then dropped its defense and Compass stepped back; QTS appealed to the Supreme Court of Virginia, which could decide whether to hear it from autumn 2026.",
+   "decided": "2026-07-02",
+   "summary": "Approved in 2023, voided by the courts, and abandoned by its developers in July 2026.",
+   "history": "In December 2023, after a 29-hour public hearing, Prince William's supervisors narrowly rezoned about 2,100 acres beside Manassas National Battlefield Park for 23 million sq ft of data centers. Neighbors in the Oak Valley Homeowners Association and the American Battlefield Trust sued. In August 2025 a circuit judge voided the rezoning, ruling that the county had not given proper public notice, and the Court of Appeals upheld that on 31 March 2026. The county then dropped its defense and Compass stepped back. QTS appealed to the Supreme Court of Virginia, then withdrew the appeal on 2 July 2026, ending the project.",
    "timeline": [
     [
      "2023-12",
@@ -1039,6 +1068,10 @@
     [
      "2026-04-30",
      "QTS appeals to the Supreme Court of Virginia"
+    ],
+    [
+     "2026-07-02",
+     "QTS withdraws its appeal, ending the project"
     ]
    ],
    "objections": [
@@ -1047,8 +1080,12 @@
     "Taxpayer money spent defending it"
    ],
    "case_for": "The county board approved it in 2023 and spent about $1.7 million defending it before withdrawing.",
-   "after": "If the Supreme Court takes the case, a final ruling could come around mid-2027.",
+   "after": "QTS said it would wind the project down. No plan to reapply has been reported.",
    "sources": [
+    [
+     "Potomac Local, Jul 2026",
+     "https://www.potomaclocal.com/2026/07/03/qts-withdraws-supreme-court-appeal-ending-proposed-digital-gateway-data-center-project/"
+    ],
     [
      "Virginia Lawyers Weekly, Apr 2026",
      "https://valawyersweekly.com/2026/04/01/virginia-court-upholds-block-prince-william-digital-gateway/"
@@ -1062,8 +1099,7 @@
      "https://www.insidenova.com/news/prince_william/digital-gateway-legal-proceedings-could-stretch-into-mid-2027-attorney-says/article_c6e5a62f-e064-4674-b86b-ad76a4af177e.html"
     ]
    ],
-   "checked": "2026-10-17",
-   "contested_from": "2023-12",
+   "checked": "2026-10-19",
    "tags": [
     "court",
     "anonymous"
@@ -1120,7 +1156,7 @@
     "How the 2021 zoning change was made"
    ],
    "case_for": "Amazon argues the permit was a separate, publicly vetted decision and that no one knew of any problem with the zoning amendment.",
-   "after": "The final hearing took place in June 2026. As of 18 October 2026 we have not found a reported ruling.",
+   "after": "The final hearing took place in June 2026. As of 19 October 2026 we have not found a reported ruling.",
    "sources": [
     [
      "Fauquier Times, Jun 2026",
@@ -1139,7 +1175,7 @@
      "https://www.datacenterdynamics.com/en/news/officials-in-virginias-fauquier-county-indefinitely-postpone-aws-data-center-proposal/"
     ]
    ],
-   "checked": "2026-10-18",
+   "checked": "2026-10-19",
    "contested_from": "2023-02-14",
    "tags": [
     "court"
@@ -2441,7 +2477,7 @@
      "https://www.businessnorth.com/daily_briefing/hermantown-city-council-meets-on-data-center-permit/article_0a95de82-484c-4f44-bde9-04ff148662f4.html"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "contested_from": "2025-11-05",
    "tags": [
     "court"
@@ -2465,11 +2501,15 @@
    "start_note": "moratorium debate",
    "decided": null,
    "summary": "Residents asked for a pause; commissioners refused 3–2 after a state senator's warning.",
-   "history": "Hood County has at least four proposed data centers. The largest, Comanche Circle, would put nine campuses totaling up to 5 GW on about 2,600 acres near the Comanche Peak nuclear plant, over a recharge zone of the Upper Trinity Aquifer. Residents pushed for a six-month moratorium to study water, power, air and noise. A state senator wrote that counties lack that power and asked the attorney general to investigate such pauses, and on 10 February 2026 commissioners rejected the moratorium 3–2.",
+   "history": "Hood County has at least four proposed data centers. The largest, Comanche Circle, would put nine campuses totaling up to 5 GW on about 2,600 acres near the Comanche Peak nuclear plant, over a recharge zone of the Upper Trinity Aquifer. Residents pushed for a six-month moratorium to study water, power, air and noise. A state senator wrote that counties lack that power and asked the attorney general to investigate such pauses, and on 10 February 2026 commissioners rejected the moratorium 3–2. In October 2026 Sailfish offered a settlement cutting the project's Hood County footprint from about 2,500 acres to about 1,375, with commitments on setbacks, cooling, light and roads. On 13 October commissioners rejected it 3–1 and unanimously denied the developer's appeal over its permit applications.",
    "timeline": [
     [
      "2026-02-10",
      "Commissioners reject a six-month moratorium, 3–2"
+    ],
+    [
+     "2026-10-13",
+     "Commissioners reject a settlement, 3–1, and deny the permit appeal"
     ]
    ],
    "objections": [
@@ -2477,15 +2517,19 @@
     "Air, noise, light and traffic",
     "Gas plants to power it"
    ],
-   "case_for": "The Data Center Coalition cites jobs and tax revenue; a state senator said counties lack the legal power to pause development.",
-   "after": null,
+   "case_for": "The developer offered a smaller footprint and limits on setbacks, cooling, light and road damage; the Data Center Coalition cites jobs and tax revenue.",
+   "after": "The developer had warned that rejecting the settlement could lead to a lawsuit and a larger project with fewer restrictions. No suit had been reported as of 13 October 2026.",
    "sources": [
+    [
+     "KERA, Oct 2026",
+     "https://www.kera.org/2026/10/13/comanche-circle-data-center-hood-county-sailfish/"
+    ],
     [
      "Texas Tribune, Feb 2026",
      "https://www.texastribune.org/2026/02/10/texas-hood-county-rejects-data-center-development-pause-ai/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "contested_from": "2026-02-10",
    "tags": [
     "anonymous"

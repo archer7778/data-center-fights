@@ -1,6 +1,6 @@
 # Sources
 
-Every source behind [Data Center Fights](https://archer7778.github.io/data-center-fights/), researched to 2026-10-17. Generated from `data/sites.json` by `tools/sources.mjs`.
+Every source behind [Data Center Fights](https://archer7778.github.io/data-center-fights/), researched to 2026-10-19. Generated from `data/sites.json` by `tools/sources.mjs`.
 
 ## Stopped (21)
 
@@ -10,10 +10,6 @@ Every source behind [Data Center Fights](https://archer7778.github.io/data-cente
 
 **West Valley campus**, near Buckeye, Maricopa County, AZ (checked 2026-10-17)
 - [ABC15 / Phoenix Business Journal, Apr 2024](https://www.abc15.com/news/business/14-billion-west-valley-data-center-project-request-withdrawn-after-cities-push-back)
-
-**Project Blue**, Tucson, AZ (checked 2026-10-17)
-- [DatacenterDynamics, Aug 2025](https://www.datacenterdynamics.com/en/news/residents-cheer-as-tucson-rejects-amazons-massive-project-blue-data-center-campus-in-arizona/)
-- [KJZZ, Aug 2025](https://www.kjzz.org/community-outrage-shut-down-project-blue-data-center-project-in-tucson-but-its-not-dead-yet)
 
 **Saturn business park**, Monterey Park, CA (checked 2026-10-17)
 - [LAist, Jan 2026](https://laist.com/news/monterey-park-data-center-moratorium)
@@ -67,6 +63,12 @@ Every source behind [Data Center Fights](https://archer7778.github.io/data-cente
 - [Texas Public Radio, Feb 2026](https://www.tpr.org/news/2026-02-18/san-marcos-city-council-blocks-proposed-data-center)
 - [DatacenterDynamics, Mar 2025](https://datacenterdynamics.com/en/news/data-center-proposal-rejected-in-san-marcos-texas)
 
+**PW Digital Gateway**, Gainesville, Prince William County, VA (checked 2026-10-19)
+- [Potomac Local, Jul 2026](https://www.potomaclocal.com/2026/07/03/qts-withdraws-supreme-court-appeal-ending-proposed-digital-gateway-data-center-project/)
+- [Virginia Lawyers Weekly, Apr 2026](https://valawyersweekly.com/2026/04/01/virginia-court-upholds-block-prince-william-digital-gateway/)
+- [InsideNoVa, Apr 2026](https://www.insidenova.com/news/prince_william/prince-william-county-withdraws-from-digital-gateway-lawsuit-reversing-course-from-2023/article_2aa0e791-1ac9-490e-8e30-a1c4880bce35.html)
+- [InsideNoVa, May 2026](https://www.insidenova.com/news/prince_william/digital-gateway-legal-proceedings-could-stretch-into-mid-2027-attorney-says/article_c6e5a62f-e064-4674-b86b-ad76a4af177e.html)
+
 **AWS third Louisa campus**, Louisa County, VA (checked 2026-10-17)
 - [DatacenterDynamics, Jul 2025](https://www.datacenterdynamics.com/en/news/aws-withdraws-plans-for-third-data-center-campus-in-louisa-county-virginia/)
 - [Virginia Mercury, Jul 2025](https://virginiamercury.com/2025/07/28/amazon-pulls-louisa-county-data-center-proposal-after-strong-resistance/)
@@ -84,11 +86,19 @@ Every source behind [Data Center Fights](https://archer7778.github.io/data-cente
 - [WPR, Sep 2025](https://www.wpr.org/news/menomonie-mayor-puts-data-center-proposal-on-hold)
 - [Civic Media, Sep 2025](https://civicmedia.us/news/2025/09/24/menomonie-data-center-plans-paused)
 
-## Approved despite opposition (15)
+## Approved despite opposition (16)
 
 **Project Marvel**, Bessemer, AL (checked 2026-10-17)
 - [Inside Climate News, Nov 2025](https://insideclimatenews.org/news/18112025/alabama-city-council-approves-rezoning-for-massive-data-center/)
 - [WBRC, Jun 2026](https://www.wbrc.com/2026/06/25/bessemer-data-center-rezoning-lawsuit-dismissed/)
+
+**Project Blue**, Tucson and unincorporated Pima County, AZ (checked 2026-10-19)
+- [KJZZ, Dec 2025](https://www.kjzz.org/fronteras-desk/2025-12-05/project-blue-electricity-plan-approved-paving-the-way-for-controversial-tucson-data-center)
+- [KOLD, Apr 2026](https://www.kold.com/2026/04/25/construction-begins-first-hyper-scale-data-center-pima-county/)
+- [KJZZ, Sep 2025](https://www.kjzz.org/fronteras-desk/2025-09-19/developer-plans-to-revive-project-blue-data-center-in-pima-county-with-new-utility-deal)
+- [Pima County: Project Blue FAQ](https://www.pima.gov/3552/Project-Blue-FAQ)
+- [DatacenterDynamics, Aug 2025](https://www.datacenterdynamics.com/en/news/residents-cheer-as-tucson-rejects-amazons-massive-project-blue-data-center-campus-in-arizona/)
+- [KJZZ, Aug 2025](https://www.kjzz.org/community-outrage-shut-down-project-blue-data-center-project-in-tucson-but-its-not-dead-yet)
 
 **Project Sail**, Coweta County, GA (checked 2026-10-17)
 - [DatacenterDynamics, Apr 2026](https://www.datacenterdynamics.com/en/news/prologis-900mw-project-sail-gets-the-go-ahead-in-coweta-county-georgia)
@@ -151,22 +161,18 @@ Every source behind [Data Center Fights](https://archer7778.github.io/data-cente
 - [POWER, Aug 2026](https://www.powermag.com/contested-5-gw-ridgeline-gas-solar-and-data-center-complex-in-west-virginia-clears-site-control-question/)
 - [WV MetroNews, Dec 2025](https://wvmetronews.com/2025/12/03/protesters-oppose-tucker-county-data-center-as-air-quality-board-considers-permit-appeal/)
 
-## Still being fought (4)
+## Still being fought (3)
 
-**Hermantown (Google)**, Hermantown, near Duluth, MN (checked 2026-10-17)
+**Hermantown (Google)**, Hermantown, near Duluth, MN (checked 2026-10-19)
 - [KAXE, Oct 2026](https://www.kaxe.org/local-news/2026-10-15/google-drops-request-tax-relief-hermantown-data-center-proposal)
 - [KAXE, Nov 2025](https://www.kaxe.org/local-news/2025-11-05/environmental-groups-sue-hermantown-data-center-review)
 - [BusinessNorth, Oct 2026](https://www.businessnorth.com/daily_briefing/hermantown-city-council-meets-on-data-center-permit/article_0a95de82-484c-4f44-bde9-04ff148662f4.html)
 
-**Comanche Circle**, near Tolar, Hood County, TX (checked 2026-10-17)
+**Comanche Circle**, near Tolar, Hood County, TX (checked 2026-10-19)
+- [KERA, Oct 2026](https://www.kera.org/2026/10/13/comanche-circle-data-center-hood-county-sailfish/)
 - [Texas Tribune, Feb 2026](https://www.texastribune.org/2026/02/10/texas-hood-county-rejects-data-center-development-pause-ai/)
 
-**PW Digital Gateway**, Gainesville, Prince William County, VA (checked 2026-10-17)
-- [Virginia Lawyers Weekly, Apr 2026](https://valawyersweekly.com/2026/04/01/virginia-court-upholds-block-prince-william-digital-gateway/)
-- [InsideNoVa, Apr 2026](https://www.insidenova.com/news/prince_william/prince-william-county-withdraws-from-digital-gateway-lawsuit-reversing-course-from-2023/article_2aa0e791-1ac9-490e-8e30-a1c4880bce35.html)
-- [InsideNoVa, May 2026](https://www.insidenova.com/news/prince_william/digital-gateway-legal-proceedings-could-stretch-into-mid-2027-attorney-says/article_c6e5a62f-e064-4674-b86b-ad76a4af177e.html)
-
-**Amazon Warrenton**, Warrenton, VA (checked 2026-10-18)
+**Amazon Warrenton**, Warrenton, VA (checked 2026-10-19)
 - [Fauquier Times, Jun 2026](https://www.fauquier.com/localnews/judge-hears-arguments-in-lawsuit-delaying-amazon-s-planned-warrenton-data-center/article_d5b6fd9e-278f-4bfc-b3f1-98ae345a7474.html)
 - [Fauquier Times, Mar 2026](https://www.fauquier.com/localnews/trial-begins-in-lawsuit-delaying-amazon-data-center/article_559d2c34-4dad-4907-b2f6-51a21079b263.html)
 - [FauquierNow, Jul 2025](https://www.fauquiernow.com/news/warrenton-town-council-pushes-back-against-data-centers-amends-zoning-ordinance/article_67ce814a-e880-4c95-8099-bac067988a25.html)
