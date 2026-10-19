@@ -216,7 +216,7 @@ footer a{color:var(--accent)}
         <input type="range" id="t" min="0" max="1" value="1" step="1" aria-label="Month shown on the map">
         <span class="when" id="when"></span>
       </div>
-      <details class="camptab" id="camptab" hidden><summary id="campsum"></summary><div class="tw"><p class="note" id="campnote" style="margin:0 0 8px"></p><table><thead><tr><th>Site</th><th>Place</th><th>Owner</th><th>Used by</th><th class="n">Power today</th><th>Our case</th></tr></thead><tbody id="campbody"></tbody></table></div></details>
+      <details class="camptab" id="camptab" hidden><summary id="campsum"></summary><div class="tw"><p class="note" id="campnote" style="margin:0 0 8px"></p><table><thead><tr><th>Site</th><th>Place</th><th>Owner</th><th>Used by</th><th class="n">Power today</th><th>Related case</th></tr></thead><tbody id="campbody"></tbody></table></div></details>
       <p class="note pb">Pins appear when a project became public and take their outcome color on the date it was decided. Size shows announced or planned megawatts; sites without a published figure are drawn small.</p>
     </div>
     <div class="panel">
@@ -358,7 +358,7 @@ function renderMap(){
   const svg=`<svg viewBox="0 0 ${GEO.w} ${GEO.h}" role="group" aria-label="Map of the United States with ${vis.length} data center fights${cv.length?' and '+cv.length+' large AI campuses':''}; each fight pin opens its case">
     <path class="land" d="${GEO.nation}"/><path class="borders" d="${GEO.borders}"/>${camps}${pins}</svg>`;
   const tip=$('#tip');$('#map').innerHTML=svg;$('#map').appendChild(tip);
-  $('#mapCounts').textContent=`${vis.length} fights${cv.length?' · '+cv.length+(cv.length===1?' AI campus':' AI campuses'):''} · ${fmtM(T)}`;
+  $('#mapCounts').textContent=`${vis.length} ${vis.length===1?'fight':'fights'}${cv.length?' · '+cv.length+(cv.length===1?' AI campus':' AI campuses'):''} · ${fmtM(T)}`;
   renderSizeKey();
 }
 // the key is drawn at the map's on-screen scale, so its circles match the pins exactly
@@ -370,7 +370,7 @@ function renderSizeKey(){
 }
 function campTip(el){
   const c=CAMP[+el.dataset.c],box=$('#map').getBoundingClientRect(),b=el.getBoundingClientRect(),cs=c.case&&S.find(s=>s.id===c.case);
-  const tip=$('#tip');tip.innerHTML=`<b>${esc(c.name)}</b>${esc(c.place)}, ${esc(c.state)}<br>AI campus${c.owner?' · '+esc(c.owner):''}${c.users?'<br>Used by '+esc(c.users):''}<br>${c.mw?'About '+n0(c.mw)+' MW in use today (Epoch AI estimate)':'Being built; no power in use yet in Epoch AI\'s data'}${cs?'<br>Also a case here: '+esc(cs.name)+' (select to open)':''}`;
+  const tip=$('#tip');tip.innerHTML=`<b>${esc(c.name)}</b>${esc(c.place)}, ${esc(c.state)}<br>AI campus${c.owner?' · '+esc(c.owner):''}${c.users?'<br>Used by '+esc(c.users):''}<br>${c.mw?'About '+n0(c.mw)+' MW in use today (Epoch AI estimate)':'Being built; no power in use yet in Epoch AI\'s data'}${cs?'<br>Related case: '+esc(cs.name)+' (select to open)':''}`;
   tip.hidden=false;tip.style.left=Math.min(Math.max(b.left+b.width/2-box.left,120),box.width-120)+'px';tip.style.top=(b.top-box.top)+'px';
 }
 function showTip(el){

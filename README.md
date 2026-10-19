@@ -9,6 +9,7 @@ A sourced map of US data center fights: where communities stopped data centers, 
 ## What's in it
 
 - **The map and timeline.** Pins appear when a project became public and take their outcome color when it was decided. Press Play to watch it unfold from 2022 to today. Each outcome also has its own shape, so color isn't needed to read it. Pin size shows announced megawatts, with a key under the legend.
+- **The biggest AI campuses:** a separate layer of the 77 US sites in Epoch AI's dataset of the largest AI data centers, sized by Epoch's estimate of power in use today, with a full table. It is not part of the fights and isn't counted in the findings. Refresh it with `node tools/campuses.mjs` after replacing `data/sources/epoch-data-centers.csv`.
 - **Filters:** search by name, place, developer or company, or narrow by state or by feature (state regulator, new gas power, NDAs, court, withdrawn, ballot, unnamed end user).
 - **A page for every case,** with its own link and share card, so a single fight can be posted on its own.
 - **Findings:** patterns across the cases (where state regulators decide, projects with their own gas power, how fast winning fights are, anonymity, size, courts, megawatt disclosure, ballots), counted live from the data. Each finding links to the cases behind it.
@@ -51,6 +52,7 @@ Every push to `main` rebuilds and publishes the site through GitHub Actions.
 
 - **Code:** [MIT](LICENSE).
 - **Data and case histories:** [CC BY 4.0](LICENSE-DATA.md). Reuse them freely, including commercially, with credit to *Data Center Fights* and a link to this project.
+- **AI campuses layer:** [Epoch AI, AI data centers](https://epoch.ai/data/data-centers) (Creative Commons Attribution), US sites only, placed at town level; see [LICENSE-DATA.md](LICENSE-DATA.md).
 - **Map outlines:** [us-atlas](https://github.com/topojson/us-atlas) (ISC), from US Census Bureau data.
 - National figures belong to their publishers and are credited and linked on the site.
 

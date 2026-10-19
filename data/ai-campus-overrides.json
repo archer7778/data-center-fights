@@ -1,1 +1,113 @@
-{"Meta Hyperion":{"place":"Holly Ridge","case":"meta-hyperion"},"OpenAI Stargate Abilene":{"case":"abilene-stargate"}}
+{
+ "Google Mesa": {
+  "town": "Mesa",
+  "state": "AZ",
+  "note": "Epoch's sources: Google's Mesa campus"
+ },
+ "Amazon Madison Mega Site": {
+  "town": "Canton",
+  "state": "MS",
+  "note": "Epoch's address: Madison Mega Site, Canton"
+ },
+ "Google Kansas City East": {
+  "town": "Kansas City",
+  "state": "MO",
+  "note": "Epoch's sources: Hunt Midwest Business Center, Kansas City, Missouri"
+ },
+ "AWS New Albany": {
+  "town": "New Albany",
+  "state": "OH",
+  "note": "Epoch's sources: City of New Albany, Ohio"
+ },
+ "Amazon Ridgeland": {
+  "town": "Ridgeland",
+  "state": "MS",
+  "note": "Epoch's address: Ridgeland, Mississippi"
+ },
+ "Google Storey County": {
+  "town": "Sparks",
+  "state": "NV",
+  "place": "Storey County (near Sparks)",
+  "note": "Epoch's sources: Google's Storey County, Nevada page; placed at the nearest city"
+ },
+ "Stream Phoenix": {
+  "town": "Goodyear",
+  "state": "AZ",
+  "note": "Stream's planning document is for its Goodyear site on Litchfield Road"
+ },
+ "Anthropic Barber Lake": {
+  "town": "Colorado City",
+  "state": "TX",
+  "note": "Cipher Mining's Barber Lake site"
+ },
+ "OpenAI Stargate Michigan": {
+  "town": "Saline",
+  "state": "MI",
+  "place": "Saline Township",
+  "case": "saline-stargate",
+  "note": "Related Digital's Michigan site"
+ },
+ "OpenAI Stargate Milam": {
+  "town": "Cameron",
+  "state": "TX",
+  "place": "Milam County",
+  "note": "Epoch's sources say Milam County; placed at the county seat"
+ },
+ "OpenAI Stargate New Mexico": {
+  "town": "Santa Teresa",
+  "state": "NM",
+  "place": "Doña Ana County (Project Jupiter)",
+  "note": "Project Jupiter"
+ },
+ "OpenAI Stargate Wisconsin": {
+  "town": "Port Washington",
+  "state": "WI",
+  "case": "port-washington-lighthouse",
+  "note": "Vantage's Port Washington site"
+ },
+ "OpenAI Stargate Abilene": {
+  "case": "abilene-stargate"
+ },
+ "Crusoe Abilene Expansion": {
+  "case": "abilene-stargate"
+ },
+ "Meta Hyperion": {
+  "place": "Holly Ridge",
+  "case": "meta-hyperion"
+ },
+ "Colossus 1": {
+  "case": "xai-colossus"
+ },
+ "Colossus 2": {
+  "case": "southaven-xai"
+ },
+ "Microsoft Fairwater Wisconsin": {
+  "case": "mount-pleasant-fairwater",
+  "place": "Mount Pleasant"
+ },
+ "Anthropic-Amazon New Carlisle": {
+  "case": "new-carlisle-amazon"
+ },
+ "CoreWeave Ellendale ND": {
+  "case": "ellendale-applied"
+ },
+ "CoreWeave Lancaster Greenfield site": {
+  "case": "lancaster-coreweave"
+ },
+ "OpenAI Stargate Shackelford": {
+  "town": "Albany",
+  "state": "TX",
+  "place": "Shackelford County",
+  "case": "frontier-shackelford",
+  "note": "Epoch's address names Shackelford County; placed at the county seat"
+ },
+ "Google Papillion": {
+  "place": "Papillion"
+ },
+ "QTS Eagle Mountain": {
+  "place": "Eagle Mountain"
+ },
+ "OpenAI Stargate Lordstown": {
+  "place": "Lordstown"
+ }
+}

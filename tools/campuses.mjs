@@ -49,7 +49,8 @@ const NAMES = { alabama: 'AL', arizona: 'AZ', georgia: 'GA', idaho: 'ID', indian
 // A five-digit number is only trusted as a ZIP when it lies in the state the address names,
 // so a long street number ("13360 Miller Rd") can't be mistaken for one.
 export function locate(addr) {
-  let st = (addr.match(STATE) || [])[1];
+  // the last state code in the address, so a street direction like "NE Huffman St" isn't read as Nebraska
+  let st = ([...addr.matchAll(new RegExp(STATE.source, 'g'))].pop() || [])[1];
   if (!st) { const low = addr.toLowerCase(); for (const k of Object.keys(NAMES).sort((x, y) => y.length - x.length)) if (low.includes(k)) { st = NAMES[k]; break } }
   if (!st) return null;
   for (const zip of (addr.match(/\b\d{5}\b/g) || []).reverse()) {
@@ -73,7 +74,10 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   const out = [], missing = [];
   for (const r of us) {
     const name = col(r, 'Name'), o = ovr[name] || {};
-    const loc = o.lat != null ? { place: o.place, state: o.state, lat: o.lat, lon: o.lon, how: 'set by hand: ' + (o.note || 'see overrides') } : locate(col(r, 'Address'));
+    // an override can name a town (looked up like any other) or give coordinates outright
+    const town = o.town && zipcodes.lookupByName(o.town, o.state)[0];
+    if (o.town && !town) { missing.push(`${name}: override town "${o.town}, ${o.state}" not found`); continue }
+    const loc = town ? { place: o.place || town.city, state: o.state, lat: town.latitude, lon: town.longitude, how: 'set by hand: ' + (o.note || 'town') } : o.lat != null ? { place: o.place, state: o.state, lat: o.lat, lon: o.lon, how: 'set by hand: ' + (o.note || 'see overrides') } : locate(col(r, 'Address'));
     if (loc && o.lat == null && o.place) { loc.place = o.place; loc.how += ', place name set by hand' }
     if (!loc) { missing.push(`${name} | ${col(r, 'Address') || '(no address)'}`); continue }
     const mw = parseFloat(col(r, 'Current power (MW)'));
@@ -90,7 +94,7 @@ if (process.argv[1] === fileURLToPath(import.meta.url)) {
   out.sort((a, b) => (b.mw || 0) - (a.mw || 0) || a.name.localeCompare(b.name));
   const stat = fs.statSync(SRC);
   fs.writeFileSync(OUT, JSON.stringify({
-    source: { name: 'Epoch AI, AI data centers', url: 'https://epoch.ai/data/data-centers', licence: 'CC BY 4.0', file: 'data/sources/epoch-data-centers.csv', downloaded: stat.mtime.toISOString().slice(0, 10) },
+    source: { name: 'Epoch AI, AI data centers', url: 'https://epoch.ai/data/data-centers', licence: 'CC BY', file: 'data/sources/epoch-data-centers.csv', downloaded: stat.mtime.toISOString().slice(0, 10) },
     note: 'Current power is Epoch AI\'s estimate of the power each site draws today, not an announced maximum. Sites still being built show no figure.',
     campuses: out,
   }, null, 1) + '\n');
