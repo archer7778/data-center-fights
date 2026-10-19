@@ -146,7 +146,7 @@
      "https://mirrorindy.org/google-withdraws-southside-data-center-proposal-franklin-township/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "nda",
     "withdrawn"
@@ -199,7 +199,7 @@
      "https://www.kbtx.com/2025/09/12/college-station-city-council-unanimously-rejects-land-sale-ai-data-center/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "anonymous"
    ]
@@ -249,7 +249,7 @@
      "https://datacenterdynamics.com/en/news/peculiar-officials-in-missouri-remove-data-centers-from-ordinance-blocking-15bn-diode-project"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "anonymous"
    ]
@@ -279,12 +279,16 @@
      "Residents repeatedly pack public meetings"
     ],
     [
+     "2025-08",
+     "Council approves a one-year pause on data-center projects"
+    ],
+    [
      "2025-08-19",
      "CRG withdraws before the council vote"
     ],
     [
-     "2025-08",
-     "Council approves a one-year pause on data-center projects"
+     "2026-05-19",
+     "Council makes the ban permanent, 7–1"
     ]
    ],
    "objections": [
@@ -293,7 +297,7 @@
     "Unnamed end user and officials' NDAs"
    ],
    "case_for": "CRG said it withdrew to incorporate community feedback and would work on a revised proposal.",
-   "after": null,
+   "after": "In May 2026 the city council voted 7–1 to make the pause permanent, leaving data centers out of every zoning district.",
    "sources": [
     [
      "KBIA / St. Louis Public Radio, Aug 2025",
@@ -302,9 +306,13 @@
     [
      "KFVS, Aug 2025",
      "https://www.kfvs12.com/2025/08/23/st-charles-places-1-year-pause-data-center-projects/"
+    ],
+    [
+     "St. Louis Public Radio, May 2026",
+     "https://www.stlpr.org/2026-05-20/st-charles-passes-a-ban-on-data-centers"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "nda",
     "withdrawn",
@@ -342,6 +350,10 @@
     [
      "2025-04-15",
      "Supervisors reject the rezoning, 6–1"
+    ],
+    [
+     "2026-07-21",
+     "Supervisors back a separate $100 billion Stack campus at Berry Hill"
     ]
    ],
    "objections": [
@@ -350,7 +362,7 @@
     "Health costs"
    ],
    "case_for": "Balico said the plant would comply with federal and state air-quality rules.",
-   "after": "Balico said it was considering housing on the land instead.",
+   "after": "Balico said it was considering housing on the land instead. In 2026 county leaders backed a separate campus: Stack Infrastructure's planned $100 billion project at the Southern Virginia Megasite at Berry Hill, near Danville.",
    "sources": [
     [
      "DatacenterDynamics, Apr 2025",
@@ -359,9 +371,17 @@
     [
      "WVTF, Apr 2025",
      "https://www.wvtf.org/news/2025-04-14/balico-withdraws-application-to-build-data-centers-in-pittsylvania-county"
+    ],
+    [
+     "Virginia Business, May 2026",
+     "https://virginiabusiness.com/stack-100b-berry-hill-data-center-project/"
+    ],
+    [
+     "WSET, Jul 2026",
+     "https://wset.com/news/local/pittsylvania-county-advances-100b-data-center-campus-proposal-despite-resident-concerns-berry-hill-july-2026"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "new-gas",
     "withdrawn",
@@ -410,7 +430,7 @@
      "https://datacenterdynamics.com/en/news/application-for-13bn-data-center-in-chesterton-indiana-withdrawn"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "withdrawn",
     "anonymous"
@@ -466,7 +486,7 @@
      "https://www.wndu.com/2025/10/23/new-carlisle-town-council-opposes-proposed-12-billion-data-center"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "anonymous"
    ]
@@ -526,7 +546,7 @@
      "https://www.wvia.org/news/local/2026-03-19/data-center-concerns-prompt-regime-change-in-archbald"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "anonymous"
    ]
@@ -581,7 +601,7 @@
      "https://www.adn.com/nation-world/2026/06/05/in-this-city-near-la-voters-backed-a-first-in-the-nation-permanent-ban-on-data-centers/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "ballot",
     "anonymous"
@@ -645,7 +665,7 @@
      "https://www.datacenterdynamics.com/en/news/township-in-michigan-settles-lawsuit-allows-data-center-project-to-proceed/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "court"
    ]
@@ -713,7 +733,7 @@
      "https://www.wpr.org/news/data-center-opponents-launch-recall-of-port-washington-mayor"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "ballot"
    ]
@@ -773,7 +793,7 @@
      "https://en.wikipedia.org/wiki/Hyperion_Data_Center"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "state-regulator",
     "new-gas"
@@ -837,7 +857,7 @@
      "https://tennesseelookout.com/2025/07/17/naacp-others-appeal-xai-turbine-permits-for-memphis-data-center/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "state-regulator",
     "new-gas",
@@ -875,6 +895,10 @@
     [
      "2026-06-22",
      "Disclosure lawsuit dismissed by agreement of both sides"
+    ],
+    [
+     "2026-07-01",
+     "QTS says it is pursuing a campus on the site"
     ]
    ],
    "objections": [
@@ -884,7 +908,7 @@
     "Officials' NDAs"
    ],
    "case_for": "Supporters, including the school superintendent, pointed to tax revenue; the developer said there would be no power-rate increases, which a council member said it was in no position to promise.",
-   "after": "Project under way.",
+   "after": "In July 2026 QTS Data Centers said it was pursuing a data center campus on the Project Marvel site, after the land was reported sold to an unnamed private equity firm in deals worth more than $870 million.",
    "sources": [
     [
      "Inside Climate News, Nov 2025",
@@ -893,9 +917,13 @@
     [
      "WBRC, Jun 2026",
      "https://www.wbrc.com/2026/06/25/bessemer-data-center-rezoning-lawsuit-dismissed/"
+    ],
+    [
+     "WBRC, Jul 2026",
+     "https://www.wbrc.com/2026/07/02/qts-confirms-plans-proposed-data-center-campus-bessemer/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "nda",
     "court",
@@ -933,6 +961,10 @@
     [
      "2026-04-07",
      "Commissioners approve the rezoning, 3–2"
+    ],
+    [
+     "2026-05-12",
+     "Residents sue to void the rezoning"
     ]
    ],
    "objections": [
@@ -940,7 +972,7 @@
     "Rural character"
    ],
    "case_for": null,
-   "after": "Opponents were raising money for a possible legal challenge.",
+   "after": "Nineteen residents sued the county and Atlas Development in Coweta County Superior Court in May 2026, asking the court to void the rezoning. The county said it does not comment on pending litigation.",
    "sources": [
     [
      "DatacenterDynamics, Apr 2026",
@@ -949,11 +981,16 @@
     [
      "Atlanta News First, Apr 2026",
      "https://www.atlantanewsfirst.com/2026/04/08/coweta-county-commissioners-approve-rezoning-massive-data-center/"
+    ],
+    [
+     "WSB-TV, May 2026",
+     "https://www.wsbtv.com/news/local/residents-sue-county-government-developer-over-17b-data-center-construction/FJP7PCHLCNCYBGQ6HGGQJWABSE/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
-    "anonymous"
+    "anonymous",
+    "court"
    ]
   },
   {
@@ -1015,7 +1052,7 @@
      "https://blandinonbroadband.org/2026/09/09/coalition-for-responsible-data-center-development-withdraws-lawsuit-due-in-farmington-to-litigation-costs-dakota-county/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "court",
     "anonymous"
@@ -1229,7 +1266,7 @@
      "https://radio.kttz.org/2026-08-12/officials-say-data-centers-can-boost-local-economies-in-abilene-they-have-spurred-a-housing-crisis"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "new-gas"
    ]
@@ -1278,7 +1315,7 @@
      "https://www.ksat.com/business/2025/07/28/cheyenne-to-host-massive-ai-data-center-using-more-electricity-than-all-wyoming-homes-combined/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "new-gas",
     "anonymous"
@@ -1328,7 +1365,7 @@
      "https://www.wvpe.org/wvpe-news/2025-12-10/council-denies-rezoning-for-data-center-near-new-carlisle"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": []
   },
   {
@@ -1368,7 +1405,7 @@
     "After opening: cooling-fan noise"
    ],
    "case_for": "About 550 full-time staff at the first building and 10,000 construction workers over two years, per Microsoft; $4.7 billion of local construction spending estimated for 2024 to 2028.",
-   "after": null,
+   "after": "Microsoft said it is committed to being a good neighbor and had added fixes for a fan hum by 18 June 2026. The suit is pending.",
    "sources": [
     [
      "Microsoft, Jun 2026",
@@ -1377,9 +1414,13 @@
     [
      "Wisconsin Examiner, Jul 2026",
      "https://wisconsinexaminer.com/2026/07/02/mount-pleasant-residents-file-class-action-suit-over-microsoft-data-center-noise/"
+    ],
+    [
+     "WPR via Urban Milwaukee, Jul 2026",
+     "https://urbanmilwaukee.com/2026/07/03/residents-sue-microsoft-over-noise-from-new-mount-pleasant-data-center/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": []
   },
   {
@@ -1430,7 +1471,7 @@
      "https://www.wisn.com/article/microsoft-drops-caledonia-data-center-after-community-pushback/68905827"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "withdrawn"
    ]
@@ -1485,7 +1526,7 @@
      "https://datacenterdynamics.com/en/news/data-center-proposal-rejected-in-san-marcos-texas"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "anonymous"
    ]
@@ -1535,7 +1576,7 @@
      "https://www.wbtv.com/2025/08/13/developers-withdraw-plans-data-center-nascar-legends-land-mooresville/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "withdrawn",
     "anonymous"
@@ -1586,7 +1627,7 @@
      "https://www.azfamily.com/2025/12/12/chandler-unanimously-votes-against-proposed-ai-data-center/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "anonymous"
    ]
@@ -1637,7 +1678,7 @@
      "https://civicmedia.us/news/2025/09/24/menomonie-data-center-plans-paused"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "nda",
     "anonymous"
@@ -1690,7 +1731,7 @@
      "https://www.wfae.org/business/2025-10-08/matthews-data-center-plan-is-withdrawn-mayor-says"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "withdrawn",
     "anonymous"
@@ -1741,7 +1782,7 @@
      "https://www.datacenterdynamics.com/en/news/proposal-for-data-center-in-howell-township-michigan-has-been-withdrawn/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "withdrawn",
     "anonymous"
@@ -1752,7 +1793,7 @@
    "name": "Aligned campus",
    "place": "Pataskala, Licking County",
    "state": "OH",
-   "lat": 40.0,
+   "lat": 40,
    "lon": -82.67,
    "developer": "Aligned Data Centers",
    "end_user": "not named",
@@ -1790,7 +1831,7 @@
      "https://www.nbc4i.com/news/local-news/central-ohio-news/datacenters/pataskala-city-council-votes-against-data-center-proposal/amp/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "anonymous"
    ]
@@ -1822,20 +1863,28 @@
     [
      "2024-04",
      "Tract withdraws after Goodyear and Buckeye object"
+    ],
+    [
+     "2024-08",
+     "Buckeye approves a separate 1,700-acre Tract campus nearby"
     ]
    ],
    "objections": [
     "Incompatible with planned land uses (city staff)"
    ],
    "case_for": null,
-   "after": null,
+   "after": "Tract later won Buckeye's approval for a separate 1,700-acre campus on former Cipriani land south of Interstate 10.",
    "sources": [
     [
      "ABC15 / Phoenix Business Journal, Apr 2024",
      "https://www.abc15.com/news/business/14-billion-west-valley-data-center-project-request-withdrawn-after-cities-push-back"
+    ],
+    [
+     "DatacenterDynamics, Aug 2024",
+     "https://www.datacenterdynamics.com/en/news/tract-plans-1700-acre-data-center-campus-in-phoenix-arizona/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "withdrawn",
     "anonymous"
@@ -1882,7 +1931,7 @@
      "https://www.foxcarolina.com/2026/08/26/spartanburg-county-zoning-board-upholds-denial-data-center-jones-road/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "court",
     "anonymous"
@@ -1923,6 +1972,10 @@
     [
      "2026-01",
      "AWS buys about 1,920 acres near the reservoir for about $72 million"
+    ],
+    [
+     "2026-04-09",
+     "Planning commission drops a hearing on removing overlay zoning, 5–2"
     ]
    ],
    "objections": [
@@ -1932,7 +1985,7 @@
     "Farmland and pace of growth"
    ],
    "case_for": "A county supervisor pointed to tax revenue and jobs; AWS said it heard the community and wanted more input on future projects.",
-   "after": "Amazon later bought land near the reservoir, saying it was for water infrastructure; the board chair said he opposes any data center there.",
+   "after": "Amazon later bought land near the reservoir, saying it was for water infrastructure; the board chair said he opposes any data center there. Supervisors sent a proposal to strip technology-overlay zoning from about 2,600 acres to the planning commission, which voted 5–2 in April 2026 not to hold a hearing on it.",
    "sources": [
     [
      "DatacenterDynamics, Jul 2025",
@@ -1945,9 +1998,17 @@
     [
      "WVVA, Jan 2026",
      "https://www.wvva.com/2026/01/16/amazon-web-services-purchases-nearly-2000-acres-land-louisa-county"
+    ],
+    [
+     "29 News, Jan 2026",
+     "https://www.29news.com/2026/01/16/amazon-web-services-purchases-nearly-2000-acres-land-louisa-county"
+    ],
+    [
+     "Central Virginian, Apr 2026",
+     "https://www.thecentralvirginian.com/news/2026/04/16/pc-votes-to-not-consider-tod-removal/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "withdrawn"
    ]
@@ -1987,6 +2048,14 @@
     [
      "2026-03-10",
      "Permit board approves 41 turbines, unanimously"
+    ],
+    [
+     "2026-04-14",
+     "NAACP sues under the Clean Air Act"
+    ],
+    [
+     "2026-06",
+     "xAI and the Justice Department ask the court to dismiss the suit"
     ]
    ],
    "objections": [
@@ -1996,7 +2065,7 @@
     "A process opponents called rushed (short notice, hearing timing)"
    ],
    "case_for": "Regulators said modeling showed the area would stay within national air-quality standards.",
-   "after": "Groups said they would pursue legal action.",
+   "after": "The NAACP, represented by the Southern Environmental Law Center and Earthjustice, sued xAI in April 2026, alleging turbines ran before the permit was granted, and asked the court to halt them. xAI says the NAACP lacks standing, and the Justice Department, Mississippi's governor and a Defense Department official asked the court to dismiss the case. No ruling had been reported as of 19 October 2026.",
    "sources": [
     [
      "Mississippi Today, Mar 2026",
@@ -2005,12 +2074,21 @@
     [
      "Mississippi Free Press, Mar 2026",
      "https://www.mississippifreepress.org/xai-faces-fierce-opposition-over-southaven-mississippi-power-plant-permit/"
+    ],
+    [
+     "WDAM, Apr 2026",
+     "https://www.wdam.com/2026/04/14/naacp-sues-xai-alleging-unlawful-operation-gas-turbines-southaven/"
+    ],
+    [
+     "Mississippi Today via DeSoto County News, Jun 2026",
+     "https://desotocountynews.com/mississippi-news/department-of-justice-sides-with-elon-musks-xai-in-southaven-lawsuit/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "state-regulator",
-    "new-gas"
+    "new-gas",
+    "court"
    ]
   },
   {
@@ -2067,7 +2145,7 @@
      "https://www.pennfuture.org/News-Clean-Air-Council-PennFuture-and-Sierra-Club-Appeal-Air-Pollution-Permit-for-Nations-Largest-Proposed-Fracked-Gas-Power-Plant-for-Homer-City-Data-Center"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "state-regulator",
     "new-gas",
@@ -2083,17 +2161,17 @@
    "lat": 38.62,
    "lon": -83.8,
    "developer": "Maysville-Mason County Industrial Authority, for an unnamed company",
-   "end_user": "a \"Fortune 50 technology company\", unnamed",
+   "end_user": "Meta (named October 2026)",
    "mw": 2200,
    "mw_note": "as previously reported",
-   "invest_bn": null,
+   "invest_bn": 15,
    "acres": 2080,
    "outcome": "approved",
    "start": "2025-11",
    "start_note": "land surveyed",
    "decided": "2026-05-22",
-   "summary": "Rezoned for an unnamed tech giant despite a 4,300-member opposition group.",
-   "history": "An anonymous developer surveyed land near the Ohio River in November 2025, and the county industrial authority proposed rezoning 2,080 acres across 28 properties for a campus reported at about 2.2 GW, for an unnamed Fortune 50 technology company. Residents formed a Facebook group of about 4,300 members, gathered more than 1,200 petition signatures and called for a moratorium. On 22 May 2026 the county fiscal court rezoned the land for rural industrial use.",
+   "summary": "Rezoned for an unnamed tech giant, later revealed as Meta, despite a 4,300-member opposition group.",
+   "history": "An anonymous developer surveyed land near the Ohio River in November 2025, and the county industrial authority proposed rezoning 2,080 acres across 28 properties for a campus reported at about 2.2 GW, for an unnamed Fortune 50 technology company. Residents formed a Facebook group of about 4,300 members, gathered more than 1,200 petition signatures and called for a moratorium. On 22 May 2026 the county fiscal court rezoned the land for rural industrial use. In October 2026 Meta was named as the company; an attorney quoted by FOX19 put the initial investment at about $15 billion.",
    "timeline": [
     [
      "2025-11",
@@ -2102,6 +2180,10 @@
     [
      "2026-05-22",
      "Fiscal court rezones 2,080 acres"
+    ],
+    [
+     "2026-10-15",
+     "Meta named as the company"
     ]
    ],
    "objections": [
@@ -2110,16 +2192,21 @@
     "Calls for a moratorium"
    ],
    "case_for": "The company would pay all electrical, water and road costs; up to 2,600 jobs, mostly in construction.",
-   "after": null,
+   "after": "The citizens group We Are Mason County KY has two lawsuits pending, seeking transparency and farmland protection. Meta is expected to close on the land in November 2026 and still needs state tax exemptions.",
    "sources": [
     [
      "DatacenterDynamics, Jun 2026",
      "https://www.datacenterdynamics.com/en/news/2000-acre-land-parcel-rezoned-for-data-center-use-in-mason-county-kentucky/"
+    ],
+    [
+     "FOX19, Oct 2026",
+     "https://www.fox19.com/2026/10/16/meta-revealed-partner-2000-acre-nky-data-center-residents-pushback/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
-    "anonymous"
+    "anonymous",
+    "court"
    ]
   },
   {
@@ -2172,7 +2259,7 @@
      "https://www.thecooldown.com/green-business/lancaster-residents-appeal-data-center-approval/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "court"
    ]
@@ -2223,7 +2310,7 @@
      "https://www.fox32chicago.com/news/lawsuit-seeks-block-amazon-data-center-permit-hobart-ind"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "court"
    ]
@@ -2246,7 +2333,7 @@
    "start_note": "air permit issued",
    "decided": "2026-02-05",
    "summary": "An off-grid gas-and-solar complex in the mountains; its air permit survived appeal.",
-   "history": "Fundamental Data plans a 5 GW complex on 291 acres near Thomas: in its first phase, 800 MW of gas, 1.3 GW of solar and 14 data-center buildings with more than 2 GW of computing load, under the state's Power Generation and Consumption Act. The state issued the gas plant's air permit in August 2025. Tucker United, the West Virginia Highlands Conservancy and Sierra Club appealed, but the Air Quality Board upheld the permit on 5 February 2026, and in August regulators found the developer had shown control of the site.",
+   "history": "Fundamental Data plans a 5 GW complex on 291 acres near Thomas: in its first phase, 800 MW of gas, 1.3 GW of solar and 14 data-center buildings with more than 2 GW of computing load, under the state's Power Generation and Consumption Act. The state issued the gas plant's air permit in August 2025. Tucker United, the West Virginia Highlands Conservancy and Sierra Club appealed, but the Air Quality Board upheld the permit on 5 February 2026, and in August regulators found the developer had shown control of the site. In August 2026 the state's Intermediate Court of Appeals dismissed the groups' further appeals, saying it lacked jurisdiction.",
    "timeline": [
     [
      "2025-08-15",
@@ -2259,6 +2346,10 @@
     [
      "2026-08-13",
      "Regulators find site control was satisfied"
+    ],
+    [
+     "2026-08-26",
+     "Appeals court dismisses the groups' appeals for lack of jurisdiction"
     ]
    ],
    "objections": [
@@ -2267,7 +2358,7 @@
     "Accuracy of land ownership filings"
    ],
    "case_for": "The developer says users bear the power costs, it seeks no state or county money, and solar cuts gas use.",
-   "after": "Commercial operation is targeted for 2028.",
+   "after": "The groups can still take the permit to the state Supreme Court of Appeals. Commercial operation is targeted for 2028.",
    "sources": [
     [
      "POWER, Aug 2026",
@@ -2276,9 +2367,13 @@
     [
      "WV MetroNews, Dec 2025",
      "https://wvmetronews.com/2025/12/03/protesters-oppose-tucker-county-data-center-as-air-quality-board-considers-permit-appeal/"
+    ],
+    [
+     "WTAP, Aug 2026",
+     "https://www.wtap.com/2026/08/26/state-appeals-court-dismisses-environmental-groups-lawsuits-over-tucker-county-data-center-plant/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "state-regulator",
     "new-gas",
@@ -2335,7 +2430,7 @@
      "https://www.datacenterdynamics.com/en/news/macquarie-invests-in-fermi-america-to-support-development-of-11gw-ai-campus-in-amarillo-texas/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "anonymous"
    ]
@@ -2406,7 +2501,7 @@
      "https://www.datacenterdynamics.com/en/news/amazon-takes-king-george-county-supervisors-to-court-over-denied-data-center-project/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "court"
    ]
@@ -2571,7 +2666,7 @@
      "https://www.datacenterdynamics.com/en/news/vantage-plots-14gw-data-center-campus-in-texas/"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": [
     "anonymous"
    ]
@@ -2581,7 +2676,7 @@
    "name": "Polaris Forge 1 (Applied Digital)",
    "place": "Ellendale",
    "state": "ND",
-   "lat": 46.0,
+   "lat": 46,
    "lon": -98.52,
    "developer": "Applied Digital",
    "end_user": "CoreWeave",
@@ -2620,7 +2715,7 @@
      "https://www.grandforksherald.com/news/north-dakota/7-billion-data-center-deal-in-southeast-north-dakota-is-worth-the-growing-pains-residents-say"
     ]
    ],
-   "checked": "2026-10-17",
+   "checked": "2026-10-19",
    "tags": []
   }
  ],
