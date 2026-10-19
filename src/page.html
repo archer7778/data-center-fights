@@ -57,6 +57,19 @@ header .stamp{font:500 12px/1.4 var(--f-mono);color:var(--muted);text-align:righ
 .legend button{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink);font:500 12.5px var(--f-body);padding:3px 9px 3px 6px;border-radius:999px;cursor:pointer}
 .legend button[aria-pressed="false"]{opacity:.45;text-decoration:line-through}
 .legend svg{flex:none}
+.sizekey{display:flex;flex-wrap:wrap;align-items:center;gap:4px 14px;padding:0 14px 8px;font-size:12px;color:var(--ink2)}
+.sizekey .k{display:inline-flex;align-items:center;gap:5px}
+.sizekey svg{flex:none;overflow:visible}
+.sizekey circle{fill:none;stroke:var(--ink2);stroke-width:1.2}
+.filters{display:flex;flex-wrap:wrap;align-items:flex-end;gap:10px 14px;padding:12px 14px}
+.filters label{display:flex;flex-direction:column;gap:3px;font:500 11.5px var(--f-mono);letter-spacing:.05em;text-transform:uppercase;color:var(--muted);min-width:0}
+.filters input,.filters select{font:14px var(--f-body);color:var(--ink);background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:6px 8px;min-width:0}
+.filters input{width:min(260px,100%)}
+.filters .fq{flex:1 1 220px}
+.filters .fq input{width:100%}
+.filters .res{font:500 12.5px var(--f-mono);color:var(--ink2);padding-bottom:7px}
+.filters .btn[hidden]{display:none}
+.row[hidden]{display:none}
 .map{position:relative;padding:0 6px}
 .map svg{display:block;width:100%;height:auto}
 .land{fill:var(--land);stroke:var(--border);stroke-width:.8}
@@ -172,10 +185,19 @@ footer a{color:var(--accent)}
 
   <section class="strip" aria-label="The national buildout in four numbers" id="strip"></section>
 
+  <section class="panel filters" aria-label="Filter the map and case list">
+    <label class="fq">Search<input type="search" id="fq" placeholder="Name, place, developer or company" autocomplete="off"></label>
+    <label>State<select id="fstate"><option value="">All states</option></select></label>
+    <label>Feature<select id="ftag"><option value="">Any</option></select></label>
+    <button class="btn" type="button" id="fclear" hidden>Clear filters</button>
+    <span class="res" id="fres" aria-live="polite"></span>
+  </section>
+
   <section class="docket">
     <div class="panel">
       <div class="ph"><h2>The map</h2><span class="counts" id="mapCounts"></span></div>
       <div class="legend" id="legend" role="group" aria-label="Show or hide outcomes"></div>
+      <div class="sizekey" id="sizekey"></div>
       <div class="map" id="map"><div class="tip" id="tip" hidden></div></div>
       <div class="timeline">
         <button class="btn" id="play" type="button" aria-label="Play the timeline">Play</button>
@@ -254,6 +276,15 @@ const S=DATA.sites.map(s=>Object.assign(s,{m0:mi(s.start),m1:mi(s.decided),mc:mi
 const ASOF=mi(DATA.as_of);
 const M0=Math.min(...S.map(s=>s.m0));
 let T=ASOF,SEL=null,SHOW=new Set(OUT),timer=null;
+const TAGL={'state-regulator':'Decided by a state regulator','new-gas':'New gas power for the project','nda':'Officials signed NDAs','court':'Went to court or a formal appeal','withdrawn':'Developer withdrew','ballot':'Voters decided a ballot measure','anonymous':'End user not named'};
+const F={q:'',st:'',tag:''};
+const norm=v=>String(v??'').toLowerCase();
+function match(s){
+  if(F.st&&s.state!==F.st)return false;
+  if(F.tag&&!(s.tags||[]).includes(F.tag))return false;
+  if(F.q){const hay=norm([s.name,s.place,s.state,s.developer,s.end_user].join(' '));if(!F.q.split(/\s+/).every(w=>hay.includes(w)))return false}
+  return true}
+const filtering=()=>!!(F.q||F.st||F.tag);
 if(CFG.select&&S.some(s=>s.id===CFG.select))SEL=CFG.select;
 try{const h=decodeURIComponent(location.hash.slice(1));if(S.some(s=>s.id===h))SEL=h}catch(e){}
 if(!SEL)SEL='pw-digital-gateway';
@@ -292,7 +323,7 @@ function renderLegend(){
     (S.some(s=>state(s,T)==='pending')?`<span style="display:inline-flex;align-items:center;gap:6px">${icon('pending')}Before a decision <span class="num">${cnt('pending')}</span></span>`:'');
 }
 function renderMap(){
-  const vis=S.filter(s=>{const st=state(s,T);return st&&(st==='pending'||SHOW.has(st))}).sort((a,b)=>(b.mw||0)-(a.mw||0));
+  const vis=S.filter(s=>{const st=state(s,T);return st&&match(s)&&(st==='pending'||SHOW.has(st))}).sort((a,b)=>(b.mw||0)-(a.mw||0));
   const pins=vis.map(s=>{const st=state(s,T),r=rad(s);
     return `<g class="pin${s.id===SEL?' sel':''}" data-id="${s.id}" transform="translate(${s.x} ${s.y})" tabindex="0" role="button" aria-label="${esc(s.name+', '+s.place+' '+s.state+': '+(st==='pending'?'before a decision':LAB[st]))}">
       ${s.id===SEL?`<circle class="ring" r="${r+5}"/>`:''}${st==='pending'?shape(st,r):shape(st,r).replace('class="shape"','class="shape" stroke="var(--panel)" stroke-width="1.5"')}</g>`}).join('');
@@ -300,6 +331,14 @@ function renderMap(){
     <path class="land" d="${GEO.nation}"/><path class="borders" d="${GEO.borders}"/>${pins}</svg>`;
   const tip=$('#tip');$('#map').innerHTML=svg;$('#map').appendChild(tip);
   $('#mapCounts').textContent=`${vis.length} sites shown · ${fmtM(T)}`;
+  renderSizeKey();
+}
+// the key is drawn at the map's on-screen scale, so its circles match the pins exactly
+function renderSizeKey(){
+  const svg=$('#map svg'),k=svg&&svg.clientWidth?svg.clientWidth/GEO.w:1;
+  const item=(mw,label)=>{const r=rad({mw})*k,d=Math.ceil(2*r+3);return `<span class="k"><svg width="${d}" height="${d}" viewBox="${-d/2} ${-d/2} ${d} ${d}" aria-hidden="true"><circle r="${r.toFixed(2)}"/></svg>${label}</span>`};
+  $('#sizekey').innerHTML=`<span>Pin size: announced MW</span>${item(300,'300 MW')}${item(1000,'1 GW')}${item(2000,'2 GW')}${item(4000,'4 GW or more')}${item(null,'no figure published')}`;
+  $('#sizekey').setAttribute('aria-label','Pin size shows announced megawatts: larger pins for larger figures, the smallest for sites with no published figure');
 }
 function showTip(el){
   const s=S.find(x=>x.id===el.dataset.id),st=state(s,T),box=$('#map').getBoundingClientRect(),b=el.getBoundingClientRect();
@@ -311,10 +350,13 @@ function showTip(el){
 function renderList(){
   const rows=[...S].sort((a,b)=>OUT.indexOf(a.outcome)-OUT.indexOf(b.outcome)||(b.m1??b.m0)-(a.m1??a.m0));
   $('#list').innerHTML=rows.map(s=>{const st=state(s,T)||'pending',hidden=!state(s,T)||(st!=='pending'&&!SHOW.has(st));
-    return `<button type="button" class="row${hidden?' dim':''}" data-id="${s.id}" aria-current="${s.id===SEL}">${icon(state(s,T)?st:'pending')}
+    return `<button type="button" class="row${hidden?' dim':''}" data-id="${s.id}" aria-current="${s.id===SEL}"${match(s)?'':' hidden'}>${icon(state(s,T)?st:'pending')}
       <span><span class="t">${esc(s.name)}</span><br><span class="p">${esc(s.place)}, ${esc(s.state)} · ${esc(s.decided?fmtD(s.decided):'undecided')}</span></span>
       <span class="m">${s.mw?n0(s.mw)+' MW':''}</span></button>`}).join('');
-  $('#listCounts').textContent=`${S.length} documented`;
+  const n=S.filter(match).length;
+  $('#listCounts').textContent=filtering()?`${n} of ${S.length} match`:`${S.length} documented`;
+  $('#list').querySelector('.empty')?.remove();
+  if(!n)$('#list').insertAdjacentHTML('beforeend','<p class="note pb empty" style="padding-top:12px">No cases match these filters.</p>');
 }
 
 /* ---------- case file ---------- */
@@ -494,6 +536,18 @@ mapEl.addEventListener('pointerout',e=>{if(e.target.closest('.pin'))$('#tip').hi
 mapEl.addEventListener('focusin',e=>{const p=e.target.closest('.pin');if(p)showTip(p)});
 mapEl.addEventListener('focusout',()=>{$('#tip').hidden=true});
 $('#asof').textContent=$('#asof2').textContent=fmtD(DATA.as_of);
+{const states=[...new Set(S.map(s=>s.state))].sort();
+ $('#fstate').insertAdjacentHTML('beforeend',states.map(st=>`<option value="${st}">${st} (${S.filter(s=>s.state===st).length})</option>`).join(''));
+ $('#ftag').insertAdjacentHTML('beforeend',Object.keys(TAGL).filter(t=>(DATA.tags||{})[t]).map(t=>`<option value="${t}">${esc(TAGL[t])} (${S.filter(s=>(s.tags||[]).includes(t)).length})</option>`).join(''))}
+function applyFilters(){
+  F.q=norm($('#fq').value).trim();F.st=$('#fstate').value;F.tag=$('#ftag').value;
+  $('#fclear').hidden=!filtering();
+  const n=S.filter(match).length;$('#fres').textContent=filtering()?`${n} of ${S.length} cases match`:'';
+  renderMap();renderList();
+}
+$('#fq').addEventListener('input',applyFilters);$('#fstate').addEventListener('change',applyFilters);$('#ftag').addEventListener('change',applyFilters);
+$('#fclear').addEventListener('click',()=>{$('#fq').value='';$('#fstate').value='';$('#ftag').value='';applyFilters();$('#fq').focus()});
+if(window.ResizeObserver)new ResizeObserver(()=>renderSizeKey()).observe($('#map'));
 if(CFG.repo){
   $('#links').innerHTML=`<a href="${esc(CFG.base)}data/sites.csv">Download the data (CSV)</a> · <a href="${esc(CFG.base)}data/sites.json">JSON</a> · <a href="${esc(CFG.repo)}/blob/main/SOURCES.md" target="_blank" rel="noopener">All sources</a> · <a href="${esc(CFG.repo)}" target="_blank" rel="noopener">Code on GitHub</a> · <a href="${esc(CFG.repo)}/issues/new?template=new-case.yml" target="_blank" rel="noopener">Suggest a case</a> · <a href="${esc(CFG.repo)}/issues/new?template=right-of-reply.yml" target="_blank" rel="noopener">Right of reply</a>`;
   $('#reply').innerHTML=` through <a href="${esc(CFG.repo)}/issues/new?template=right-of-reply.yml" target="_blank" rel="noopener">this form</a>`;

@@ -8,7 +8,8 @@ A sourced map of US data center fights: where communities stopped data centers, 
 
 ## What's in it
 
-- **The map and timeline.** Pins appear when a project became public and take their outcome color when it was decided. Press Play to watch it unfold from 2022 to today. Each outcome also has its own shape, so color isn't needed to read it.
+- **The map and timeline.** Pins appear when a project became public and take their outcome color when it was decided. Press Play to watch it unfold from 2022 to today. Each outcome also has its own shape, so color isn't needed to read it. Pin size shows announced megawatts, with a key under the legend.
+- **Filters:** search by name, place, developer or company, or narrow by state or by feature (state regulator, new gas power, NDAs, court, withdrawn, ballot, unnamed end user).
 - **A page for every case,** with its own link and share card, so a single fight can be posted on its own.
 - **Findings:** patterns across the cases (where state regulators decide, projects with their own gas power, how fast winning fights are, anonymity, size, courts, megawatt disclosure, ballots), counted live from the data. Each finding links to the cases behind it.
 - **The megawatt ledger:** announced or planned capacity by outcome, and decisions over time.
